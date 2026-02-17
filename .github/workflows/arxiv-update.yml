@@ -1,0 +1,102 @@
+name: Update arXiv Papers & Website
+
+on:
+  schedule:
+    # Run at midnight EST every day (5 AM UTC)
+    - cron: '0 0 * * *'
+  
+  # Allow manual trigger from GitHub Actions tab
+  workflow_dispatch:
+
+permissions:
+  contents: write
+  pages: write
+  id-token: write
+
+jobs:
+  update-pipeline:
+    runs-on: ubuntu-latest
+    
+    steps:
+      # Step 1: Check out repository
+      - name: Checkout repository
+        uses: actions/checkout@v3
+        with:
+          fetch-depth: 0
+
+      # Step 2: Configure Git
+      - name: Configure Git
+        run: |
+          git config --global user.name "GitHub Copilot"
+          git config --global user.email "noreply@github.com"
+          git remote set-url origin https://x-access-token:${GITHUB_TOKEN}@github.com/nsaririan3/nsaririan3.github.io.git
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+
+      # Step 3: Setup Node.js (for running Copilot CLI)
+      - name: Setup Node.js
+        uses: actions/setup-node@v3
+        with:
+          node-version: '18'
+
+      # Step 4: Create data directory if not exists
+      - name: Create data directory
+        run: mkdir -p data
+
+      # Step 5: Run ArxivFetcher Agent
+      - name: 'Agent: Fetch arXiv Papers'
+        id: arxiv-fetch
+        run: |
+          echo "Starting ArxivFetcher Agent..."
+          node .github/agents/arxiv-fetcher.js
+        continue-on-error: true
+
+      # Step 6: Run ContentProcessor Agent
+      - name: 'Agent: Process & Clean Content'
+        id: content-process
+        run: |
+          echo "Starting ContentProcessor Agent..."
+          node .github/agents/content-processor.js
+        continue-on-error: true
+
+      # Step 7: Run HTMLGenerator Agent
+      - name: 'Agent: Generate HTML Pages'
+        id: html-generate
+        run: |
+          echo "Starting HTMLGenerator Agent..."
+          node .github/agents/html-generator.js
+        continue-on-error: true
+
+      # Step 8: Run Publisher Agent
+      - name: 'Agent: Publish & Deploy'
+        id: publisher
+        run: |
+          echo "Starting Publisher Agent..."
+          node .github/agents/publisher.js
+        continue-on-error: true
+
+      # Step 9: Report Job Status
+      - name: Pipeline Status Report
+        if: always()
+        run: |
+          echo "=== Pipeline Execution Summary ==="
+          echo "ArxivFetcher: ${{ steps.arxiv-fetch.outcome }}"
+          echo "ContentProcessor: ${{ steps.content-process.outcome }}"
+          echo "HTMLGenerator: ${{ steps.html-generate.outcome }}"
+          echo "Publisher: ${{ steps.publisher.outcome }}"
+          echo "=================================="
+          
+          if [ "${{ steps.publisher.outcome }}" == "success" ]; then
+            echo "✓ Pipeline completed successfully"
+            echo "Website deployed to: https://nsaririan3.github.io/"
+          else
+            echo "✗ Pipeline had issues - check logs above"
+          fi
+
+      # Step 10: Notify on failure (optional)
+      - name: Notify failure
+        if: failure()
+        run: |
+          echo "❌ Pipeline failed - Check GitHub Actions logs for details"
+          echo "Repository: https://github.com/nsaririan3/nsaririan3.github.io"
+          echo "Actions: https://github.com/nsaririan3/nsaririan3.github.io/actions"

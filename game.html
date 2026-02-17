@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Pac-Man Game</title>
+  <link rel="stylesheet" href="css/style.css">
+  <style>
+    /* Valentine's Day Theme for Game Page */
+    body.game-page {
+      background: linear-gradient(135deg, #ffe0ec 0%, #fff0f5 100%);
+    }
+
+    .game-page header {
+      background: linear-gradient(135deg, #ff69b4 0%, #ff1493 100%);
+      box-shadow: 0 4px 12px rgba(255, 20, 147, 0.3);
+    }
+
+    .game-page header h1,
+    .game-page header a {
+      color: #fff;
+    }
+
+    .game-page header a:hover {
+      color: #ffe0ec;
+      text-decoration: underline;
+    }
+
+    .game-page .game-container {
+      background: rgba(255, 255, 255, 0.95);
+      border: 3px solid #ff69b4;
+      border-radius: 15px;
+      padding: 2rem;
+      box-shadow: 0 8px 32px rgba(255, 20, 147, 0.2);
+    }
+
+    .game-page .game-container h1 {
+      color: #c41c3b;
+      text-shadow: 2px 2px 4px rgba(255, 105, 180, 0.3);
+    }
+
+    .game-page .btn-primary {
+      background: #ff1493;
+      border-color: #c41c3b;
+      color: #fff;
+    }
+
+    .game-page .btn-primary:hover {
+      background: #c41c3b;
+      transform: scale(1.05);
+    }
+
+    .game-page .btn-secondary {
+      background: #ffb3d9;
+      border-color: #ff69b4;
+      color: #8b0040;
+    }
+
+    .game-page .btn-secondary:hover {
+      background: #ff69b4;
+    }
+
+    .game-page .game-info {
+      background: linear-gradient(135deg, #ffe0ec 0%, #ffc0d9 100%);
+      border: 2px solid #ff69b4;
+      color: #c41c3b;
+      border-radius: 10px;
+      padding: 1.5rem;
+      margin-top: 1.5rem;
+      font-weight: bold;
+      font-size: 1.1rem;
+    }
+
+    .game-page .game-instructions {
+      background: #fff0f5;
+      border-left: 4px solid #ff1493;
+      padding: 1.5rem;
+      margin-top: 2rem;
+      border-radius: 8px;
+    }
+
+    .game-page .game-instructions h3 {
+      color: #c41c3b;
+      margin-top: 0;
+    }
+
+    .game-page .game-instructions li {
+      color: #8b0040;
+    }
+
+    .game-page footer {
+      background: linear-gradient(135deg, #ff69b4 0%, #ff1493 100%);
+      color: #fff;
+      border-top: 3px solid #c41c3b;
+    }
+  </style>
+</head>
+<body class="game-page">
+  <header role="banner">
+    <nav aria-label="Main Navigation">
+      <h1>Personal Coding Blog</h1>
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="game.html" class="active">Game</a></li>
+        <li><a href="papers.html">Papers</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main role="main" class="game-main">
+    <section class="game-container">
+      <h1>Pac-Man Game</h1>
+      
+      <div class="game-controls">
+        <button id="startBtn" class="btn btn-primary" aria-label="Start Game">Start Game</button>
+        <button id="pauseBtn" class="btn btn-secondary" aria-label="Pause Game" disabled>Pause</button>
+      </div>
+
+      <canvas id="gameCanvas" width="800" height="600" aria-label="Pac-Man game canvas"></canvas>
+
+      <div class="game-info">
+        <div class="info-item">Score: <span id="score">0</span></div>
+        <div class="info-item">Lives: <span id="lives">❤️ ❤️ ❤️</span></div>
+        <div class="info-item">High Score: <span id="highScore">0</span></div>
+        <div class="info-item" id="powerupStatus"></div>
+      </div>
+
+      <div class="game-instructions">
+        <h3>How to Play</h3>
+        <ul>
+          <li><strong>Arrow Keys</strong> - Move Pac-Man</li>
+          <li><strong>Spacebar</strong> - Start/Pause game</li>
+          <li><strong>Spacebar</strong> - Fire hearts (with rose power-up)</li>
+          <li><strong>Objective</strong> - Eat all pellets and avoid ghosts</li>
+          <li><strong>Power-up</strong> - Rose gives you heart projectiles for 10 seconds</li>
+          <li><strong>Scoring</strong> - Pellets: 10pts | Ghost: 100pts | Power-up: 200pts</li>
+        </ul>
+      </div>
+    </section>
+  </main>
+
+  <footer role="contentinfo">
+    <p>Pac-Man Game</p>
+  </footer>
+
+  <script src="js/game.js"></script>
+</body>
+</html>

@@ -1,0 +1,25 @@
+{
+  "name": "personal-coding-blog",
+  "version": "1.0.0",
+  "description": "Personal coding blog with Valentine's Pac-Man game and auto-updating arXiv paper feed",
+  "main": "index.html",
+  "scripts": {
+    "run-agents": "node .github/agents/arxiv-fetcher.js && node .github/agents/content-processor.js && node .github/agents/html-generator.js && node .github/agents/publisher.js",
+    "fetch": "node .github/agents/arxiv-fetcher.js",
+    "process": "node .github/agents/content-processor.js",
+    "generate": "node .github/agents/html-generator.js",
+    "publish": "node .github/agents/publisher.js"
+  },
+  "keywords": [
+    "blog",
+    "arXiv",
+    "machine-learning",
+    "pacman",
+    "game"
+  ],
+  "author": "nsaririan3",
+  "license": "MIT",
+  "dependencies": {
+    "xml2js": "^0.6.2"
+  }
+}

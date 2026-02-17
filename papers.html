@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>arXiv Papers Feed</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <header role="banner">
+    <nav aria-label="Main Navigation">
+      <h1>Personal Coding Blog</h1>
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="game.html">Game</a></li>
+        <li><a href="papers.html" class="active">Papers</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main role="main">
+    <section class="papers-section">
+      <div class="container">
+        <h1>Latest arXiv Papers</h1>
+        <p class="subtitle">Machine learning, NLP, and quantum computing research</p>
+        
+        <div class="papers-info">
+          <p>Total papers: <strong id="paperCount">0</strong></p>
+          <p>Last updated: <time id="lastUpdated">Loading...</time></p>
+          <p>Updates every midnight EST</p>
+        </div>
+
+        <!-- Search & Filter Controls -->
+        <div class="controls">
+          <input 
+            type="text" 
+            id="searchInput" 
+            class="search-input" 
+            placeholder="Search papers by title or author..."
+            aria-label="Search papers"
+          >
+          
+          <select id="sortSelect" class="sort-select" aria-label="Sort papers">
+            <option value="date">Sort by: Newest First</option>
+            <option value="title">Sort by: Title A-Z</option>
+            <option value="author">Sort by: Author A-Z</option>
+          </select>
+
+          <div class="filters" role="group" aria-label="Filter by category">
+            <label><input type="checkbox" value="cs.LG" checked> Machine Learning</label>
+            <label><input type="checkbox" value="cs.CL" checked> NLP</label>
+            <label><input type="checkbox" value="quant-ph" checked> Quantum</label>
+          </div>
+        </div>
+
+        <!-- Papers Grid -->
+        <div class="papers-grid" id="papersList">
+          <div class="loading">Loading papers...</div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer role="contentinfo">
+    <p>Auto-updating arXiv Paper Feed</p>
+  </footer>
+
+  <script>
+    // Load and render papers
+    let allPapers = [];
+
+    fetch('data/papers.json')
+      .then(res => res.json())
+      .then(data => {
+        allPapers = data.papers || [];
+        const container = document.getElementById('papersList');
+        
+        // Update paper count and last updated
+        document.getElementById('paperCount').textContent = allPapers.length;
+        const lastUpdated = new Date(data.metadata?.lastUpdated || new Date());
+        document.getElementById('lastUpdated').textContent = lastUpdated.toLocaleString();
+        
+        if (allPapers.length === 0) {
+          container.innerHTML = '<p class="no-papers">No papers found. Check back at midnight!</p>';
+          return;
+        }
+
+        renderPapers(allPapers);
+      })
+      .catch(err => {
+        console.error('Error loading papers:', err);
+        document.getElementById('papersList').innerHTML = '<p class="error">Error loading papers</p>';
+      });
+
+    function renderPapers(papers) {
+      const container = document.getElementById('papersList');
+      if (papers.length === 0) {
+        container.innerHTML = '<p class="no-papers">No papers match your filters</p>';
+        return;
+      }
+
+      // Map category codes to readable names
+      const getCategoryLabel = (code) => {
+        const categoryMap = {
+          'cs.CL': 'NLP',
+          'cs.LG': 'Machine Learning',
+          'quant-ph': 'Quantum Computing',
+          'cs.AI': 'AI'
+        };
+        return categoryMap[code] || code;
+      };
+
+      container.innerHTML = papers.map(paper => `
+        <article class="paper-card">
+          <h3><a href="${paper.summaryUrl}" target="_blank" rel="noopener">${paper.title}</a></h3>
+          <p class="authors">
+            ${paper.authors.slice(0, 3).map(a => `<span class="author">${a}</span>`).join(', ')}
+            ${paper.authors.length > 3 ? ' et al.' : ''}
+          </p>
+          <p class="date">📅 ${new Date(paper.publishedDate).toLocaleDateString('en-US', {
+            year: 'numeric', month: 'short', day: 'numeric'
+          })}</p>
+          <p class="abstract">${paper.abstract.substring(0, 180)}...</p>
+          <div class="tags">
+            <span class="tag">${getCategoryLabel(paper.category)}</span>
+          </div>
+          <a href="${paper.pdfUrl}" class="btn btn-primary" target="_blank" rel="noopener">📄 Read PDF</a>
+        </article>
+      `).join('');
+    }
+
+    // Search functionality
+    document.getElementById('searchInput').addEventListener('input', (e) => {
+      const query = e.target.value.toLowerCase();
+      const filtered = allPapers.filter(p => 
+        p.title.toLowerCase().includes(query) ||
+        p.authors.some(a => a.toLowerCase().includes(query)) ||
+        p.abstract.toLowerCase().includes(query)
+      );
+      renderPapers(filtered);
+    });
+
+    // Sort functionality
+    document.getElementById('sortSelect').addEventListener('change', (e) => {
+      const sorted = [...allPapers];
+      if (e.target.value === 'title') {
+        sorted.sort((a, b) => a.title.localeCompare(b.title));
+      } else if (e.target.value === 'author') {
+        sorted.sort((a, b) => a.authors[0].localeCompare(b.authors[0]));
+      } else {
+        sorted.sort((a, b) => new Date(b.publishedDate) - new Date(a.publishedDate));
+      }
+      renderPapers(sorted);
+    });
+
+    // Filter checkboxes
+    document.querySelectorAll('.filters input[type="checkbox"]').forEach(checkbox => {
+      checkbox.addEventListener('change', () => {
+        const checkedCategories = Array.from(document.querySelectorAll('.filters input[type="checkbox"]:checked'))
+          .map(c => c.value);
+        
+        const filtered = allPapers.filter(p => checkedCategories.includes(p.category));
+        renderPapers(filtered);
+      });
+    });
+  </script>
+</body>
+</html>
