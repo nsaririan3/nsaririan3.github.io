@@ -33,62 +33,50 @@ jobs:
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 
-      # Step 3: Setup Node.js (for running Copilot CLI)
-      - name: Setup Node.js
-        uses: actions/setup-node@v3
+      # Step 3: Set up Python
+      - name: Set up Python
+        uses: actions/setup-python@v5
         with:
-          node-version: '18'
+          python-version: "3.x"
 
-      # Step 4: Create data directory if not exists
+      # Step 4: Install dependencies
+      - name: Install dependencies
+        run: |
+          python -m pip install --upgrade pip
+          pip install requests xmltodict
+
+      # Step 5: Create data directory if not exists
       - name: Create data directory
         run: mkdir -p data
 
-      # Step 5: Run ArxivFetcher Agent
-      - name: 'Agent: Fetch arXiv Papers'
-        id: arxiv-fetch
+      # Step 6: Fetch latest papers
+      - name: Fetch latest papers
         run: |
-          echo "Starting ArxivFetcher Agent..."
-          node .github/agents/arxiv-fetcher.js
-        continue-on-error: true
+          python scripts/fetch_papers.py
 
-      # Step 6: Check if fetch succeeded
-      - name: Check fetch results
-        id: check-fetch
+      # Step 7: Update papers.json
+      - name: Update papers.json
         run: |
-          if [ -f "data/papers-raw.json" ]; then
-            PAPER_COUNT=$(node -e "console.log(JSON.parse(require('fs').readFileSync('data/papers-raw.json', 'utf8')).totalCount || 0)")
-            echo "papers_found=$PAPER_COUNT" >> $GITHUB_OUTPUT
-            echo "✅ Found $PAPER_COUNT papers"
-          else
-            echo "papers_found=0" >> $GITHUB_OUTPUT
-            echo "❌ No papers-raw.json file found"
+          python scripts/update_papers.py
+
+      # Step 8: Commit and push changes
+      - name: Commit and push changes
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          GIT_TERMINAL_PROMPT: "0"
+        run: |
+          set -euo pipefail
+          git config user.name "GitHub Actions"
+          git config user.email "actions@github.com"
+          git remote set-url origin "https://x-access-token:${GITHUB_TOKEN}@github.com/${GITHUB_REPOSITORY}.git"
+          git add data/papers.json data/papers-raw.json
+          if git diff --cached --quiet; then
+            echo "No changes to commit."
+            exit 0
           fi
-        continue-on-error: true
-
-      # Step 7: Run ContentProcessor Agent (only if papers were fetched)
-      - name: 'Agent: Process & Clean Content'
-        id: content-process
-        if: steps.check-fetch.outputs.papers_found > 0
-        run: |
-          echo "Starting ContentProcessor Agent..."
-          node .github/agents/content-processor.js
-        continue-on-error: true
-
-      # Step 8: Run HTMLGenerator Agent
-      - name: 'Agent: Generate HTML Pages'
-        id: html-generate
-        run: |
-          echo "Starting HTMLGenerator Agent..."
-          node .github/agents/html-generator.js
-        continue-on-error: true
-
-      # Step 9: Run Publisher Agent
-      - name: 'Agent: Publish & Deploy'
-        id: publisher
-        run: |
-          echo "Starting Publisher Agent..."
-          node .github/agents/publisher.js
-        continue-on-error: true
+          git commit -m "Update paper list"
+          git pull --rebase origin main
+          git push origin HEAD:main
 
       # Step 10: Report Job Status
       - name: Pipeline Status Report
