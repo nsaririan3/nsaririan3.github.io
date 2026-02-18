@@ -3,7 +3,7 @@ name: Update arXiv Papers & Website
 on:
   schedule:
     # Run at midnight EST (5 AM UTC) every day
-    - cron: '0 5 * * *'
+    - cron: '0 * * * *'
   
   # Allow manual trigger from GitHub Actions tab
   workflow_dispatch:
@@ -59,7 +59,11 @@ jobs:
         run: |
           python scripts/update_papers.py
 
-      # Step 8: Commit and push changes
+      # Step 8: Copy papers.json to site root
+      - name: Copy papers.json to root
+        run: cp data/papers.json papers.json
+
+      # Step 9: Commit and push changes
       - name: Commit and push changes
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
@@ -69,7 +73,7 @@ jobs:
           git config user.name "GitHub Actions"
           git config user.email "actions@github.com"
           git remote set-url origin "https://x-access-token:${GITHUB_TOKEN}@github.com/${GITHUB_REPOSITORY}.git"
-          git add data/papers.json data/papers-raw.json
+          git add data/papers.json data/papers-raw.json papers.json
           if git diff --cached --quiet; then
             echo "No changes to commit."
             exit 0
