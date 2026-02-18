@@ -10,7 +10,7 @@ const path = require('path');
 const xml2js = require('xml2js');
 
 // Configuration
-const ARXIV_API = 'https://arxiv.org/api/query';
+const ARXIV_API = 'https://export.arxiv.org/api/query';
 const KEYWORDS = [
   'machine learning',
   'natural language processing',

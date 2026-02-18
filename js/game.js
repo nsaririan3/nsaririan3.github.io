@@ -340,12 +340,10 @@ function render() {
     }
   }
 
-  // Power-up (Power Pellet)
+  // Power-up (Rose)
   if (powerUp.active) {
-    ctx.fillStyle = '#FFD700'; // Gold color
-    ctx.beginPath();
-    ctx.arc(powerUp.gridX * GRID_SIZE + GRID_SIZE / 2, powerUp.gridY * GRID_SIZE + GRID_SIZE / 2, GRID_SIZE / 3, 0, Math.PI * 2);
-    ctx.fill();
+    ctx.font = '16px Arial';
+    ctx.fillText('🌹', powerUp.gridX * GRID_SIZE + 2, (powerUp.gridY + 1) * GRID_SIZE - 2);
   }
 
   // Pac-Man
@@ -372,12 +370,10 @@ function render() {
     ctx.fill();
   });
 
-  // Projectiles
+  // Projectiles (Hearts)
   projectiles.forEach((proj) => {
-    ctx.fillStyle = '#FF0000'; // Red color
-    ctx.beginPath();
-    ctx.arc(proj.gridX * GRID_SIZE + GRID_SIZE / 2, proj.gridY * GRID_SIZE + GRID_SIZE / 2, 3, 0, Math.PI * 2);
-    ctx.fill();
+    ctx.font = '14px Arial';
+    ctx.fillText('💕', proj.gridX * GRID_SIZE + 2, (proj.gridY + 1) * GRID_SIZE - 4);
   });
 }
 
