@@ -295,7 +295,7 @@ function spawnPowerUp() {
       powerUp.gridX = x;
       powerUp.gridY = y;
       powerUp.active = true;
-      console.log('🌹 Rose spawned at', x, y);
+      console.log('⭐ Power pellet spawned at', x, y);
     }
   }
 
@@ -340,10 +340,12 @@ function render() {
     }
   }
 
-  // Power-up (Rose)
+  // Power-up (Power Pellet)
   if (powerUp.active) {
-    ctx.font = '16px Arial';
-    ctx.fillText('🌹', powerUp.gridX * GRID_SIZE + 2, (powerUp.gridY + 1) * GRID_SIZE - 2);
+    ctx.fillStyle = '#FFD700'; // Gold color
+    ctx.beginPath();
+    ctx.arc(powerUp.gridX * GRID_SIZE + GRID_SIZE / 2, powerUp.gridY * GRID_SIZE + GRID_SIZE / 2, GRID_SIZE / 3, 0, Math.PI * 2);
+    ctx.fill();
   }
 
   // Pac-Man
@@ -370,10 +372,12 @@ function render() {
     ctx.fill();
   });
 
-  // Projectiles (Hearts)
+  // Projectiles
   projectiles.forEach((proj) => {
-    ctx.font = '14px Arial';
-    ctx.fillText('💕', proj.gridX * GRID_SIZE + 2, (proj.gridY + 1) * GRID_SIZE - 4);
+    ctx.fillStyle = '#FF0000'; // Red color
+    ctx.beginPath();
+    ctx.arc(proj.gridX * GRID_SIZE + GRID_SIZE / 2, proj.gridY * GRID_SIZE + GRID_SIZE / 2, 3, 0, Math.PI * 2);
+    ctx.fill();
   });
 }
 

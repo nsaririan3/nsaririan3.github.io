@@ -101,7 +101,7 @@ function generateIndexHTML() {
         <div class="features-grid">
           <div class="feature-card">
             <h3>🎮 Play Game</h3>
-            <p>Enjoy a Valentine's-themed Pac-Man game with special rose power-ups and heart projectiles.</p>
+            <p>Enjoy a classic Pac-Man game with power pellets and projectile abilities.</p>
           </div>
           <div class="feature-card">
             <h3>📰 Paper Feed</h3>
@@ -192,9 +192,9 @@ function generateGameHTML() {
         <ul>
           <li><strong>Arrow Keys</strong> - Move Pac-Man</li>
           <li><strong>Spacebar</strong> - Start/Pause game</li>
-          <li><strong>Spacebar</strong> - Fire hearts (with rose power-up)</li>
+          <li><strong>Spacebar</strong> - Fire projectiles (with power pellet)</li>
           <li><strong>Objective</strong> - Eat all pellets and avoid ghosts</li>
-          <li><strong>Power-up</strong> - Rose gives you heart projectiles for 10 seconds</li>
+          <li><strong>Power-up</strong> - Power pellet gives you projectile ability for 10 seconds</li>
           <li><strong>Scoring</strong> - Pellets: 10pts | Ghost: 100pts | Power-up: 200pts</li>
         </ul>
       </div>
@@ -202,7 +202,7 @@ function generateGameHTML() {
   </main>
 
   <footer role="contentinfo">
-    <p>❤️ Pac-Man game with Valentine's Day theming</p>
+    <p>Pac-Man Game</p>
   </footer>
 
   <script src="js/game.js"></script>
