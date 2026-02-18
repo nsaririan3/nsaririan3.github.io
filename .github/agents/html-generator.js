@@ -139,7 +139,7 @@ function generateIndexHTML() {
 
   <footer role="contentinfo">
     <p>Last updated: <time>${formattedDate}</time></p>
-    <p>❤️ Built with Valentine's Day love in 2025</p>
+    <p>Built with ❤️ in 2025</p>
   </footer>
 </body>
 </html>`;
@@ -154,7 +154,7 @@ function generateGameHTML() {
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Valentine's Pac-Man Game</title>
+  <title>Pac-Man Game</title>
   <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
@@ -171,7 +171,7 @@ function generateGameHTML() {
 
   <main role="main" class="game-main">
     <section class="game-container">
-      <h1>💖 Valentine's Pac-Man Game 🌹</h1>
+      <h1>Pac-Man Game</h1>
       
       <div class="game-controls">
         <button id="startBtn" class="btn btn-primary" aria-label="Start Game">Start Game</button>
@@ -358,14 +358,16 @@ function generatePapersHTML() {
  * Generate css/style.css
  */
 function generateStyleCSS() {
-  return `/* Valentine's Day Color Palette */
+  return `/* Professional Blue/Gray Color Palette */
 :root {
-  --primary-red: #ff1744;
-  --pink: #ff69b4;
-  --dark-red: #c41c3b;
+  --primary-color: #2563eb;
+  --primary-dark: #1e40af;
+  --secondary-color: #64748b;
+  --accent-color: #3b82f6;
   --white: #ffffff;
-  --light-pink: #ffb3d9;
-  --gray: #f5f5f5;
+  --light-gray: #f1f5f9;
+  --gray: #e2e8f0;
+  --dark-gray: #334155;
 }
 
 * {
@@ -940,7 +942,7 @@ function main() {
     console.log(`   - index.html (homepage)`);
     console.log(`   - game.html (Pac-Man game)`);
     console.log(`   - papers.html (paper feed)`);
-    console.log(`   - css/style.css (Valentine's styling)`);
+    console.log(`   - css/style.css (Professional styling)`);
     
     process.exit(0);
   } catch (error) {
