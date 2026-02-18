@@ -71,7 +71,28 @@
       .then(res => res.json())
       .then(data => {
         const papers = data.papers || [];
+        const metadata = data.metadata || {};
         const container = document.getElementById('papersList');
+        
+        // Update metadata display
+        const totalPapersEl = document.querySelector('.papers-info strong');
+        const lastUpdatedEl = document.querySelector('.papers-info time');
+        
+        if (totalPapersEl) {
+          totalPapersEl.textContent = metadata.totalCount || papers.length;
+        }
+        
+        if (lastUpdatedEl && metadata.lastUpdated) {
+          const date = new Date(metadata.lastUpdated);
+          lastUpdatedEl.textContent = date.toLocaleString('en-US', {
+            year: 'numeric',
+            month: 'numeric', 
+            day: 'numeric',
+            hour: 'numeric',
+            minute: '2-digit',
+            hour12: true
+          });
+        }
         
         if (papers.length === 0) {
           container.innerHTML = '<p class="no-papers">No papers found. Check back at midnight!</p>';
