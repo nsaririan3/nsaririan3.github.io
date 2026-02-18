@@ -9,7 +9,7 @@
 <body>
   <header role="banner">
     <nav aria-label="Main Navigation">
-      <h1>Personal Coding Blog</h1>
+      <h1>💕 Personal Coding Blog</h1>
       <ul>
         <li><a href="index.html">Home</a></li>
         <li><a href="game.html">Game</a></li>
@@ -21,13 +21,13 @@
   <main role="main">
     <section class="papers-section">
       <div class="container">
-        <h1>Latest arXiv Papers</h1>
-        <p class="subtitle">Machine learning, NLP, and quantum computing research</p>
+        <h1>📰 Latest arXiv Papers</h1>
+        <p class="subtitle">Tracking papers in machine learning, NLP, and quantum computing</p>
         
         <div class="papers-info">
-          <p>Total papers: <strong id="paperCount">0</strong></p>
-          <p>Last updated: <time id="lastUpdated">Loading...</time></p>
-          <p>Updates every midnight EST</p>
+          <p>Total papers: <strong>0</strong></p>
+          <p>Last updated: <time>2/18/2026, 5:56:46 AM</time></p>
+          <p>Updates every midnight EST 🌙</p>
         </div>
 
         <!-- Search & Filter Controls -->
@@ -36,7 +36,7 @@
             type="text" 
             id="searchInput" 
             class="search-input" 
-            placeholder="Search papers by title or author..."
+            placeholder="Search papers by title..."
             aria-label="Search papers"
           >
           
@@ -46,7 +46,7 @@
             <option value="author">Sort by: Author A-Z</option>
           </select>
 
-          <div class="filters" role="group" aria-label="Filter by category">
+          <div class="filters" role="group" aria-label="Filter by keyword">
             <label><input type="checkbox" value="cs.LG" checked> Machine Learning</label>
             <label><input type="checkbox" value="cs.CL" checked> NLP</label>
             <label><input type="checkbox" value="quant-ph" checked> Quantum</label>
@@ -62,107 +62,72 @@
   </main>
 
   <footer role="contentinfo">
-    <p>Auto-updating arXiv Paper Feed</p>
+    <p>📚 Auto-updating arXiv paper feed</p>
   </footer>
 
   <script>
     // Load and render papers
-    let allPapers = [];
-
     fetch('data/papers.json')
       .then(res => res.json())
       .then(data => {
-        allPapers = data.papers || [];
+        const papers = data.papers || [];
         const container = document.getElementById('papersList');
         
-        // Update paper count and last updated
-        document.getElementById('paperCount').textContent = allPapers.length;
-        const lastUpdated = new Date(data.metadata?.lastUpdated || new Date());
-        document.getElementById('lastUpdated').textContent = lastUpdated.toLocaleString();
-        
-        if (allPapers.length === 0) {
+        if (papers.length === 0) {
           container.innerHTML = '<p class="no-papers">No papers found. Check back at midnight!</p>';
           return;
         }
 
-        renderPapers(allPapers);
+        function renderPapers(filtered) {
+          container.innerHTML = filtered.map(paper => `
+            <article class="paper-card">
+              <h3><a href="${paper.summaryUrl}" target="_blank">${paper.title}</a></h3>
+              <p class="authors">
+                ${paper.authors.slice(0, 3).map(a => `<span class="author">${a}</span>`).join(', ')}
+                ${paper.authors.length > 3 ? ' et al.' : ''}
+              </p>
+              <p class="date">📅 ${new Date(paper.publishedDate).toLocaleDateString('en-US', {
+                year: 'numeric', month: 'short', day: 'numeric'
+              })}</p>
+              <p class="abstract">${paper.abstract.substring(0, 200)}...</p>
+              <div class="tags">
+                <span class="tag">${paper.category}</span>
+              </div>
+              <a href="${paper.pdfUrl}" class="btn btn-primary" target="_blank">📄 Read PDF</a>
+            </article>
+          `).join('');
+        }
+
+        // Initial render
+        renderPapers(papers);
+
+        // Search functionality
+        document.getElementById('searchInput').addEventListener('input', (e) => {
+          const query = e.target.value.toLowerCase();
+          const filtered = papers.filter(p => 
+            p.title.toLowerCase().includes(query) ||
+            p.authors.some(a => a.toLowerCase().includes(query))
+          );
+          renderPapers(filtered);
+        });
+
+        // Sort functionality
+        document.getElementById('sortSelect').addEventListener('change', (e) => {
+          const sorted = [...papers];
+          if (e.target.value === 'title') {
+            sorted.sort((a, b) => a.title.localeCompare(b.title));
+          } else if (e.target.value === 'author') {
+            sorted.sort((a, b) => a.authors[0].localeCompare(b.authors[0]));
+          } else {
+            sorted.sort((a, b) => new Date(b.publishedDate) - new Date(a.publishedDate));
+          }
+          renderPapers(sorted);
+        });
       })
       .catch(err => {
         console.error('Error loading papers:', err);
         document.getElementById('papersList').innerHTML = '<p class="error">Error loading papers</p>';
       });
-
-    function renderPapers(papers) {
-      const container = document.getElementById('papersList');
-      if (papers.length === 0) {
-        container.innerHTML = '<p class="no-papers">No papers match your filters</p>';
-        return;
-      }
-
-      // Map category codes to readable names
-      const getCategoryLabel = (code) => {
-        const categoryMap = {
-          'cs.CL': 'NLP',
-          'cs.LG': 'Machine Learning',
-          'quant-ph': 'Quantum Computing',
-          'cs.AI': 'AI'
-        };
-        return categoryMap[code] || code;
-      };
-
-      container.innerHTML = papers.map(paper => `
-        <article class="paper-card">
-          <h3><a href="${paper.summaryUrl}" target="_blank" rel="noopener">${paper.title}</a></h3>
-          <p class="authors">
-            ${paper.authors.slice(0, 3).map(a => `<span class="author">${a}</span>`).join(', ')}
-            ${paper.authors.length > 3 ? ' et al.' : ''}
-          </p>
-          <p class="date">📅 ${new Date(paper.publishedDate).toLocaleDateString('en-US', {
-            year: 'numeric', month: 'short', day: 'numeric'
-          })}</p>
-          <p class="abstract">${paper.abstract.substring(0, 180)}...</p>
-          <div class="tags">
-            <span class="tag">${getCategoryLabel(paper.category)}</span>
-          </div>
-          <a href="${paper.pdfUrl}" class="btn btn-primary" target="_blank" rel="noopener">📄 Read PDF</a>
-        </article>
-      `).join('');
-    }
-
-    // Search functionality
-    document.getElementById('searchInput').addEventListener('input', (e) => {
-      const query = e.target.value.toLowerCase();
-      const filtered = allPapers.filter(p => 
-        p.title.toLowerCase().includes(query) ||
-        p.authors.some(a => a.toLowerCase().includes(query)) ||
-        p.abstract.toLowerCase().includes(query)
-      );
-      renderPapers(filtered);
-    });
-
-    // Sort functionality
-    document.getElementById('sortSelect').addEventListener('change', (e) => {
-      const sorted = [...allPapers];
-      if (e.target.value === 'title') {
-        sorted.sort((a, b) => a.title.localeCompare(b.title));
-      } else if (e.target.value === 'author') {
-        sorted.sort((a, b) => a.authors[0].localeCompare(b.authors[0]));
-      } else {
-        sorted.sort((a, b) => new Date(b.publishedDate) - new Date(a.publishedDate));
-      }
-      renderPapers(sorted);
-    });
-
-    // Filter checkboxes
-    document.querySelectorAll('.filters input[type="checkbox"]').forEach(checkbox => {
-      checkbox.addEventListener('change', () => {
-        const checkedCategories = Array.from(document.querySelectorAll('.filters input[type="checkbox"]:checked'))
-          .map(c => c.value);
-        
-        const filtered = allPapers.filter(p => checkedCategories.includes(p.category));
-        renderPapers(filtered);
-      });
-    });
   </script>
 </body>
 </html>
