@@ -49,13 +49,13 @@ function generateIndexHTML() {
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Personal Coding Blog - Valentine's Edition</title>
+  <title>Personal Coding Blog</title>
   <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
   <header role="banner">
     <nav aria-label="Main Navigation">
-      <h1>💕 Personal Coding Blog</h1>
+      <h1>Personal Coding Blog</h1>
       <ul>
         <li><a href="index.html" class="active">Home</a></li>
         <li><a href="game.html">Game</a></li>
@@ -68,11 +68,11 @@ function generateIndexHTML() {
     <!-- Hero Section -->
     <section class="hero">
       <div class="hero-content">
-        <h2>Valentine's Day Edition 2025 💖</h2>
-        <p class="tagline">Explore AI research and play a Valentine's-themed Pac-Man game</p>
+        <h2>Welcome to My Personal Coding Blog</h2>
+        <p class="tagline">Explore AI research and play a classic Pac-Man game</p>
         <div class="cta-buttons">
-          <a href="game.html" class="btn btn-primary">🎮 Play Pac-Man Game</a>
-          <a href="papers.html" class="btn btn-secondary">📚 Browse arXiv Papers</a>
+          <a href="game.html" class="btn btn-primary">Play Pac-Man Game</a>
+          <a href="papers.html" class="btn btn-secondary">Browse arXiv Papers</a>
         </div>
       </div>
     </section>
@@ -104,12 +104,12 @@ function generateIndexHTML() {
             <p>Enjoy a classic Pac-Man game with power pellets and projectile abilities.</p>
           </div>
           <div class="feature-card">
-            <h3>📰 Paper Feed</h3>
+            <h3>� Paper Feed</h3>
             <p>Auto-updating feed of latest arXiv papers in machine learning, NLP, and quantum computing.</p>
           </div>
           <div class="feature-card">
-            <h3>💕 Valentine's Theme</h3>
-            <p>Everything is beautifully styled with a Valentine's Day color scheme throughout.</p>
+            <h3>🎨 Professional Design</h3>
+            <p>Clean, modern design with professional blue and gray color scheme.</p>
           </div>
         </div>
       </div>
@@ -160,7 +160,7 @@ function generateGameHTML() {
 <body>
   <header role="banner">
     <nav aria-label="Main Navigation">
-      <h1>💕 Personal Coding Blog</h1>
+      <h1>Personal Coding Blog</h1>
       <ul>
         <li><a href="index.html">Home</a></li>
         <li><a href="game.html" class="active">Game</a></li>
@@ -230,7 +230,7 @@ function generatePapersHTML() {
 <body>
   <header role="banner">
     <nav aria-label="Main Navigation">
-      <h1>💕 Personal Coding Blog</h1>
+      <h1>Personal Coding Blog</h1>
       <ul>
         <li><a href="index.html">Home</a></li>
         <li><a href="game.html">Game</a></li>
@@ -242,13 +242,13 @@ function generatePapersHTML() {
   <main role="main">
     <section class="papers-section">
       <div class="container">
-        <h1>📰 Latest arXiv Papers</h1>
+        <h1>Latest arXiv Papers</h1>
         <p class="subtitle">Tracking papers in machine learning, NLP, and quantum computing</p>
         
         <div class="papers-info">
           <p>Total papers: <strong>${totalPapers}</strong></p>
           <p>Last updated: <time>${formattedDate}</time></p>
-          <p>Updates every midnight EST 🌙</p>
+          <p>Updates every midnight EST</p>
         </div>
 
         <!-- Search & Filter Controls -->
