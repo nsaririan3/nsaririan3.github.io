@@ -25,9 +25,9 @@
         <p class="subtitle">Tracking papers in machine learning, NLP, and quantum computing</p>
         
         <div class="papers-info">
-          <p>Total papers: <strong>0</strong></p>
-          <p>Last updated: <time>2/18/2026, 12:56:46 AM</time></p>
-          <p>Updates every midnight EST</p>
+          <p>Total papers: <strong id="totalPapers">0</strong></p>
+          <p>Last updated: <time>auto</time></p>
+          <p>Updates every hour</p>
         </div>
 
         <!-- Search & Filter Controls -->
@@ -67,7 +67,7 @@
 
   <script>
     // Load and render papers
-    fetch('data/papers.json')
+    fetch('papers.json')
       .then(res => res.json())
       .then(data => {
         const papers = data.papers || [];
@@ -75,7 +75,7 @@
         const container = document.getElementById('papersList');
         
         // Update metadata display
-        const totalPapersEl = document.querySelector('.papers-info strong');
+        const totalPapersEl = document.getElementById('totalPapers');
         const lastUpdatedEl = document.querySelector('.papers-info time');
         
         if (totalPapersEl) {

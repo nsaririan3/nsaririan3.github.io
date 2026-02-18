@@ -28,7 +28,7 @@ if (!fs.existsSync(DATA_DIR)) {
 /**
  * Query arXiv API with rate limiting and retry logic
  */
-async function queryArxiv(query, maxResults = 50, retries = 3) {
+async function queryArxiv(query, maxResults = 200, retries = 3) {
   for (let attempt = 1; attempt <= retries; attempt++) {
     try {
       const searchQuery = encodeURIComponent(query);
@@ -140,38 +140,88 @@ function extractPaperMetadata(entry) {
  * Create fallback sample data when API fails
  */
 function createFallbackData() {
-  console.log('📝 Creating fallback sample data due to API issues...');
+  console.log('📝 Creating comprehensive fallback sample data...');
   
   const samplePapers = [
     {
-      arxivId: "2502.12345",
+      arxivId: "2401.12345",
       title: "Advances in Machine Learning for Natural Language Processing",
       authors: ["Alice Johnson", "Bob Smith", "Carol Davis"],
       abstract: "This paper presents recent advances in applying machine learning techniques to natural language processing tasks. We explore transformer architectures and their applications in various NLP domains including sentiment analysis, machine translation, and question answering systems.",
       category: "cs.CL",
-      publishedDate: new Date().toISOString().split('T')[0],
-      pdfUrl: "https://arxiv.org/pdf/2502.12345.pdf",
-      summaryUrl: "https://arxiv.org/abs/2502.12345"
+      publishedDate: "2024-01-15",
+      pdfUrl: "https://arxiv.org/pdf/2401.12345.pdf",
+      summaryUrl: "https://arxiv.org/abs/2401.12345"
     },
     {
-      arxivId: "2502.12346", 
+      arxivId: "2401.12346",
       title: "Quantum Computing Algorithms for Optimization Problems",
       authors: ["David Wilson", "Eva Chen"],
       abstract: "We investigate quantum computing approaches to solve complex optimization problems. This work focuses on quantum annealing and variational quantum algorithms for combinatorial optimization, with applications to logistics and financial portfolio optimization.",
       category: "quant-ph",
-      publishedDate: new Date().toISOString().split('T')[0],
-      pdfUrl: "https://arxiv.org/pdf/2502.12346.pdf",
-      summaryUrl: "https://arxiv.org/abs/2502.12346"
+      publishedDate: "2024-01-14",
+      pdfUrl: "https://arxiv.org/pdf/2401.12346.pdf",
+      summaryUrl: "https://arxiv.org/abs/2401.12346"
     },
     {
-      arxivId: "2502.12347",
+      arxivId: "2401.12347",
       title: "Deep Learning Approaches to Computer Vision",
       authors: ["Frank Miller", "Grace Lee", "Henry Taylor"],
       abstract: "This comprehensive survey covers recent developments in deep learning for computer vision applications. We discuss convolutional neural networks, attention mechanisms, and their applications in image classification, object detection, and semantic segmentation.",
       category: "cs.CV",
-      publishedDate: new Date().toISOString().split('T')[0],
-      pdfUrl: "https://arxiv.org/pdf/2502.12347.pdf",
-      summaryUrl: "https://arxiv.org/abs/2502.12347"
+      publishedDate: "2024-01-13",
+      pdfUrl: "https://arxiv.org/pdf/2401.12347.pdf",
+      summaryUrl: "https://arxiv.org/abs/2401.12347"
+    },
+    {
+      arxivId: "2401.12348",
+      title: "Neural Machine Translation with Attention Mechanisms",
+      authors: ["Ivy Rodriguez", "Jack Thompson"],
+      abstract: "We present a novel approach to neural machine translation using advanced attention mechanisms. Our model achieves state-of-the-art performance on multiple language pairs by incorporating contextual embeddings and multi-head attention.",
+      category: "cs.CL",
+      publishedDate: "2024-01-12",
+      pdfUrl: "https://arxiv.org/pdf/2401.12348.pdf",
+      summaryUrl: "https://arxiv.org/abs/2401.12348"
+    },
+    {
+      arxivId: "2401.12349",
+      title: "Quantum Machine Learning: A Survey",
+      authors: ["Kevin Brown", "Lily Zhang", "Mike Davis", "Nina Patel"],
+      abstract: "This survey paper provides a comprehensive overview of quantum machine learning algorithms and their applications. We discuss quantum versions of classical ML algorithms including quantum support vector machines, quantum neural networks, and quantum clustering methods.",
+      category: "quant-ph",
+      publishedDate: "2024-01-11",
+      pdfUrl: "https://arxiv.org/pdf/2401.12349.pdf",
+      summaryUrl: "https://arxiv.org/abs/2401.12349"
+    },
+    {
+      arxivId: "2401.12350",
+      title: "Large Language Models for Code Generation",
+      authors: ["Oliver Wang", "Paula Garcia"],
+      abstract: "We explore the use of large language models for automatic code generation. Our experiments show significant improvements in code quality and correctness when using transformer-based models trained on large code corpora.",
+      category: "cs.SE",
+      publishedDate: "2024-01-10",
+      pdfUrl: "https://arxiv.org/pdf/2401.12350.pdf",
+      summaryUrl: "https://arxiv.org/abs/2401.12350"
+    },
+    {
+      arxivId: "2401.12351",
+      title: "Federated Learning with Differential Privacy",
+      authors: ["Quinn Johnson", "Rachel Kim", "Steve Lopez"],
+      abstract: "This paper addresses privacy concerns in federated learning by incorporating differential privacy mechanisms. We propose a novel framework that balances model accuracy with privacy guarantees across distributed data sources.",
+      category: "cs.LG",
+      publishedDate: "2024-01-09",
+      pdfUrl: "https://arxiv.org/pdf/2401.12351.pdf",
+      summaryUrl: "https://arxiv.org/abs/2401.12351"
+    },
+    {
+      arxivId: "2401.12352",
+      title: "Graph Neural Networks for Social Network Analysis",
+      authors: ["Tom Anderson", "Uma Patel"],
+      abstract: "We apply graph neural networks to analyze social network structures and dynamics. Our approach uses attention-based graph convolutions to capture complex relationships and predict user behavior in online social platforms.",
+      category: "cs.SI",
+      publishedDate: "2024-01-08",
+      pdfUrl: "https://arxiv.org/pdf/2401.12352.pdf",
+      summaryUrl: "https://arxiv.org/abs/2401.12352"
     }
   ];
   
@@ -196,7 +246,7 @@ async function main() {
         const query = `(ti:"${keyword}" OR au:"${keyword}")`;
         
         // Query arXiv API with rate limiting
-        const xmlData = await queryArxiv(query, 50); // Reduced from 100 to 50 per keyword
+        const xmlData = await queryArxiv(query, 500); // Get up to 500 per keyword
         
         // Parse XML response
         const entries = await parseArxivResponse(xmlData);
