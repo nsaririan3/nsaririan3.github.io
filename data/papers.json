@@ -1,7 +1,7 @@
 {
   "metadata": {
     "totalCount": 100,
-    "lastUpdated": "2026-04-13T01:48:39.295516Z",
+    "lastUpdated": "2026-04-13T04:51:37.108146Z",
     "keywords": [
       "machine learning",
       "natural language processing",
@@ -9,6 +9,66 @@
     ]
   },
   "papers": [
+    {
+      "arxivId": "2604.09538v1",
+      "title": "Explicit Block Encoding of Difference-of-Gaussian Operators on a Periodic Grid",
+      "authors": [
+        "Jishnu Mahmud",
+        "John Winship",
+        "Tom Lash",
+        "James Ostrowski",
+        "Rebekah Herrman"
+      ],
+      "abstract": "The Difference-of-Gaussian (DoG) is a widely used operator across applications, including image processing (feature and edge detection), quantum machine learning, and finite-difference methods (approximations of the Laplacian-of-Gaussian). In this paper, we construct an explicit quantum block encoding of the DoG operator on a periodic grid, exploiting its natural probabilistic structure. The central observation is that the DoG admits a natural decomposition to two normalized Gaussian distributions, each preparable by explicit and efficient circuits, with the negation encoded using a single Pauli-$Z$ gate on a branch-indicator qubit. This enables the operator's block encoding to be directly mapped to the Linear Combination of Unitaries framework without requiring signed amplitude loading, quantum random-access memory, or any other black-box oracles. The proposed method achieves a constant subnormalization factor $\u03bb= 2$ independent of the grid size $N$, the spatial dimension $D$, and the stencil width. Additionally, we show that the DoG operator is diagonalized by the discrete Fourier basis, which allows us to derive an exact closed-form expression for the block-encoding success probability in terms of the input signal's power spectrum, weighted by the operator's transfer function. Finally, we prove that the expression reduces to $O(h^4)$ scaling with respect to grid spacing $h$ as the periodic grid becomes finer. This implementation provides an explicit construction method for a tunable, wide-stencil bandpass filter whose frequency response is controlled by two Gaussian scale parameters.",
+      "publishedDate": "2026-04-10",
+      "pdfUrl": "https://arxiv.org/pdf/2604.09538v1",
+      "summaryUrl": "https://arxiv.org/abs/2604.09538v1",
+      "category": "quant-ph"
+    },
+    {
+      "arxivId": "2604.09528v1",
+      "title": "Machine Learning Phase Field Reconstruction in a Bose-Einstein Condensate",
+      "authors": [
+        "Jackson Lee",
+        "Andrew J Millis"
+      ],
+      "abstract": "A basic challenge in experimental physics is the extraction of information related to variables that are not directly measured. The challenge is particularly severe in quantum systems where one may be interested in correlations of operators that are not diagonal in the measurement basis. In this paper we take a step towards addressing this issue in the context of Boson superfluids, where standard in-situ imaging yields only the spatially resolved density, leaving the phase field - crucial for identifying topological defects such as vortices and confirming superfluidity - indirectly encoded. Previous work has shown that the location of vortices in the phase field may be detected, but has not solved the problems of fully reconstructing the phase or identifying the charge (vortex vs. antivortex). This paper shows that a combination of a deep machine learning (ML) model and classical computer vision post-processing steps can address this gap. We use realistic snapshots of the thermal state of a two-dimensional BEC in a harmonic trap using synthetic data obtained from projected Gross-Pitaevskii equation simulations to train a U-Net-based architecture to infer the absolute values of the phase field gradients from an observed density field, and then employ a separate ML model to locate the positions of the vortex cores and a post-processing graphical analysis to determine with high accuracy the phase field, including the quantized charge of each vortex.",
+      "publishedDate": "2026-04-10",
+      "pdfUrl": "https://arxiv.org/pdf/2604.09528v1",
+      "summaryUrl": "https://arxiv.org/abs/2604.09528v1",
+      "category": "cond-mat.quant-gas"
+    },
+    {
+      "arxivId": "2604.09499v1",
+      "title": "Physics-Informed Reinforcement Learning of Spatial Density Velocity Potentials for Map-Free Racing",
+      "authors": [
+        "Shathushan Sivashangaran",
+        "Apoorva Khairnar",
+        "Sepideh Gohari",
+        "Vihaan Dutta",
+        "Azim Eskandarian"
+      ],
+      "abstract": "Autonomous racing without prebuilt maps is a grand challenge for embedded robotics that requires kinodynamic planning from instantaneous sensor data at the acceleration and tire friction limits. Out-Of-Distribution (OOD) generalization to various racetrack configurations utilizes Machine Learning (ML) to encode the mathematical relation between sensor data and vehicle actuation for end-to-end control, with implicit localization. These comprise Behavioral Cloning (BC) that is capped to human reaction times and Deep Reinforcement Learning (DRL) which requires large-scale collisions for comprehensive training that can be infeasible without simulation but is arduous to transfer to reality, thus exhibiting greater performance than BC in simulation, but actuation instability on hardware. This paper presents a DRL method that parameterizes nonlinear vehicle dynamics from the spectral distribution of depth measurements with a non-geometric, physics-informed reward, to infer vehicle time-optimal and overtaking racing controls with an Artificial Neural Network (ANN) that utilizes less than 1% of the computation of BC and model-based DRL. Slaloming from simulation to reality transfer and variance-induced conservatism are eliminated with the combination of a physics engine exploit-aware reward and the replacement of an explicit collision penalty with an implicit truncation of the value horizon. The policy outperforms human demonstrations by 12% in OOD tracks on proportionally scaled hardware, by maximizing the friction circle with tire dynamics that resemble an empirical Pacejka tire model. System identification illuminates a functional bifurcation where the first layer compresses spatial observations to extract digitized track features with higher resolution in corner apexes, and the second encodes nonlinear dynamics.",
+      "publishedDate": "2026-04-10",
+      "pdfUrl": "https://arxiv.org/pdf/2604.09499v1",
+      "summaryUrl": "https://arxiv.org/abs/2604.09499v1",
+      "category": "cs.RO"
+    },
+    {
+      "arxivId": "2604.09472v1",
+      "title": "Data Selection Effects on Self-Supervised Learning of Audio Representations for French Audiovisual Broadcasts",
+      "authors": [
+        "Valentin Pelloin",
+        "Lina Bekkali",
+        "Reda Dehak",
+        "David Doukhan"
+      ],
+      "abstract": "Audio and speech self-supervised encoder models are now widely used for a lot of different tasks. Many of these models are often trained on clean segmented speech content such as LibriSpeech. In this paper, we look into how the pretraining datasets of such SSL (Self-Supervised Learning) models impact their downstream results. We build a large pretraining corpus of highly diverse TV and Radio broadcast audio content, which we describe with automatic tools. We use these annotations to build smaller subsets, which we use to train audio SSL models. Then, we evaluate the models on multiple downstream tasks such as automatic speech recognition, voice activity and music detection, or speaker recognition. The results show the potential of pretraining SSL models on diverse audio content without restricting it to speech. We also perform a membership inference attack to evaluate the encoder ability to memorize their training datasets, which highlight the importance of data deduplication. This unified training could bridge speech and music machine learning communities.",
+      "publishedDate": "2026-04-10",
+      "pdfUrl": "https://arxiv.org/pdf/2604.09472v1",
+      "summaryUrl": "https://arxiv.org/abs/2604.09472v1",
+      "category": "eess.AS"
+    },
     {
       "arxivId": "2604.09437v1",
       "title": "AdaCubic: An Adaptive Cubic Regularization Optimizer for Deep Learning",
@@ -1570,91 +1630,6 @@
       "pdfUrl": "https://arxiv.org/pdf/2604.07233v1",
       "summaryUrl": "https://arxiv.org/abs/2604.07233v1",
       "category": "cs.LG"
-    },
-    {
-      "arxivId": "2604.07219v1",
-      "title": "Robust Hybrid Beamforming with Liquid Crystal Antennas and Liquid Neural Networks",
-      "authors": [
-        "Xinquan Wang",
-        "Mingjun Ying",
-        "Hongren Chen",
-        "Guanyue Qian",
-        "Xingchen Liu",
-        "Peijie Ma",
-        "Dipankar Shakya",
-        "Christos Argyropoulos",
-        "Theodore S. Rappaport"
-      ],
-      "abstract": "Sub-terahertz (sub-THz) multi-user multiple-input multiple-output (MU-MIMO) systems unlock immense bandwidth for 6G wireless communications. However, practical deployment of wireless systems in sub-THz bands faces critical challenges such as increased atmospheric absorption, reduced channel coherence time due to increased Doppler spread at higher carrier frequencies, and hardware bottlenecks as low-loss sub-THz phase shifters are difficult to realize. To overcome the hardware and channel estimation challenges of sub-THz systems, this paper proposes a hybrid beamforming (BF) framework that integrates reconfigurable liquid crystal (LC) antennas with a liquid neural network (LNN) for transmitter. Specifically, we employ an LC antenna as the analog BF stage of a hybrid BF architecture, exploiting its voltage-driven permittivity tunability to achieve high-gain beam steering without the need for lossy phase shifters. For digital BF, we utilize an ordinary differential equations-defined LNN to learn temporal channel dynamics, and use a manifold optimization technique to compress the search space. We validated the proposed method on simulated site-specific 108 GHz ray-tracing channels in an urban scenario using NYURay, a ray-tracing simulator validated against 142 GHz propagation measurements. The 108 GHz carrier frequency matches the operating band of the LC antenna hardware. The proposed method achieves an 88.6\\% spectral efficiency (SE) gain and higher robustness to imperfect channel estimation compared to the learning-aided gradient descent and gated recurrent unit machine learning baselines, and 1.9 times higher SE than the 3GPP TR~38.901 standard antenna model, highlighting the potential of LC-based hardware for sub-THz communications.",
-      "publishedDate": "2026-04-08",
-      "pdfUrl": "https://arxiv.org/pdf/2604.07219v1",
-      "summaryUrl": "https://arxiv.org/abs/2604.07219v1",
-      "category": "cs.IT"
-    },
-    {
-      "arxivId": "2604.07214v1",
-      "title": "Quantum Gibbs sampling through the detectability lemma",
-      "authors": [
-        "Di Fang",
-        "Jianfeng Lu",
-        "Yu Tong",
-        "Chu Zhao"
-      ],
-      "abstract": "Gibbs state preparation is an important subroutine in quantum computing. In this work we use the detectability lemma to improve Gibbs state preparation. Specifically, we design new Gibbs state preparation methods that do not rely on simulating Lindbladian evolution, thus avoiding the overhead from it. For local Lindbladians consisting of $M$ terms, this approach reduces the cost by a factor of $O(M)$. We also combine the detectability lemma operator and quantum singular value transformation to implement ground state projection operators of frustration-free Hamiltonians, resulting in a quadratic speedup in the spectral gap dependence. Applying this method to Lindbladians for the Gibbs state of local commuting Hamiltonians, we achieve quadratically better dependence on the Lindbladian spectral gap.",
-      "publishedDate": "2026-04-08",
-      "pdfUrl": "https://arxiv.org/pdf/2604.07214v1",
-      "summaryUrl": "https://arxiv.org/abs/2604.07214v1",
-      "category": "quant-ph"
-    },
-    {
-      "arxivId": "2604.07205v1",
-      "title": "Defect-free arrays at the thousand-atom scale in a 4-K cryogenic environment",
-      "authors": [
-        "Desiree Lim",
-        "Hadriel Mamann",
-        "Gr\u00e9goire Pichard",
-        "Lilian Bourachot",
-        "Arvid Lindberg",
-        "Clotilde Hamot",
-        "Hugo Le Bars",
-        "Florian Fasola",
-        "Siddhy Tan",
-        "Gwennol\u00e9 Cournez",
-        "Sylvain Dutartre",
-        "Thierry Cartry",
-        "Sylvain Lemettre",
-        "Richard Hostein",
-        "Julien Paris",
-        "Franck Ferreyrol",
-        "Andr\u00e9a Collardey",
-        "Adrien Signoles",
-        "Thierry Lahaye",
-        "Corentin Monmeyran",
-        "Bruno Ximenez"
-      ],
-      "abstract": "We report on a cryogenic platform at 4 K incorporating high numerical aperture optics for the generation of large-scale tweezers arrays, and compatible with Rydberg-state manipulation. We achieve trapping lifetimes of around 5000 s, significantly extending the available experimental time for the preparation of large-scale arrays. By combining two trapping lasers at different wavelengths and by minimizing other atom losses during the rearrangement and imaging processes, we demonstrate the preparation of defect-free arrays with up to 1024 atoms. Our cryogenic design opens exciting prospects for analog and digital quantum computing.",
-      "publishedDate": "2026-04-08",
-      "pdfUrl": "https://arxiv.org/pdf/2604.07205v1",
-      "summaryUrl": "https://arxiv.org/abs/2604.07205v1",
-      "category": "physics.atom-ph"
-    },
-    {
-      "arxivId": "2604.07197v1",
-      "title": "Machine learning Hamiltonian enables scalable and accurate defect calculations: The case of oxygen vacancies in amorphous SiO$_2$",
-      "authors": [
-        "Zhenxing Dai",
-        "Zhong Yang",
-        "Mingjue Ni",
-        "Menglin Huang",
-        "Hongjun Xiang",
-        "Xin-Gao Gong",
-        "Shiyou Chen"
-      ],
-      "abstract": "Point defects critically influence the properties of materials and devices, yet density functional theory (DFT) remains computationally demanding for defect supercell calculations. Machine learning interatomic potentials (MLIPs) offer high efficiency but require extensive datasets. MLIPs trained only on defect configurations in small supercells exhibit systematic energy errors in larger supercells, demonstrating limited transferability. Here, we present a machine learning Hamiltonian (MLH) model-based method for calculating total energies and atomic forces in defect supercells with linear-scaling computational cost, enabling efficient structural relaxation and accurate formation energy predictions. We take oxygen vacancies in amorphous SiO$_2$ as an example and train the MLH model on defect configurations in 95-atom supercells, with the training data derived from 120 self-consistent field calculations and 12 structural relaxations. The MLH model enables efficient structural relaxations for host (defect-free) and defect systems in larger supercells, avoiding the systematic energy errors observed in MLIPs. The cancellation of energy errors between host and defect systems yields accurate formation energy predictions, with deviations from DFT below 50 meV. The proposed method holds significant potential for defect simulations in complex materials.",
-      "publishedDate": "2026-04-08",
-      "pdfUrl": "https://arxiv.org/pdf/2604.07197v1",
-      "summaryUrl": "https://arxiv.org/abs/2604.07197v1",
-      "category": "cond-mat.mtrl-sci"
     }
   ]
 }
