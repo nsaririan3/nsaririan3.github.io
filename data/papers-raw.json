@@ -1,6 +1,652 @@
 {
   "papers": [
     {
+      "arxivId": "2604.20691v1",
+      "title": "Bayesian approach for uncertainty quantification of hybrid spectral unmixing in $\u03b3$-ray spectrometry",
+      "authors": [
+        "Dinh Triem Phan",
+        "J\u00e9r\u00f4me Bobin",
+        "Cheick Thiam",
+        "Christophe Bobin"
+      ],
+      "abstract": "Identifying and quantifying $\u03b3$-emitting radionuclides, considering spectral deformation from $\u03b3$-interactions in radioactive source surroundings, present a significant challenge in $\u03b3$-ray spectrometry. In that context, a hybrid machine learning method has been previously proposed to jointly estimate the counting and spectral signatures of $\u03b3$-emitters under conditions of spectral variability. This paper addresses the uncertainty quantification of the estimators (i.e., the counting and the variable $\u03bb$ which characterizes the spectral signatures) obtained by this spectral unmixing algorithm. The focus is on the coverage interval, as defined by the GUM, which corresponds closely to a credible interval in the Bayesian framework. Given the inverse problem and the constraints associated with spectral deformation, two Bayesian methods - Laplace approximation and Markov Chain Monte Carlo - have been developed for uncertainty quantification to ensure robust decision-making. The Laplace approximation technique approximates the posterior distribution by a Gaussian distribution, while the Markov Chain Monte Carlo technique samples the posterior distribution. This study evaluates these two methods in terms of precision of coverage interval based on repeated Monte Carlo samples using the long-run success rate. Numerical experiments show that both methods yield similar results close to the expected success rate of 95.4$\\%$ when constraints related to spectral signatures deformation and counting are inactive. However, when constraints are active or the background counting significantly dominates other radionuclides, the Laplace approximation method deviates from the expected long-run success rate due to the non-Gaussian posterior distribution. In such cases, the Markov Chain Monte Carlo method still provides robust results.",
+      "publishedDate": "2026-04-22",
+      "pdfUrl": "https://arxiv.org/pdf/2604.20691v1",
+      "summaryUrl": "https://arxiv.org/abs/2604.20691v1",
+      "category": "physics.data-an"
+    },
+    {
+      "arxivId": "2604.20636v1",
+      "title": "Load-dependent Hardness Prediction for Materials using Machine Learning",
+      "authors": [
+        "Madhubanti Mukherjee",
+        "Rampi Ramprasad",
+        "Harikrishna Sahu"
+      ],
+      "abstract": "Superhard materials are critical for wear-resistant and high-stress applications. Conventional approaches correlating hardness with elastic moduli derived from DFT calculations enable rapid screening but overlook the strong load dependence of hardness. In this work, machine learning (ML) models were developed using a large, curated dataset of load-dependent experimental Vickers hardness (Hv) measurements. Moderate correlation was observed between experimental and DFT-based Hv values, whereas a single-task ML model trained solely on experimental data outperformed multi-task models that combined experimental and computed data. The superior performance of the single-task model highlights that explicit inclusion of indentation load, along with compositional, electronic, and structural descriptors, is essential and sufficient for accurate hardness prediction, beyond what can be achieved using DFT-accessible bulk and shear moduli alone (or in tandem with experimental data). These results emphasize the importance of high-quality experimental data and explicit inclusion of measurement conditions, particularly load, in the development of reliable hardness prediction models.",
+      "publishedDate": "2026-04-22",
+      "pdfUrl": "https://arxiv.org/pdf/2604.20636v1",
+      "summaryUrl": "https://arxiv.org/abs/2604.20636v1",
+      "category": "cond-mat.mtrl-sci"
+    },
+    {
+      "arxivId": "2604.20622v1",
+      "title": "pAI/MSc: ML Theory Research with Humans on the Loop",
+      "authors": [
+        "Mahmoud Abdelmoneum",
+        "Pierfrancesco Beneventano",
+        "Tomaso Poggio"
+      ],
+      "abstract": "We present pAI/MSc, an open-source, customizable, modular multi-agent system for academic research workflows. Our goal is not autonomous scientific ideation, nor fully automated research. It is narrower and more practical: to reduce by orders of magnitude the human steering required to turn a specified hypothesis into a literature-grounded, mathematically established, experimentally supported, submission-oriented manuscript draft. pAI/MSc is built with a current emphasis on machine learning theory and adjacent quantitative fields.",
+      "publishedDate": "2026-04-22",
+      "pdfUrl": "https://arxiv.org/pdf/2604.20622v1",
+      "summaryUrl": "https://arxiv.org/abs/2604.20622v1",
+      "category": "cs.AI"
+    },
+    {
+      "arxivId": "2604.20593v1",
+      "title": "Predicting co-segregation in multicomponent alloys with solute-solute interactions",
+      "authors": [
+        "Zuoyong Zhang",
+        "Chuang Deng"
+      ],
+      "abstract": "The co-segregation of impurities in multicomponent alloys has been widely recognized as an effective strategy for tailoring material properties. However, quantitative predictions of co-segregation behavior remain a significant challenge for alloy design in systems containing multiple solute species. In this work, we develop an extended dual-solute (DS) segregation framework to quantitatively predict co-segregation behavior with solute-solute interactions, including both homoatomic and heteroatomic contributions. A machine-learning workflow is first established to predict the pairwise segregation energy to construct the DS segregation energy spectra that intrinsically include solute-solute interactions. The resulting spectral information is then utilized to determine the upper and lower bounds of segregation for individual solutes. When applied to magnesium-based multicomponent systems constructed by alloying Mg with any two of the 11 candidate solute species, the extended DS segregation framework is successfully validated by hybrid molecular dynamics/Monte Carlo simulations and experimental results available in existing literature. Furthermore, we introduce a design strategy to promote co-segregation by incorporating additional solute species that exhibit attractive interactions with existing solutes, thereby enabling enhanced segregation even in the presence of strong site competition. These results underscore the critical role of solute-solute interactions in governing co-segregation behavior and provide a predictive pathway for the design and optimization of multicomponent alloys.",
+      "publishedDate": "2026-04-22",
+      "pdfUrl": "https://arxiv.org/pdf/2604.20593v1",
+      "summaryUrl": "https://arxiv.org/abs/2604.20593v1",
+      "category": "cond-mat.mtrl-sci"
+    },
+    {
+      "arxivId": "2604.20553v1",
+      "title": "DeepParse: Hybrid Log Parsing with LLM-Synthesized Regex Masks",
+      "authors": [
+        "Amir Shetaia",
+        "Sean Kauffman"
+      ],
+      "abstract": "Modern distributed systems produce massive, heterogeneous logs essential for reliability, security, and anomaly detection. Converting these free-form messages into structured templates (log parsing) is challenging due to evolving formats and limited labeled data. Machine-learning-based parsers like Drain are fast but accuracy often degrades on complex variables, while Large Language Models (LLMs) offer better generalization but incur prohibitive inference costs. This paper presents DeepParse, a hybrid framework that automatically mines reusable variable patterns from small log samples using an LLM, then applies them deterministically through the Drain algorithm. By separating the reasoning phase from execution, DeepParse enables accurate, scalable, and cost-efficient log structuring without relying on brittle handcrafted rules or per-line neural inference. Across 16 benchmark datasets, DeepParse achieves higher accuracy in variable extraction (97.6% average Parsing Accuracy) and better consistency than both heuristic and LLM-only baselines. Integrating DeepParse into an anomaly detection pipeline reduced false alarms by over 30% and reduced inference latency by 36% compared to heuristic baselines.",
+      "publishedDate": "2026-04-22",
+      "pdfUrl": "https://arxiv.org/pdf/2604.20553v1",
+      "summaryUrl": "https://arxiv.org/abs/2604.20553v1",
+      "category": "cs.SE"
+    },
+    {
+      "arxivId": "2604.20551v1",
+      "title": "On Bayesian Softmax-Gated Mixture-of-Experts Models",
+      "authors": [
+        "Nicola Bariletto",
+        "Huy Nguyen",
+        "Nhat Ho",
+        "Alessandro Rinaldo"
+      ],
+      "abstract": "Mixture-of-experts models provide a flexible framework for learning complex probabilistic input-output relationships by combining multiple expert models through an input-dependent gating mechanism. These models have become increasingly prominent in modern machine learning, yet their theoretical properties in the Bayesian framework remain largely unexplored. In this paper, we study Bayesian mixture-of-experts models, focusing on the ubiquitous softmax-based gating mechanism. Specifically, we investigate the asymptotic behavior of the posterior distribution for three fundamental statistical tasks: density estimation, parameter estimation, and model selection. First, we establish posterior contraction rates for density estimation, both in the regimes with a fixed, known number of experts and with a random learnable number of experts. We then analyze parameter estimation and derive convergence guarantees based on tailored Voronoi-type losses, which account for the complex identifiability structure of mixture-of-experts models. Finally, we propose and analyze two complementary strategies for selecting the number of experts. Taken together, these results provide one of the first systematic theoretical analyses of Bayesian mixture-of-experts models with softmax gating, and yield several theory-grounded insights for practical model design.",
+      "publishedDate": "2026-04-22",
+      "pdfUrl": "https://arxiv.org/pdf/2604.20551v1",
+      "summaryUrl": "https://arxiv.org/abs/2604.20551v1",
+      "category": "stat.ML"
+    },
+    {
+      "arxivId": "2604.20548v1",
+      "title": "Enhancing Research Idea Generation through Combinatorial Innovation and Multi-Agent Iterative Search Strategies",
+      "authors": [
+        "Shuai Chen",
+        "Chengzhi Zhang"
+      ],
+      "abstract": "Scientific progress depends on the continual generation of innovative re-search ideas. However, the rapid growth of scientific literature has greatly increased the cost of knowledge filtering, making it harder for researchers to identify novel directions. Although existing large language model (LLM)-based methods show promise in research idea generation, the ideas they produce are often repetitive and lack depth. To address this issue, this study proposes a multi-agent iterative planning search strategy inspired by com-binatorial innovation theory. The framework combines iterative knowledge search with an LLM-based multi-agent system to generate, evaluate, and re-fine research ideas through repeated interaction, with the goal of improving idea diversity and novelty. Experiments in the natural language processing domain show that the proposed method outperforms state-of-the-art base-lines in both diversity and novelty. Further comparison with ideas derived from top-tier machine learning conference papers indicates that the quality of the generated ideas falls between that of accepted and rejected papers. These results suggest that the proposed framework is a promising approach for supporting high-quality research idea generation. The source code and dataset used in this paper are publicly available on Github repository: https://github.com/ChenShuai00/MAGenIdeas. The demo is available at https://huggingface.co/spaces/cshuai20/MAGenIdeas.",
+      "publishedDate": "2026-04-22",
+      "pdfUrl": "https://arxiv.org/pdf/2604.20548v1",
+      "summaryUrl": "https://arxiv.org/abs/2604.20548v1",
+      "category": "cs.CL"
+    },
+    {
+      "arxivId": "2604.20519v1",
+      "title": "Node-reduction through Joint Optimization of Input and Readout Layers in Photonic Reservoir Equalization",
+      "authors": [
+        "Ruben Van Assche",
+        "Sarah Masaad",
+        "Peter Bienstman"
+      ],
+      "abstract": "Photonic reservoir computing is a machine learning paradigm in which a recurrent neural network remains fixed while only the output weights are trained. This makes it a well-suited approach for high-speed signal equalisation in optical communication systems, offering a trainable, low-power, and low-complexity solution. However, achieving strong performance typically requires relatively large network sizes, as learning is confined to the output layer. To address this, we investigate the role of trainable input mappings alongside conventional output weight optimisation. Across a range of short- and mid-reach IM/DD transmission scenarios, reaching up to 200 km for a 28 GBd NRZ signal, improvements of over two orders of magnitude in BER are achieved. This enables halving the network size while maintaining comparable performance. Furthermore, we show that this approach effectively extends the memory of the reservoir, resulting in over three orders of magnitude improvement in memory-intensive tasks. These results also show that starting at 16 nodes a performance of at least one to two magnitudes better than both a complexity matched FFE and a Volterra filter of second order are reached.",
+      "publishedDate": "2026-04-22",
+      "pdfUrl": "https://arxiv.org/pdf/2604.20519v1",
+      "summaryUrl": "https://arxiv.org/abs/2604.20519v1",
+      "category": "physics.optics"
+    },
+    {
+      "arxivId": "2604.20495v1",
+      "title": "Towards Certified Malware Detection: Provable Guarantees Against Evasion Attacks",
+      "authors": [
+        "Nandakrishna Giri",
+        "Asmitha K. A.",
+        "Serena Nicolazzo",
+        "Antonino Nocera",
+        "Vinod P"
+      ],
+      "abstract": "Machine learning-based static malware detectors remain vulnerable to adversarial evasion techniques, such as metamorphic engine mutations. To address this vulnerability, we propose a certifiably robust malware detection framework based on randomized smoothing through feature ablation and targeted noise injection. During evaluation, our system analyzes an executable by generating multiple ablated variants, classifies them by using a smoothed classifier, and identifies the final label based on the majority vote. By analyzing the top-class voting distribution and the Wilson score interval, we derive a formal certificate that guarantees robustness within a specific radius against feature-space perturbations. We evaluate our approach by comparing the performance of the base classifier and the smoothed classifier on both clean executables and ablated variants generated using PyMetaEngine. Our results demonstrate that the proposed smoothed classifier successfully provides certifiable robustness against metamorphic evasion attacks without requiring modifications to the underlying machine learning architecture.",
+      "publishedDate": "2026-04-22",
+      "pdfUrl": "https://arxiv.org/pdf/2604.20495v1",
+      "summaryUrl": "https://arxiv.org/abs/2604.20495v1",
+      "category": "cs.CR"
+    },
+    {
+      "arxivId": "2604.20492v1",
+      "title": "Decentralized Machine Learning with Centralized Performance Guarantees via Gibbs Algorithms",
+      "authors": [
+        "Yaiza Bermudez",
+        "Samir Perlaza",
+        "I\u00f1aki Esnaola"
+      ],
+      "abstract": "In this paper, it is shown, for the first time, that centralized performance is achievable in decentralized learning without sharing the local datasets. Specifically, when clients adopt an empirical risk minimization with relative-entropy regularization (ERM-RER) learning framework and a forward-backward communication between clients is established, it suffices to share the locally obtained Gibbs measures to achieve the same performance as that of a centralized ERM-RER with access to all the datasets. The core idea is that the Gibbs measure produced by client~$k$ is used, as reference measure, by client~$k+1$. This effectively establishes a principled way to encode prior information through a reference measure. In particular, achieving centralized performance in the decentralized setting requires a specific scaling of the regularization factors with the local sample sizes. Overall, this result opens the door to novel decentralized learning paradigms that shift the collaboration strategy from sharing data to sharing the local inductive bias via the reference measures over the set of models.",
+      "publishedDate": "2026-04-22",
+      "pdfUrl": "https://arxiv.org/pdf/2604.20492v1",
+      "summaryUrl": "https://arxiv.org/abs/2604.20492v1",
+      "category": "stat.ML"
+    },
+    {
+      "arxivId": "2604.20475v1",
+      "title": "A topological decoupling of modified nodal analysis including controlled sources",
+      "authors": [
+        "Idoia Cortes Garcia",
+        "Peter F. F\u00f6rster",
+        "Lennart Jansen",
+        "Wil Schilders",
+        "Sebastian Sch\u00f6ps"
+      ],
+      "abstract": "We derive a topological decoupling of the equations of modified nodal analysis (MNA) to a semi-explicit index one differential-algebraic equation. The decoupling explicitly allows for controlled sources, which play a crucial role in engineering design workflows. Furthermore, the proof is constructive and provides a graph-based algorithmic framework for the computation of the decoupling, enabling its application to a variety of industry problems. These include the generation of consistent initial conditions, model order reduction, (scientific) machine learning, as well as speeding up conventional circuit simulation. In addition, the decoupling preserves the structure of MNA, i.e. the resulting systems remain sparse and key parts remain positive definite. We illustrate the decoupling using multiple examples, including some of the most common subcircuits containing controlled sources. Lastly, we also provide a first software implementation of the decoupling.",
+      "publishedDate": "2026-04-22",
+      "pdfUrl": "https://arxiv.org/pdf/2604.20475v1",
+      "summaryUrl": "https://arxiv.org/abs/2604.20475v1",
+      "category": "math.NA"
+    },
+    {
+      "arxivId": "2604.20467v1",
+      "title": "Mechanistic Interpretability Tool for AI Weather Models",
+      "authors": [
+        "Kirsten I. Tempest",
+        "Matthias Beylich",
+        "George C. Craig"
+      ],
+      "abstract": "Artificial Intelligence (AI) weather models are improving rapidly, and their forecasts are already competitive with long-established traditional Numerical Weather Prediction (NWP). To build confidence in this new methodology, it is critical that we understand how these predictions are generated. This is a huge challenge as these AI weather models remain largely black boxes. In other areas of Machine Learning (ML), mechanistic interpretability has emerged as a framework for understanding ML predictions by analysing the building blocks responsible for them. Here we present an open-source, highly adaptable tool which incorporates concepts from mechanistic interpretability. The tool organises internal latent representations from the model processor and allows for initial analyses, including cosine similarity and Principal Component Analysis (PCA), enabling the user to identify directions in latent space potentially associated with meteorological features. Applying our tool to the graph neural network GraphCast, we present preliminary case studies for mid-latitude synoptic-scale waves and specific humidity. These demonstrate the tool's ability to identify linear combinations of latent channels that appear to correspond to interpretable features.",
+      "publishedDate": "2026-04-22",
+      "pdfUrl": "https://arxiv.org/pdf/2604.20467v1",
+      "summaryUrl": "https://arxiv.org/abs/2604.20467v1",
+      "category": "physics.ao-ph"
+    },
+    {
+      "arxivId": "2604.20458v1",
+      "title": "Surrogate Functionals for Machine-Learned Orbital-Free Density Functional Theory",
+      "authors": [
+        "Roman Remme",
+        "Fred A. Hamprecht"
+      ],
+      "abstract": "We introduce surrogate functionals: machine-learned energy functionals for orbital-free density functional theory (OF-DFT) which are defined not by universal fidelity to a physical reference, but merely by the requirement that density optimization with a fixed procedure yields the true ground-state density. Helpfully, training surrogate functionals requires only ground-state densities, no energies or gradients away from the ground state. We here propose a gradient-descent-improvement loss that guarantees exponential convergence of the density to the ground state, and combine it with an adaptive sampling scheme that concentrates learning around the optimization trajectories actually visited during inference. On the QM9 and QMugs benchmarks, surrogate functionals achieve density errors competitive with or improving upon the state of the art for fully supervised machine-learned OF-DFT, while eliminating the need for the $O(N^3)$ orthononormalization step required by prior work, yielding improved runtime scaling for larger systems.",
+      "publishedDate": "2026-04-22",
+      "pdfUrl": "https://arxiv.org/pdf/2604.20458v1",
+      "summaryUrl": "https://arxiv.org/abs/2604.20458v1",
+      "category": "cs.LG"
+    },
+    {
+      "arxivId": "2604.20438v1",
+      "title": "Quantum-Enhanced Recurrent Neural Networks via Variational Quantum Gating for Battery State of Health Prediction",
+      "authors": [
+        "Yin Xu",
+        "Qinglin Liu",
+        "Li Gao",
+        "Hua Xu"
+      ],
+      "abstract": "Accurate state-of-health (SOH) estimation for lithium-ion batteries remains a challenging problem due to complex electrochemical degradation mechanisms and long-range temporal dependencies. In this work, we propose a quantum-enhanced recurrent framework, termed QLSTM, in which variational quantum circuits are directly embedded into the gating mechanisms of long short-term memory networks. By replacing classical affine transformations with parameterized unitary operations, the proposed model introduces structured nonlinear transformations into the recurrent state-transition process. Extensive experiments on multiple benchmark battery datasets demonstrate that QLSTM consistently outperforms classical sequence models in both predictive accuracy and robustness, achieving significant reductions in mean absolute error (MAE), with improvements on the order of 20% compared with classical LSTM baselines. Ablation studies further confirm that these improvements arise primarily from quantum-enhanced gating rather than input-level transformations. Additional analyses on qubit scaling and noise robustness reveal that model performance is governed by a balance between expressive capacity and trainability. These results provide empirical evidence that embedding quantum computational primitives within recurrent architectures offers a structurally grounded approach to improving sequence modeling capability. The proposed framework establishes a new design paradigm for integrating quantum operators into temporal learning models, with potential applications in complex dynamical system prediction tasks.",
+      "publishedDate": "2026-04-22",
+      "pdfUrl": "https://arxiv.org/pdf/2604.20438v1",
+      "summaryUrl": "https://arxiv.org/abs/2604.20438v1",
+      "category": "quant-ph"
+    },
+    {
+      "arxivId": "2604.20409v1",
+      "title": "Calibrating conditional risk",
+      "authors": [
+        "Andrey Vasilyev",
+        "Yikai Wang",
+        "Xiaocheng Li",
+        "Guanting Chen"
+      ],
+      "abstract": "We introduce and study the problem of calibrating conditional risk, which involves estimating the expected loss of a prediction model conditional on input features. We analyze this problem in both classification and regression settings and show that it is fundamentally equivalent to a standard regression task. For classification settings, we further establish a connection between conditional risk calibration and individual/conditional probability calibration, and develop theoretical insights for the performance metric. This reveals that while conditional risk calibration is related to existing uncertainty quantification problems, it remains a distinct and standalone machine learning problem. Empirically, we validate our theoretical findings and demonstrate the practical implications of conditional risk calibration in the learning to defer (L2D) framework. Our systematic experiments provide both qualitative and quantitative assessments, offering guidance for future research in uncertainty-aware decision-making.",
+      "publishedDate": "2026-04-22",
+      "pdfUrl": "https://arxiv.org/pdf/2604.20409v1",
+      "summaryUrl": "https://arxiv.org/abs/2604.20409v1",
+      "category": "cs.LG"
+    },
+    {
+      "arxivId": "2604.20370v1",
+      "title": "Cold-Start Forecasting of New Product Life-Cycles via Conditional Diffusion Models",
+      "authors": [
+        "Ruihan Zhou",
+        "Zishi Zhang",
+        "Jinhui Han",
+        "Yijie Peng",
+        "Xiaowei Zhang"
+      ],
+      "abstract": "Forecasting the life-cycle trajectory of a newly launched product is important for launch planning, resource allocation, and early risk assessment. This task is especially difficult in the pre-launch and early post-launch phases, when product-specific outcome history is limited or unavailable, creating a cold-start problem. In these phases, firms must make decisions before demand patterns become reliably observable, while early signals are often sparse, noisy, and unstable We propose the Conditional Diffusion Life-cycle Forecaster (CDLF), a conditional generative framework for forecasting new-product life-cycle trajectories under cold start. CDLF combines three sources of information: static descriptors, reference trajectories from similar products, and newly arriving observations when available. Here, static descriptors refer to structured pre-launch characteristics of the product, such as category, price tier, brand or organization identity, scale, and access conditions. This structure allows the model to condition forecasts on relevant product context and to update them adaptively over time without retraining, yielding flexible multi-modal predictive distributions under extreme data scarcity. The method satisfies consistency with a horizon-uniform distributional error bound for recursive generation. Across studies on Intel microprocessor stock keeping unit (SKU) life cycles and the platform-mediated adoption of open large language model repositories, CDLF delivers more accurate point forecasts and higher-quality probabilistic forecasts than classical diffusion models, Bayesian updating approaches, and other state-of-the-art machine-learning baselines.",
+      "publishedDate": "2026-04-22",
+      "pdfUrl": "https://arxiv.org/pdf/2604.20370v1",
+      "summaryUrl": "https://arxiv.org/abs/2604.20370v1",
+      "category": "cs.LG"
+    },
+    {
+      "arxivId": "2604.20355v1",
+      "title": "Fluctuation-driven multi-step charge density wave transition in monolayer TiSe$_2$",
+      "authors": [
+        "Luka Beni\u0107",
+        "Dino Novko",
+        "Ivor Lon\u010dari\u0107"
+      ],
+      "abstract": "The exact microscopic origin, symmetry, and thermal melting mechanism of the charge density wave (CDW) phase in TiSe$_{2}$ remain a subject of intense debate, particularly regarding the presence of chiral structural order and a multi-step phase transition. Here, we resolve the finite-temperature structural dynamics of the monolayer TiSe$_{2}$ using large-scale molecular dynamics simulations driven by an accurate, first-principles-trained machine-learning interatomic potential. We demonstrate that the CDW melting deviates from a conventional second-order phase transition, while it undergoes a two-step melting process characterised by an extended fluctuation regime between $T^{\\ast}\\approx200$ K and $T_{\\mathrm{CDW}}\\approx250$ K, with proliferation of topological defects and domain walls, and accompanied by a completely overdamped soft optical phonon. Furthermore, we reveal that anisotropic long-wavelength thermal fluctuations spontaneously stabilise an asymmetric $3Q$ chiral CDW order with $C2$ symmetry. These findings provide a unified microscopic framework for understanding complex fluctuation-driven phase transitions in 2D quantum materials, demonstrating that the intricate CDW physics of TiSe$_{2}$ can be largely captured without invoking excitonic correlations.",
+      "publishedDate": "2026-04-22",
+      "pdfUrl": "https://arxiv.org/pdf/2604.20355v1",
+      "summaryUrl": "https://arxiv.org/abs/2604.20355v1",
+      "category": "cond-mat.mtrl-sci"
+    },
+    {
+      "arxivId": "2604.20304v1",
+      "title": "LLM-guided phase diagram construction through high-throughput experimentation",
+      "authors": [
+        "Ryo Tamura",
+        "Haruhiko Morito",
+        "Yuna Oikawa",
+        "Guillaume Deffrennes",
+        "Shoichi Matsuda",
+        "Naruki Yoshikawa",
+        "Tomoaki Takayama",
+        "Taichi Abe",
+        "Koji Tsuda",
+        "Kei Terayama"
+      ],
+      "abstract": "Constructing phase diagrams for multicomponent alloys requires extensive experimental measurements and is a time-consuming task. Here we investigate whether large language models (LLMs) can guide experimental planning for phase diagram construction. In our framework, a general-purpose LLM serves as the experimental planner, suggesting compositions for measurement at each cycle in a closed loop with high-throughput synthesis and X-ray diffraction phase identification. Using this framework, we experimentally constructed the ternary phase diagram of the Co-Al-Ge system at 900 degree C through iterative synthesis and characterization. We compared two strategies that differ in how the initial compositions are selected: one uses predictions from a domain-specific LLM trained on phase diagram data (aLLoyM), while the other relies solely on the general-purpose LLM. The two strategies exhibited complementary strengths. aLLoyM directed the initial measurements toward compositionally complex regions in the interior of the ternary diagram, enabling the earliest discovery of all three novel phases that form only in the ternary system. In contrast, the general-purpose LLM adopted a textbook-like approach which efficiently identified a larger number of phases in fewer cycles. In addition, a simulated benchmark comparing the LLM against conventional machine learning confirmed that the LLM achieves more efficient exploration. The results demonstrate that LLMs have high potential as experimental planners for phase diagram construction.",
+      "publishedDate": "2026-04-22",
+      "pdfUrl": "https://arxiv.org/pdf/2604.20304v1",
+      "summaryUrl": "https://arxiv.org/abs/2604.20304v1",
+      "category": "cond-mat.mtrl-sci"
+    },
+    {
+      "arxivId": "2604.20293v1",
+      "title": "Synthetic Flight Data Generation Using Generative Models",
+      "authors": [
+        "Karim Aly",
+        "Alexei Sharpanskykh"
+      ],
+      "abstract": "The increasing adoption of synthetic data in aviation research offers a promising solution to data scarcity and confidentiality challenges. This study investigates the potential of generative models to produce realistic synthetic flight data and evaluates their quality through a comprehensive four-stage assessment framework. The need for synthetic flight data arises from their potential to serve as an alternative to confidential real-world records and to augment rare events in historical datasets. These enhanced datasets can then be used to train machine learning models that predict critical events, such as flight delays, cancellations, diversions, and turnaround times. Two generative models, Tabular Variational Autoencoder (TVAE) and Gaussian Copula (GC), are adapted to generate synthetic flight information and compared based on their ability to preserve statistical similarity, fidelity, diversity, and predictive utility. Results indicate that while GC achieves higher statistical similarity and fidelity, its computational cost hinders its applicability to large datasets. In contrast, TVAE efficiently handles large datasets and enables scalable synthetic data generation. The findings demonstrate that synthetic data can support flight delay prediction models with accuracy comparable to those trained on real data. These results pave the way for leveraging synthetic flight data to enhance predictive modeling in air transportation.",
+      "publishedDate": "2026-04-22",
+      "pdfUrl": "https://arxiv.org/pdf/2604.20293v1",
+      "summaryUrl": "https://arxiv.org/abs/2604.20293v1",
+      "category": "cs.LG"
+    },
+    {
+      "arxivId": "2604.20288v1",
+      "title": "Generative Augmentation of Imbalanced Flight Records for Flight Diversion Prediction: A Multi-objective Optimisation Framework",
+      "authors": [
+        "Karim Aly",
+        "Alexei Sharpanskykh",
+        "Jacco Hoekstra"
+      ],
+      "abstract": "Flight diversions are rare but high-impact events in aviation, making their reliable prediction vital for both safety and operational efficiency. However, their scarcity in historical records impedes the training of machine learning models utilised to predict them. This study addresses this scarcity gap by investigating how generative models can augment historical flight data with synthetic diversion records to enhance model training and improve predictive accuracy. We propose a multi-objective optimisation framework coupled with automated hyperparameter search to identify optimal configurations for three deep generative models: Tabular Variational Autoencoder (TVAE), Conditional Tabular Generative Adversarial Network (CTGAN), and CopulaGAN, with the Gaussian Copula (GC) model serving as a statistical baseline. The quality of the synthetic data was examined through a six-stage evaluation framework encompassing realism, diversity, operational validity, statistical similarity, fidelity, and predictive utility. Results show that the optimised models significantly outperform their non-optimised counterparts, and that synthetic augmentation substantially improves diversion prediction compared to models trained solely on real data. These findings demonstrate the effectiveness of hyperparameter-optimised generative models for advancing predictive modelling of rare events in air transportation.",
+      "publishedDate": "2026-04-22",
+      "pdfUrl": "https://arxiv.org/pdf/2604.20288v1",
+      "summaryUrl": "https://arxiv.org/abs/2604.20288v1",
+      "category": "cs.LG"
+    },
+    {
+      "arxivId": "2604.20277v1",
+      "title": "Domain-Wall-Mediated Ultralow-Barrier Sliding and Pinning in Ferroelectric Moir\u00e9 Superlattices Revealed by Machine Learning",
+      "authors": [
+        "Jia-Wen Li",
+        "Sheng Meng",
+        "Xinghua Shi",
+        "Jin Zhang",
+        "Wei-Hai Fang"
+      ],
+      "abstract": "Sliding ferroelectrics built from stacked nonpolar monolayers enable out-of-plane polarization and unconventional switching via interlayer sliding, yet the microscopic sliding dynamics remain unclear. Using machine-learning molecular dynamics, we reveal spontaneous thermally driven interlayer sliding in ferroelectric MoS2 moir\u00e9 superlattices, with relative velocities on the order of 1 m/s at 300 K. Instead of rigid translation of the entire bilayer, the motion appears as a global drift of the moir\u00e9 pattern. Such thermally driven sliding is inconsistent with the meV/atom-scale rigid-sliding barrier. In contrast, when constrained relaxation is allowed, the sliding proceeds along an almost barrierless pathway that directly reproduces the global drift of the moir\u00e9 pattern. Furthermore, sulfur vacancies trigger a sliding-to-pinning transition, with about 0.1% S vacancies already sufficient to convert the long-range sliding into localized oscillations. Notably, these phenomena are not restricted to small twist angles, but arise generically in twisting-induced multidomain structures. These results reveal that the sliding process is governed by a domain-wall-mediated collective reconstruction pathway with an ultralow barrier, rather than rigid layer translation, deepening the understanding of microscopic dynamics in moir\u00e9 superlattices and sliding ferroelectrics.",
+      "publishedDate": "2026-04-22",
+      "pdfUrl": "https://arxiv.org/pdf/2604.20277v1",
+      "summaryUrl": "https://arxiv.org/abs/2604.20277v1",
+      "category": "cond-mat.mtrl-sci"
+    },
+    {
+      "arxivId": "2604.20261v1",
+      "title": "Memory-Augmented LLM-based Multi-Agent System for Automated Feature Generation on Tabular Data",
+      "authors": [
+        "Fengxian Dong",
+        "Zhi Zheng",
+        "Xiao Han",
+        "Wei Chen",
+        "Jingqing Ruan",
+        "Tong Xu",
+        "Yong Chen",
+        "Enhong Chen"
+      ],
+      "abstract": "Automated feature generation extracts informative features from raw tabular data without manual intervention and is crucial for accurate, generalizable machine learning. Traditional methods rely on predefined operator libraries and cannot leverage task semantics, limiting their ability to produce diverse, high-value features for complex tasks. Recent Large Language Model (LLM)-based approaches introduce richer semantic signals, but still suffer from a restricted feature space due to fixed generation patterns and from the absence of feedback from the learning objective. To address these challenges, we propose a Memory-Augmented LLM-based Multi-Agent System (\\textbf{MALMAS}) for automated feature generation. MALMAS decomposes the generation process into agents with distinct responsibilities, and a Router Agent activates an appropriate subset of agents per iteration, further broadening exploration of the feature space. We further integrate a memory module comprising procedural memory, feedback memory, and conceptual memory, enabling iterative refinement that adaptively guides subsequent feature generation and improves feature quality and diversity. Extensive experiments on multiple public datasets against state-of-the-art baselines demonstrate the effectiveness of our approach. The code is available at https://github.com/fxdong24/MALMAS",
+      "publishedDate": "2026-04-22",
+      "pdfUrl": "https://arxiv.org/pdf/2604.20261v1",
+      "summaryUrl": "https://arxiv.org/abs/2604.20261v1",
+      "category": "cs.AI"
+    },
+    {
+      "arxivId": "2604.20236v1",
+      "title": "Machine Learning for Two-Stage Graph Sparsification for the Travelling Salesman Problem",
+      "authors": [
+        "Bo-Cheng Lin",
+        "Yi Mei",
+        "Mengjie Zhang"
+      ],
+      "abstract": "High-performance TSP solvers like LKH search within a sparsified candidate graph rather than over all possible edges. Graph sparsification is non-trivial: keep too many edges and the solver wastes time; cut too many and it loses edges that belong to the optimal tour. The two leading heuristic methods, $\u03b1$-Nearest and POPMUSIC, produce high-quality candidate graphs, but no single heuristic is both sparse and reliable across all instance sizes and distributions. Machine learning methods can potentially learn better sparsification models. However, existing approaches operate on the complete graph, which is expensive and mostly restricted to Euclidean distances. To address this issue, we propose a two-stage graph sparsification approach: Stage~1 takes the union of $\u03b1$-Nearest and POPMUSIC to maximise recall; Stage~2 trains a single model to reduce density. We conducted experiments across four TSPLIB distance types, five spatial distributions, and problem sizes from 50 to 500. The two-stage approach substantially reduces candidate-graph density while retaining high coverage, generalises across distance types and distributions, outperforms recent neural sparsification methods that are restricted to Euclidean distances, and becomes increasingly valuable at larger scales where single-stage heuristics degrade.",
+      "publishedDate": "2026-04-22",
+      "pdfUrl": "https://arxiv.org/pdf/2604.20236v1",
+      "summaryUrl": "https://arxiv.org/abs/2604.20236v1",
+      "category": "cs.LG"
+    },
+    {
+      "arxivId": "2604.20200v1",
+      "title": "Chasing the Public Score: User Pressure and Evaluation Exploitation in Coding Agent Workflows",
+      "authors": [
+        "Hardy Chen",
+        "Nancy Lau",
+        "Haoqin Tu",
+        "Shuo Yan",
+        "Xiangyan Liu",
+        "Zijun Wang",
+        "Juncheng Wu",
+        "Michael Qizhe Shieh",
+        "Alvaro A. Cardenas",
+        "Cihang Xie",
+        "Yuyin Zhou"
+      ],
+      "abstract": "Frontier coding agents are increasingly used in workflows where users supervise progress primarily through repeated improvement of a public score, namely the reported score on a public evaluation file with labels in the workspace, rather than through direct inspection of the agent's intermediate outputs. We study whether multi-round user pressure to improve that score induces public score exploitation: behavior that raises the public score through shortcuts without improving hidden private evaluation. We begin with a preliminary single-script tabular classification task, where GPT-5.4 and Claude Opus 4.6 both exploit label information within 10 rounds of user-agent interaction. We then build AgentPressureBench, a 34-task machine-learning repository benchmark spanning three input modalities, and collect 1326 multi-round trajectories from 13 coding agents. On our benchmark, we observe 403 exploitative runs, spanning across all tasks. We also find that stronger models have higher exploitation rates, supported by a significant Spearman rank correlation of 0.77. Our ablation experiments show that higher user pressure leads to earlier exploitation, reducing the average first exploit round by 15.6 rounds (i.e., 19.67 to 4.08). As a mitigation, adding explicit anti-exploit wordings in prompt mostly eliminates exploitation (100% to 8.3%). We hope that our work can bring attention to more careful use of coding agents workflow, and developing more robust coding agents under user pressure. Our project page is at https://ucsc-vlaa.github.io/AgentPressureBench .",
+      "publishedDate": "2026-04-22",
+      "pdfUrl": "https://arxiv.org/pdf/2604.20200v1",
+      "summaryUrl": "https://arxiv.org/abs/2604.20200v1",
+      "category": "cs.CL"
+    },
+    {
+      "arxivId": "2604.20180v1",
+      "title": "Tensor network surrogate models for variational quantum computation",
+      "authors": [
+        "Ryo Watanabe",
+        "Dries Sels",
+        "Joseph Tindall"
+      ],
+      "abstract": "We adopt a two-dimensional tensor-network (TN) ansatz to simulate variational quantum algorithms on two-dimensional qubit architectures, demonstrating its capability to accurately simulate deep circuits through the Quantum Approximate Optimization Algorithm (QAOA) applied to Ising spin-glass problems on heavy-hexagonal and square lattices. For heavy-hexagonal problems with up to three-body interactions, parameters trained on small instances and transferred to systems an order of magnitude larger improve the sampled energy distribution only up to intermediate depths, indicating a fundamental limit of parameter concentration as a transfer strategy. By extending the training itself with TN simulations on larger system sizes, we avoid local minima and obtain lower-energy samples. Analyses of entanglement growth and importance sampling show that the simulation remains classically feasible with moderate bond dimension. We find that parameter concentration also persists on square lattices, albeit at substantially higher computational cost to perform reliable sampling. Overall, our TN framework not only provides an efficient and controlled framework for benchmarking variational quantum algorithms on two-dimensional lattices, but also serves as an effective surrogate model for training variational algorithms.",
+      "publishedDate": "2026-04-22",
+      "pdfUrl": "https://arxiv.org/pdf/2604.20180v1",
+      "summaryUrl": "https://arxiv.org/abs/2604.20180v1",
+      "category": "quant-ph"
+    },
+    {
+      "arxivId": "2604.20145v1",
+      "title": "Pre-Execution Query Slot-Time Prediction in Cloud Data Warehouses: A Feature-Scoped Machine Learning Approach",
+      "authors": [
+        "Prashant Kumar Pathak"
+      ],
+      "abstract": "Cloud data warehouses bill compute based on slot-time consumed. In shared multi-tenant environments, query cost is highly variable and hard to estimate before execution, causing budget overruns and degraded scheduling. Static query-planner heuristics fail to capture complex SQL structure, data skew, and workload contention. We present a feature-scoped machine learning approach that predicts BigQuery slot-time before execution using only pre-execution observable signals: a structured query complexity score derived from SQL operator costs, data volume features from planner estimates and workload metadata, and textual features from query text. We deliberately exclude runtime factors (slot-pool utilization, cache state, realized skew) unknowable at submission. The model uses a HistGradientBoostingRegressor trained on log-transformed slot-time, with a TF-IDF + TruncatedSVD-512 text pipeline fused with numeric and categorical features. Trained on 749 queries across seven deployment environments and evaluated out-of-distribution on 746 queries from two held-out environments, the model achieves MAE 1.17 slot-minutes, RMSE 4.71, and 74% explained variance on the full workload. On cost-significant queries (slot-time >= 0.01 min, N=282) the model achieves MAE 3.10 versus 4.95 for a predict-mean baseline and 4.54 for predict-median, a 30-37% reduction. On long-tail queries (>= 20 min, N=22) the model does not outperform trivial baselines, consistent with the hypothesis that long-tail queries are dominated by unobserved runtime factors outside the current feature scope. A complexity-routed dual-model architecture is described as a practical refinement, and directions for closing the long-tail gap are identified as future work.",
+      "publishedDate": "2026-04-22",
+      "pdfUrl": "https://arxiv.org/pdf/2604.20145v1",
+      "summaryUrl": "https://arxiv.org/abs/2604.20145v1",
+      "category": "cs.DB"
+    },
+    {
+      "arxivId": "2604.20143v1",
+      "title": "Machine learning moment closure models for the radiative transfer equation IV: enforcing symmetrizable hyperbolicity in two dimensions",
+      "authors": [
+        "Juntao Huang"
+      ],
+      "abstract": "This is our fourth work in the series on machine learning (ML) moment closure models for the radiative transfer equation (RTE). In the first three papers of this series, we considered the RTE in slab geometry in 1D1V (i.e. one dimension in physical space and one dimension in angular space), and introduced a gradient-based ML moment closure [1], then enforced the hyperbolicity through a symmetrizer [2], or together with physical characteristic speeds by learning the eigenvalues of the Jacobian matrix [3].   Here, we extend our framework to the RTE in 2D2V (i.e. two dimensions in physical space and two dimensions in angular space). The main idea is to preserve the leading part of the classical $P_N$ model and modify only the highest-order block row. By analyzing the structural properties of the $P_N$ model, we show that its coefficient matrices are symmetric and admit a block-tridiagonal structure. Then we use this property to introduce a block-diagonal symmetrizer for the ML moment model and derive explicit algebraic conditions on the closure blocks which guarantee the symmetrizable hyperbolicity of the resulting ML system. These conditions lead to a natural parametrization of the closure in terms of a symmetric positive definite matrix together with symmetric closure blocks, which can be learned from data while automatically enforcing symmetrizable hyperbolicity by construction. The numerical results show that the proposed framework improves upon the classical $P_N$ model while maintaining hyperbolicity.",
+      "publishedDate": "2026-04-22",
+      "pdfUrl": "https://arxiv.org/pdf/2604.20143v1",
+      "summaryUrl": "https://arxiv.org/abs/2604.20143v1",
+      "category": "math.NA"
+    },
+    {
+      "arxivId": "2604.20125v1",
+      "title": "Autonomous operation of the DIAG0 diagnostic line for 6D phase-space monitoring at LCLS-II",
+      "authors": [
+        "Ryan Roussel",
+        "Gopika Bhardwaj",
+        "Dylan Kennedy",
+        "Chris Garnier",
+        "An Le",
+        "William Colocho",
+        "Michael Ehrlichman",
+        "Yuantao Ding",
+        "Feng Zhou",
+        "Auralee Edelen"
+      ],
+      "abstract": "Characterizing the full 6-dimensional phase-space distribution of beams from the LCLS-II photoinjector is essential for understanding and optimizing downstream accelerator performance. Long-term monitoring of this distribution is equally important for detecting drifts in machine state and implementing timely corrective actions. Continuous phase space characterization during routine operation demands reliable tomographic diagnostic measurements and fast, efficient reconstruction methods. In this work, we demonstrate the first fully autonomous 6-dimensional beam-tomography system deployed on the DIAG0 parasitic beamline at LCLS-II. Using machine-learning-based control algorithms, the system autonomously configures DIAG0 and executes tomographic manipulations within operational constraints, adaptively re-optimizing beamline parameters and scan ranges in response to changes in the incoming beam. Tomographic measurements are streamed to the S3DF computing cluster where generative analysis methods reconstruct the phase-space distribution. We demonstrate that this framework produces detailed 6-dimensional beam reconstructions at a cadence of one reconstruction every 5 to 10 minutes, enabling real-time, multi-hour monitoring of injector beam evolution with unprecedented fidelity. These results represent a significant step toward fully autonomous operation of accelerator beamlines with real-time beam diagnostics for current and next-generation accelerator facilities.",
+      "publishedDate": "2026-04-22",
+      "pdfUrl": "https://arxiv.org/pdf/2604.20125v1",
+      "summaryUrl": "https://arxiv.org/abs/2604.20125v1",
+      "category": "physics.acc-ph"
+    },
+    {
+      "arxivId": "2604.20118v1",
+      "title": "Complexity of quantum states in the stabilizer formalism",
+      "authors": [
+        "Shuangshuang Fu",
+        "Shunlong Luo",
+        "Yue Zhang"
+      ],
+      "abstract": "We initiate an investigation into a notion of state complexity for discrete-variable quantum systems. Specifically, we propose an information-theoretic quantifier for the complexity of quantum states within the stabilizer formalism of quantum computation. This is achieved by leveraging the symmetric Jordan product (associated with classicality) and the skew-symmetric Lie product (linked to quantumness) between the square root of the quantum state and the Heisenberg-Weyl displacement operators. We establish the fundamental properties of this quantifier and demonstrate that state complexity is closely related to the nonstabilizerness of quantum states via the $L^4$-norm of their characteristic functions.",
+      "publishedDate": "2026-04-22",
+      "pdfUrl": "https://arxiv.org/pdf/2604.20118v1",
+      "summaryUrl": "https://arxiv.org/abs/2604.20118v1",
+      "category": "quant-ph"
+    },
+    {
+      "arxivId": "2604.20116v1",
+      "title": "Before the Mic: Physical-Layer Voiceprint Anonymization with Acoustic Metamaterials",
+      "authors": [
+        "Zhiyuan Ning",
+        "Zhanyong Tang",
+        "Xiaojiang Chen",
+        "Zheng Wang"
+      ],
+      "abstract": "Voiceprints are widely used for authentication; however, they are easily captured in public settings and cannot be revoked once leaked. Existing anonymization systems operate inside recording devices, which makes them ineffective when microphones or software are untrusted, as in conference rooms, lecture halls, and interviews. We present EchoMask, the first practical physical-layer system for real-time voiceprint anonymization using acoustic metamaterials. By modifying sound waves before they reach the microphone, EchoMask prevents attackers from capturing clean voiceprints through compromised devices. Our design combines three key innovations: frequency-selective interference to disrupt voiceprint features while preserving speech intelligibility, an acoustic-field model to ensure stability under speaker movement, and reconfigurable structures that create time-varying interference to prevent learning or canceling a fixed acoustic pattern. EchoMask is low-cost, power-free, and 3D-printable, requiring no machine learning, software support, or microphone modification. Experiments conducted across eight microphones in diverse environments demonstrate that EchoMask increases the Miss-match Rate, i.e., the fraction of failed voiceprint matching attempts, to over 90%, while maintaining high speech intelligibility.",
+      "publishedDate": "2026-04-22",
+      "pdfUrl": "https://arxiv.org/pdf/2604.20116v1",
+      "summaryUrl": "https://arxiv.org/abs/2604.20116v1",
+      "category": "cs.SD"
+    },
+    {
+      "arxivId": "2604.20115v1",
+      "title": "On the Stability and Generalization of First-order Bilevel Minimax Optimization",
+      "authors": [
+        "Xuelin Zhang",
+        "Peipei Yuan"
+      ],
+      "abstract": "Bilevel optimization and bilevel minimax optimization have recently emerged as unifying frameworks for a range of machine-learning tasks, including hyperparameter optimization and reinforcement learning. The existing literature focuses on empirical efficiency and convergence guarantees, leaving a critical theoretical gap in understanding how well these algorithms generalize. To bridge this gap, we provide the first systematic generalization analysis for first-order gradient-based bilevel minimax solvers with lower-level minimax problems. Specifically, by leveraging algorithmic stability arguments, we derive fine-grained generalization bounds for three representative algorithms, including single-timescale stochastic gradient descent-ascent, and two variants of two-timescale stochastic gradient descent-ascent. Our results reveal a precise trade-off among algorithmic stability, generalization gaps, and practical settings. Furthermore, extensive empirical evaluations corroborate our theoretical insights on realistic optimization tasks with bilevel minimax structures.",
+      "publishedDate": "2026-04-22",
+      "pdfUrl": "https://arxiv.org/pdf/2604.20115v1",
+      "summaryUrl": "https://arxiv.org/abs/2604.20115v1",
+      "category": "cs.LG"
+    },
+    {
+      "arxivId": "2604.20078v1",
+      "title": "Improved large-scale graph learning through ridge spectral sparsification",
+      "authors": [
+        "Daniele Calandriello",
+        "Ioannis Koutis",
+        "Alessandro Lazaric",
+        "Michal Valko"
+      ],
+      "abstract": "Graph-based techniques and spectral graph theory have enriched the field of machine learning with a variety of critical advances. A central object in the analysis is the graph Laplacian L, which encodes the structure of the graph. We consider the problem of learning over this Laplacian in a distributed streaming setting, where new edges of the graph are observed in real time by a network of workers. In this setting, it is hard to learn quickly or approximately while keeping a distributed representation of L. To address this challenge, we present a novel algorithm, GSQUEAK, which efficiently sparsifies the Laplacian by maintaining a small subset of effective resistances. We show that our algorithm produces sparsifiers with strong spectral approximation guarantees, all while processing edges in a single pass and in a distributed fashion.",
+      "publishedDate": "2026-04-22",
+      "pdfUrl": "https://arxiv.org/pdf/2604.20078v1",
+      "summaryUrl": "https://arxiv.org/abs/2604.20078v1",
+      "category": "cs.LG"
+    },
+    {
+      "arxivId": "2604.20062v1",
+      "title": "Federated Learning over Blockchain-Enabled Cloud Infrastructure",
+      "authors": [
+        "Saloni Garg",
+        "Amit Sagtani",
+        "Kamal Kant Hiran"
+      ],
+      "abstract": "The rise of IoT devices and the uptake of cloud computing have informed a new era of data-driven intelligence. Traditional centralized machine learning models that require a large volume of data to be stored in a single location have therefore become more susceptible to data breaches, privacy violations, and regulatory non-compliance. This report presents a thorough examination of the merging of Federated Learning (FL) and blockchain technology in a cloud-edge setting, demonstrating it as an effective solution to the stated concerns. We are proposing a detailed four-dimensional architectural categorization that meticulously assesses coordination frameworks, consensus algorithms, data storage practices, and trust models that are significant to these integrated systems. The manuscript presents a comprehensive comparative examination of two cutting-edge frameworks: the Multi-Objectives Reinforcement Federated Learning Blockchain (MORFLB), which is designed for intelligent transportation systems, and the Federated Blockchain-IoT Framework for Sustainable Healthcare Systems (FBCI-SHS), elucidating their distinctive contributions and inherent limitations. Lastly, we engage in a thorough evaluation of the literature that integrates a comparative perspective on current frameworks to discern the singular nature of this research within existing knowledge systems. The manuscript culminates in delineating the principal challenges and offering a strategic framework for prospective research trajectories, emphasizing the advancement of adaptive, resilient, and standardized BCFL systems across diverse application domains.",
+      "publishedDate": "2026-04-21",
+      "pdfUrl": "https://arxiv.org/pdf/2604.20062v1",
+      "summaryUrl": "https://arxiv.org/abs/2604.20062v1",
+      "category": "cs.LG"
+    },
+    {
+      "arxivId": "2604.20061v1",
+      "title": "Predictivity and Utility of Neural Surrogates of Multiscale PDEs",
+      "authors": [
+        "Karthik Duraisamy"
+      ],
+      "abstract": "Scientific machine learning is increasingly being spoken of as universal emulators for classical numerical solvers for multi-scale partial differential equations, but most apparent successes can be explained by facts that also define their limits. Many successful benchmarks live on low-dimensional solution manifolds where any competent reduced model will interpolate well. More fundamentally, neural surrogates systematically under-resolve high-frequency content due to spectral bias, and coarse-graining compounds this problem through irreversible information loss. In many multi-scale problems, no architecture or training procedure can fully recover what the coarse representation discards. Two simple examples are used to characterize spectral bias, coarse-graining and error accumulation. We discuss why medium-range weather prediction on reanalysis data sits in a favorable sweet spot and why this will not generalize to genuinely chaotic multi-scale scenarios. We identify domains where neural surrogates offer genuine value, propose further research on neural-classical hybrids, and call for better reporting standards.",
+      "publishedDate": "2026-04-21",
+      "pdfUrl": "https://arxiv.org/pdf/2604.20061v1",
+      "summaryUrl": "https://arxiv.org/abs/2604.20061v1",
+      "category": "math-ph"
+    },
+    {
+      "arxivId": "2604.20040v1",
+      "title": "VPT2 Calculations of Vibrational Energies of CH3COOC6H4COOH Done in Seconds on a Laptop Using a Machine Learned Potential",
+      "authors": [
+        "Saikiran Kotaru",
+        "Chen Qu",
+        "Apurba Nandi",
+        "Paul L. Houston",
+        "Joel M. Bowman"
+      ],
+      "abstract": "The determination of quartic force fields for use in vibrational second-order perturbation (VPT2) calculations, currently available in numerous electronic structure packages, becomes very expensive as the size of the molecule increases, especially if high-level coupled cluster theory is used. Machine-learned potentials (MLPs) for large molecules and clusters offer a viable alternative to obtain the quartic force field (QFF). Here, we report Fortran and Python software to determine the QFF and perform VPT2 calculations of energies from MLPs. We describe this software briefly and then apply it to \\ce{H2O} and protonated oxalate as test cases. The Fortran software is applied to 21-atom aspirin, using a fast MLP reported by us. Despite the fact that there are 32,509 unique cubic force constants for aspirin, the computer time to calculate them using this MLP is trivial, i.e., around one minute. These results are the first quantum anharmonic ones for such a large molecule. The present protocol offers an efficient way to study quantum anharmonic effects for vibrational energies in large molecules. Currently, these are obtained overwhelmingly from classical molecular dynamics simulations, which cannot describe strong anharmonicity.",
+      "publishedDate": "2026-04-21",
+      "pdfUrl": "https://arxiv.org/pdf/2604.20040v1",
+      "summaryUrl": "https://arxiv.org/abs/2604.20040v1",
+      "category": "physics.chem-ph"
+    },
+    {
+      "arxivId": "2604.20019v1",
+      "title": "Multi-Objective Reinforcement Learning for Generating Covalent Inhibitor Candidates",
+      "authors": [
+        "Renee Gil"
+      ],
+      "abstract": "Rational design of covalent inhibitors requires simultaneously optimizing multiple properties, such as binding affinity, target selectivity, or electrophilic reactivity. This presents a multi-objective problem not easily addressed by screening alone. Here we present a machine learning pipeline for generating covalent inhibitor candidates using multi-objective reinforcement learning (RL), applied to two targets: epidermal growth factor receptor (EGFR) and acetylcholinesterase (ACHE). A SMILES-based pretrained LSTM serves as the generative model, optimized via policy gradient RL with Pareto crowding distance to balance competing scoring functions including synthetic accessibility, predicted covalent activity, residue affinity, and an approximated docking score. The pipeline rediscovers known covalent inhibitors at rates of up to 0.50% (EGFR) and 0.74% (ACHE) in 10,000-structure runs, with candidate structures achieving warhead-to-residue distances as short as 5.5 angstrom (EGFR) and 3.2 angstrom (ACHE) after further docking-based screening. More notably, the pipeline spontaneously generates structures bearing warhead motifs absent from the training data - including allenes, 3-oxo-$\u03b2$-sultams, and $\u03b1$-methylene-$\u03b2$-lactones - all of which have independent literature support as covalent warheads. These results suggest that RL-guided generation can explore covalent chemical space beyond its training distribution, and may be useful as a tool for medicinal chemists working on covalent drug discovery.",
+      "publishedDate": "2026-04-21",
+      "pdfUrl": "https://arxiv.org/pdf/2604.20019v1",
+      "summaryUrl": "https://arxiv.org/abs/2604.20019v1",
+      "category": "cs.LG"
+    },
+    {
+      "arxivId": "2604.20017v1",
+      "title": "Strain in Sound: Soft Corrugated Tube for Local Strain Sensing with Acoustic Resonance",
+      "authors": [
+        "Michael Chun",
+        "Ananya Nukala",
+        "Tae Myung Huh"
+      ],
+      "abstract": "We present a soft corrugated tube sensor designed to estimate strain in each half segment. When air flows through the tube, the internal corrugated cavities induce pressure oscillations that excite the tube's standing wave resonance mode, generating an acoustic tone. Stretching the tube affects both the resonance mode frequency, due to changes in overall length, and the frequency-flow speed relationship, due to variations in cavity width, which is particularly useful for local strain estimation. By sweeping flow rates in a controlled manner, we collected resonance frequency data across flow speeds under various local stretch conditions, enabling a machine learning algorithm (gradient boosting regressor) to estimate segmental strain with high accuracy. The dual-period tube design (3.1 mm and 4.18 mm corrugation periods) achieved a mean absolute error (MAE) of 0.8 mm, while the single-period tube (3.1 mm) provided a satisfactory MAE of 1 mm. Testing on a mannequin finger demonstrated the sensor's capability to differentiate multi-joint configurations, showing its potential for estimating non-uniform deformations in soft bodies.",
+      "publishedDate": "2026-04-21",
+      "pdfUrl": "https://arxiv.org/pdf/2604.20017v1",
+      "summaryUrl": "https://arxiv.org/abs/2604.20017v1",
+      "category": "cs.RO"
+    },
+    {
+      "arxivId": "2604.20013v1",
+      "title": "Assessing System Capabilities and Bottlenecks of an Early Fault-Tolerant Bicycle Architecture",
+      "authors": [
+        "Kun Liu",
+        "Ben Foxman",
+        "Gian-Luca R. Anselmetti",
+        "Yongshan Ding"
+      ],
+      "abstract": "Early modular fault tolerant quantum computers remain constrained by costly inter-module communication and limited magic state factory service. Understanding such bottlenecks and investigating compiler optimizations most close the gap between algorithm requirements and hardware capabilities is a concrete and practically urgent systems problem. We study the modular architectures based on Bivariate Bicycle codes and identify the dominant bottleneck: inter-module communication induced by non-Clifford operations. We build a compilation pipeline to fill the missing parts of prior works and propose compiler optimizations: synthesizing arbitrary-angle rotations at the factory (syn@fac), transvection based Clifford deferral, and Clifford insertion for critical path duration reduction. We extend the evaluation scope of the prior work to 40+ benchmark categories drawn from PennyLane and MQTBench, including quantum algorithms and Hamiltonian simulations with varying sizes. Under the present instruction cost, syn@fac reduces estimated circuit failure probability by a factor of 9.0 on average across non-Clifford benchmarks. The robustness persists across sweeps of instruction cost ratios, LPU count, and factory count. Besides, transvection reduces Clifford deferral compile time by 77.04\\%, while Clifford insertion reduces end-to-end circuit duration by 11.54\\% on average on MQTBench, with smaller gains on Hamiltonian simulations. We hope this work inspires the studies on compiler optimizations for early modular FTQC systems.",
+      "publishedDate": "2026-04-21",
+      "pdfUrl": "https://arxiv.org/pdf/2604.20013v1",
+      "summaryUrl": "https://arxiv.org/abs/2604.20013v1",
+      "category": "quant-ph"
+    },
+    {
+      "arxivId": "2604.19970v1",
+      "title": "Automated Quantum Software and AI Engineering",
+      "authors": [
+        "Nazanin Siavash",
+        "Armin Moin"
+      ],
+      "abstract": "In this paper, we conduct a systematic literature review of (semi-) automated approaches to Quantum Software Engineering (QSE) and Quantum Artificial Intelligence (QAI). Prior work in the literature indicated that both Software Engineering (SE) and Artificial Intelligence (AI) practices may become more efficient by using (semi-) automated approaches. This also holds in the Quantum Computing (QC), Quantum Information Science (QIS), and Quantum Engineering (QE) world, as well as in hybrid quantum-classical applications. In fact, automation is even more crucial in such cases since there is a limited number of developers and AI experts (e.g., data scientists) who possess the required knowledge and skills in QC. Moreover, in hybrid setups, automation may help decide what part of the application should be deployed on quantum hardware and on which of the available quantum platforms, if applicable. This can be a significant help to achieve productivity leap and efficiency even for subject matter experts. Unlike prior literature reviews and surveys, this work focuses on automation in SE and AI for quantum and hybrid quantum-classical applications and identifies the recent trends and future directions through a systematic literature review. We are interested in methods and techniques that can enable a broader development and deployment of quantum and hybrid AI-enabled software systems.",
+      "publishedDate": "2026-04-21",
+      "pdfUrl": "https://arxiv.org/pdf/2604.19970v1",
+      "summaryUrl": "https://arxiv.org/abs/2604.19970v1",
+      "category": "cs.SE"
+    },
+    {
+      "arxivId": "2604.19943v1",
+      "title": "Structured Disagreement in Health-Literacy Annotation: Epistemic Stability, Conceptual Difficulty, and Agreement-Stratified Inference",
+      "authors": [
+        "Olga Kellert",
+        "Sriya Kondury",
+        "Candice Koo",
+        "Nemika Tyagi",
+        "Steffen Eikenberry"
+      ],
+      "abstract": "Annotation pipelines in Natural Language Processing (NLP) commonly assume a single latent ground truth per instance and resolve disagreement through label aggregation. Perspectivist approaches challenge this view by treating disagreement as potentially informative rather than erroneous. We present a large-scale analysis of graded health-literacy annotations from 6,323 open-ended COVID-19 responses collected in Ecuador and Peru. Each response was independently labeled by multiple annotators using proportional correctness scores, reflecting the degree to which responses align with normative public-health guidelines, allowing us to analyze the full distribution of judgments rather than aggregated labels. Variance decomposition shows that question-level conceptual difficulty accounts for substantially more variance than annotator identity, indicating that disagreement is structured by the task itself rather than driven by individual raters. Agreement-stratified analyses further reveal that key social-scientific effects, including country, education, and urban-rural differences, vary in magnitude and in some cases reverse direction across levels of inter-annotator agreement. These findings suggest that graded health-literacy evaluation contains both epistemically stable and unstable components, and that aggregating across them can obscure important inferential differences. We therefore argue that strong perspectivist modeling is not only conceptually justified but statistically necessary for valid inference in graded interpretive tasks.",
+      "publishedDate": "2026-04-21",
+      "pdfUrl": "https://arxiv.org/pdf/2604.19943v1",
+      "summaryUrl": "https://arxiv.org/abs/2604.19943v1",
+      "category": "cs.CL"
+    },
+    {
+      "arxivId": "2604.19939v1",
+      "title": "Accelerating the Design of Resorbable Magnesium Alloys: A Machine Learning Approach to Property Prediction",
+      "authors": [
+        "Vickey Nandal",
+        "V\u00edt Bene\u0161",
+        "Pavel Bal\u00e1\u017e",
+        "Ji\u0159\u00ed Ryj\u00e1\u010dek",
+        "Karel Tesa\u0159"
+      ],
+      "abstract": "Resorbable magnesium (Mg) alloys are promising candidates for temporary medical devices due to their biodegradability and favorable mechanical properties. To accelerate the design of diluted Mg alloys for implants, we developed a data-driven framework to elucidate the complex relationships between composition, processing, and mechanical properties. The framework screens mechanical properties within biocompatible compositional limits, treating degradation as a design constraint rather than an explicit prediction target. Using a dataset of 410 samples, we trained six different machine learning (ML) models to predict yield strength, ultimate tensile strength, and elongation. Among them, ensemble models, particularly CatBoost, demonstrated high predictive accuracy (R2, YS = 0.950, UTS = 0.916 and El = 0.903). SHapley Additive exPlanation analysis revealed that thermomechanical processing conditions and alloying elements such as Zn, Mn and Gd are the most influential factors governing mechanical behavior in diluted Mg alloys. Validation on the experimental dataset confirmed the models' robustness and generalization capability in capturing process-property relationships. The optimized CatBoost model was further employed to generate predictive property maps visualizing the strength-ductility trade-off as a function of Zn-Mn composition. This work establishes a validated ML framework for rapid in silico screening and targeted design of next-generation resorbable Mg alloys.",
+      "publishedDate": "2026-04-21",
+      "pdfUrl": "https://arxiv.org/pdf/2604.19939v1",
+      "summaryUrl": "https://arxiv.org/abs/2604.19939v1",
+      "category": "cond-mat.mtrl-sci"
+    },
+    {
+      "arxivId": "2604.19903v1",
+      "title": "A Multi-Plant Machine Learning Framework for Emission Prediction, Forecasting, and Control in Cement Manufacturing",
+      "authors": [
+        "Sheikh Junaid Fayaz",
+        "Nestor D. Montiel-Bohorquez",
+        "Wilson Ricardo Leal da Silva",
+        "Shashank Bishnoi",
+        "Matteo Romano",
+        "Manuele Gatti",
+        "N. M. Anoop Krishnan"
+      ],
+      "abstract": "Cement production is among the largest contributors to industrial air pollution, emitting ~3 Mt NOx/year. The industry-standard mitigation approach, selective non-catalytic reduction (SNCR), exhibits low NH3 utilization efficiency, resulting in operational inefficiencies and increased reagent costs. Here, we develop a data-driven framework for emission control using large-scale operational data from four cement plants worldwide. Benchmarking nine machine learning architectures, we observe that prediction error varies ~3-5x across plants due to variation in data richness. Incorporating short-term process history nearly triples NOx prediction accuracy, revealing that NOx formation carries substantial process memory, a timescale dependence that is absent in CO and CO2. Further, we develop models that forecast NOx overshoots as early as nine minutes, providing a buffer for operational adjustments. The developed framework controls NOx formation at the source, reducing NH3 consumption in downstream SNCR. Surrogate model projections estimate a ~34-64% reduction in NOx while preserving clinker quality, corresponding to a reduction of ~290 t NOx/year and ~58,000 USD/year in NH3 savings. This work establishes a generalizable framework for data-driven emission control, offering a pathway toward low-emission operation without structural modifications or additional hardware, with potential applicability to other hard-to-abate industries such as steel, glass, and lime.",
+      "publishedDate": "2026-04-21",
+      "pdfUrl": "https://arxiv.org/pdf/2604.19903v1",
+      "summaryUrl": "https://arxiv.org/abs/2604.19903v1",
+      "category": "cs.LG"
+    },
+    {
+      "arxivId": "2604.19869v1",
+      "title": "Practical HPCQC Integration with QDMI: A Real-Hardware Case Study with IQM Systems",
+      "authors": [
+        "Lukas Burgholzer",
+        "Marcel Walter",
+        "Patrick Hopf",
+        "\u00c1lvaro Caride-Tabar\u00e9s S\u00e1nchez",
+        "Teemu Mattsson",
+        "Bernd Hoffmann",
+        "Noora F\u00e4rkkil\u00e4",
+        "Daniel Bulmash",
+        "Robert Wille",
+        "Eric Mansfield"
+      ],
+      "abstract": "Quantum computers are moving into HPC centers, and the main challenge is now integration rather than pure hardware access. Many current software paths still depend on vendor-specific adapter chains between user SDKs, schedulers, and backend APIs. This pattern makes operations more complex than necessary and slows the transition from pilots to production workflows. We present a practical integration path centered on the Quantum Device Management Interface (QDMI). Using IQM superconducting systems as a hardware case study, we implement an IQM-backed QDMI layer and connect it to two software layers that HPC centers working with quantum computers already care about: Slurm-based job execution and Qiskit-facing user workflows. The implementation is publicly available at https://github.com/iqm-finland/QDMI-on-IQM. The key message is simple: integrating quantum hardware into HPC does not have to be a bespoke engineering effort for each backend. Once the software-hardware boundary is standardized, large parts of the stack become reusable across providers and deployment styles. Our results do not claim that standardization eliminates all HPCQC challenges. They show that this specific boundary can already be standardized today in a way that is practical for users, operators, and vendors.",
+      "publishedDate": "2026-04-21",
+      "pdfUrl": "https://arxiv.org/pdf/2604.19869v1",
+      "summaryUrl": "https://arxiv.org/abs/2604.19869v1",
+      "category": "quant-ph"
+    },
+    {
       "arxivId": "2604.19690v1",
       "title": "Is the `Known' Enough? An Integrated Machine Learning Framework for Eclipsing Binary Classification and Parameter Estimation Based on Well-Characterized Systems",
       "authors": [
@@ -26,6 +672,20 @@
       "pdfUrl": "https://arxiv.org/pdf/2604.19684v1",
       "summaryUrl": "https://arxiv.org/abs/2604.19684v1",
       "category": "cs.LG"
+    },
+    {
+      "arxivId": "2604.19855v1",
+      "title": "Toward designing workload-aware Surface Code Architectures",
+      "authors": [
+        "Archisman Ghosh",
+        "Avimita Chatterjee",
+        "Swaroop Ghosh"
+      ],
+      "abstract": "Practical quantum advantage is expected to depend on fault-tolerant quantum computing, although the architectural overhead needed to support fault tolerance is still extremely high. Prior FTQC designs generally emphasize either fast logical-qubit accessibility at the cost of significant qubit overhead, or high logical-qubit density at the cost of added workload latency. We propose an architecture that balances these competing objectives by placing surface-code patches around an ancilla-centric region, which yields nearly uniform ancilla access for all data qubits. Building on this design, we introduce a new workload-driven placement method that uses the $T$-gate profile of an application to determine an effective floorplan. We further provide a reconfigurable optimization for reducing the latency of $Y$-gate measurements on a per-workload basis. To improve flexibility, we also study concurrent execution of multiple programs on the same architecture. Numerical evaluation indicates that our approach keeps cycles per instruction near the optimal regime while reducing the number of required data tiles by up to $\\sim21\\%$, and achieves up to $\\sim90\\%$ efficiency when running 10 programs concurrently.",
+      "publishedDate": "2026-04-21",
+      "pdfUrl": "https://arxiv.org/pdf/2604.19855v1",
+      "summaryUrl": "https://arxiv.org/abs/2604.19855v1",
+      "category": "quant-ph"
     },
     {
       "arxivId": "2604.19659v1",
@@ -313,6 +973,431 @@
       "category": "cs.CR"
     },
     {
+      "arxivId": "2604.19846v1",
+      "title": "Neural posterior estimation of the neutrino direction in IceCube using transformer-encoded normalizing flows on the sphere",
+      "authors": [
+        "R. Abbasi",
+        "M. Ackermann",
+        "J. Adams",
+        "J. A. Aguilar",
+        "M. Ahlers",
+        "J. M. Alameddine",
+        "S. Ali",
+        "N. M. Amin",
+        "K. Andeen",
+        "C. Arg\u00fcelles",
+        "Y. Ashida",
+        "S. Athanasiadou",
+        "S. N. Axani",
+        "R. Babu",
+        "X. Bai",
+        "A. Balagopal V.",
+        "S. W. Barwick",
+        "V. Basu",
+        "R. Bay",
+        "J. J. Beatty",
+        "J. Becker Tjus",
+        "P. Behrens",
+        "J. Beise",
+        "C. Bellenghi",
+        "S. Benkel",
+        "S. BenZvi",
+        "D. Berley",
+        "E. Bernardini",
+        "D. Z. Besson",
+        "E. Blaufuss",
+        "L. Bloom",
+        "S. Blot",
+        "F. Bontempo",
+        "J. Y. Book Motzkin",
+        "C. Boscolo Meneguolo",
+        "S. B\u00f6ser",
+        "O. Botner",
+        "J. B\u00f6ttcher",
+        "J. Braun",
+        "B. Brinson",
+        "Z. Brisson-Tsavoussis",
+        "R. T. Burley",
+        "D. Butterfield",
+        "K. Carloni",
+        "J. Carpio",
+        "N. Chau",
+        "Z. Chen",
+        "D. Chirkin",
+        "S. Choi",
+        "A. Chubarov",
+        "B. A. Clark",
+        "G. H. Collin",
+        "D. A. Coloma Borja",
+        "A. Connolly",
+        "J. M. Conrad",
+        "D. F. Cowen",
+        "C. De Clercq",
+        "J. J. DeLaunay",
+        "D. Delgado",
+        "T. Delmeulle",
+        "S. Deng",
+        "P. Desiati",
+        "K. D. de Vries",
+        "G. de Wasseige",
+        "T. DeYoung",
+        "J. C. D\u00edaz-V\u00e9lez",
+        "S. DiKerby",
+        "T. Ding",
+        "M. Dittmer",
+        "A. Domi",
+        "L. Draper",
+        "L. Dueser",
+        "D. Durnford",
+        "K. Dutta",
+        "M. A. DuVernois",
+        "T. Ehrhardt",
+        "L. Eidenschink",
+        "A. Eimer",
+        "C. Eldridge",
+        "P. Eller",
+        "E. Ellinger",
+        "D. Els\u00e4sser",
+        "R. Engel",
+        "H. Erpenbeck",
+        "W. Esmail",
+        "S. Eulig",
+        "J. Evans",
+        "P. A. Evenson",
+        "K. L. Fan",
+        "K. Fang",
+        "K. Farrag",
+        "A. R. Fazely",
+        "A. Fedynitch",
+        "N. Feigl",
+        "C. Finley",
+        "D. Fox",
+        "A. Franckowiak",
+        "S. Fukami",
+        "P. F\u00fcrst",
+        "J. Gallagher",
+        "E. Ganster",
+        "A. Garcia",
+        "M. Garcia",
+        "E. Genton",
+        "L. Gerhardt",
+        "A. Ghadimi",
+        "C. Glaser",
+        "T. Gl\u00fcsenkamp",
+        "J. G. Gonzalez",
+        "S. Goswami",
+        "A. Granados",
+        "D. Grant",
+        "S. J. Gray",
+        "S. Griffin",
+        "K. M. Groth",
+        "D. Guevel",
+        "C. G\u00fcnther",
+        "P. Gutjahr",
+        "C. Ha",
+        "A. Hallgren",
+        "L. Halve",
+        "F. Halzen",
+        "L. Hamacher",
+        "M. Handt",
+        "K. Hanson",
+        "J. Hardin",
+        "A. A. Harnisch",
+        "P. Hatch",
+        "A. Haungs",
+        "J. H\u00e4u\u00dfler",
+        "K. Helbing",
+        "J. Hellrung",
+        "B. Henke",
+        "L. Hennig",
+        "F. Henningsen",
+        "L. Heuermann",
+        "R. Hewett",
+        "N. Heyer",
+        "S. Hickford",
+        "A. Hidvegi",
+        "C. Hill",
+        "G. C. Hill",
+        "R. Hmaid",
+        "K. D. Hoffman",
+        "A. Hollnagel",
+        "D. Hooper",
+        "S. Hori",
+        "K. Hoshina",
+        "M. Hostert",
+        "W. Hou",
+        "M. Hrywniak",
+        "T. Huber",
+        "K. Hultqvist",
+        "K. Hymon",
+        "A. Ishihara",
+        "W. Iwakiri",
+        "M. Jacquart",
+        "S. Jain",
+        "O. Janik",
+        "M. Jansson",
+        "M. Jin",
+        "N. Kamp",
+        "D. Kang",
+        "W. Kang",
+        "A. Kappes",
+        "L. Kardum",
+        "T. Karg",
+        "A. Karle",
+        "A. Katil",
+        "M. Kauer",
+        "J. L. Kelley",
+        "M. Khanal",
+        "A. Khatee Zathul",
+        "A. Kheirandish",
+        "T. Kim",
+        "H. Kimku",
+        "F. Kirchner",
+        "J. Kiryluk",
+        "C. Klein",
+        "S. R. Klein",
+        "Y. Kobayashi",
+        "S. Koch",
+        "A. Kochocki",
+        "R. Koirala",
+        "H. Kolanoski",
+        "T. Kontrimas",
+        "L. K\u00f6pke",
+        "C. Kopper",
+        "D. J. Koskinen",
+        "P. Koundal",
+        "M. Kowalski",
+        "T. Kozynets",
+        "A. Kravka",
+        "N. Krieger",
+        "T. Krishnan",
+        "K. Kruiswijk",
+        "E. Krupczak",
+        "A. Kumar",
+        "E. Kun",
+        "N. Kurahashi",
+        "C. Lagunas Gualda",
+        "L. Lallement Arnaud",
+        "M. J. Larson",
+        "F. Lauber",
+        "J. P. Lazar",
+        "K. Leonard DeHolton",
+        "A. Leszczy\u0144ska",
+        "C. Li",
+        "J. Liao",
+        "C. Lin",
+        "Q. R. Liu",
+        "Y. T. Liu",
+        "M. Liubarska",
+        "C. Love",
+        "L. Lu",
+        "F. Lucarelli",
+        "W. Luszczak",
+        "Y. Lyu",
+        "M. Macdonald",
+        "E. Magnus",
+        "Y. Makino",
+        "E. Manao",
+        "S. Mancina",
+        "A. Mand",
+        "I. C. Mari\u015f",
+        "S. Marka",
+        "Z. Marka",
+        "L. Marten",
+        "I. Martinez-Soler",
+        "R. Maruyama",
+        "J. Mauro",
+        "F. Mayhew",
+        "F. McNally",
+        "K. Meagher",
+        "A. Medina",
+        "M. Meier",
+        "Y. Merckx",
+        "L. Merten",
+        "J. Mitchell",
+        "L. Molchany",
+        "S. Mondal",
+        "T. Montaruli",
+        "R. W. Moore",
+        "Y. Morii",
+        "A. Mosbrugger",
+        "D. Mousadi",
+        "E. Moyaux",
+        "T. Mukherjee",
+        "M. Nakos",
+        "U. Naumann",
+        "J. Necker",
+        "L. Neste",
+        "M. Neumann",
+        "H. Niederhausen",
+        "M. U. Nisa",
+        "K. Noda",
+        "A. Noell",
+        "A. Novikov",
+        "A. Obertacke",
+        "V. O'Dell",
+        "A. Olivas",
+        "R. Orsoe",
+        "J. Osborn",
+        "E. O'Sullivan",
+        "B. Owens",
+        "V. Palusova",
+        "H. Pandya",
+        "A. Parenti",
+        "N. Park",
+        "V. Parrish",
+        "E. N. Paudel",
+        "L. Paul",
+        "C. P\u00e9rez de los Heros",
+        "T. Pernice",
+        "T. C. Petersen",
+        "J. Peterson",
+        "S. Pick",
+        "M. Plum",
+        "A. Pont\u00e9n",
+        "V. Poojyam",
+        "B. Pries",
+        "R. Procter-Murphy",
+        "G. T. Przybylski",
+        "L. Pyras",
+        "C. Raab",
+        "J. Rack-Helleis",
+        "N. Rad",
+        "M. Ravn",
+        "K. Rawlins",
+        "Z. Rechav",
+        "A. Rehman",
+        "I. Reistroffer",
+        "E. Resconi",
+        "S. Reusch",
+        "C. D. Rho",
+        "W. Rhode",
+        "L. Ricca",
+        "B. Riedel",
+        "A. Rifaie",
+        "E. J. Roberts",
+        "S. Rodan",
+        "M. Rongen",
+        "A. Rosted",
+        "C. Rott",
+        "T. Ruhe",
+        "L. Ruohan",
+        "D. Ryckbosch",
+        "J. Saffer",
+        "D. Salazar-Gallegos",
+        "P. Sampathkumar",
+        "A. Sandrock",
+        "G. Sanger-Johnson",
+        "M. Santander",
+        "S. Sarkar",
+        "M. Scarnera",
+        "M. Schaufel",
+        "H. Schieler",
+        "S. Schindler",
+        "L. Schlickmann",
+        "B. Schl\u00fcter",
+        "F. Schl\u00fcter",
+        "N. Schmeisser",
+        "T. Schmidt",
+        "A. Scholz",
+        "F. G. Schr\u00f6der",
+        "S. Schwirn",
+        "S. Sclafani",
+        "D. Seckel",
+        "L. Seen",
+        "M. Seikh",
+        "S. Seunarine",
+        "P. A. Sevle Myhr",
+        "R. Shah",
+        "S. Shah",
+        "S. Shefali",
+        "N. Shimizu",
+        "B. Skrzypek",
+        "R. Snihur",
+        "J. Soedingrekso",
+        "D. Soldin",
+        "P. Soldin",
+        "G. Sommani",
+        "C. Spannfellner",
+        "G. M. Spiczak",
+        "C. Spiering",
+        "J. Stachurska",
+        "M. Stamatikos",
+        "T. Stanev",
+        "T. Stezelberger",
+        "T. St\u00fcrwald",
+        "T. Stuttard",
+        "G. W. Sullivan",
+        "I. Taboada",
+        "S. Ter-Antonyan",
+        "A. Terliuk",
+        "A. Thakuri",
+        "M. Thiesmeyer",
+        "W. G. Thompson",
+        "J. Thwaites",
+        "S. Tilav",
+        "K. Tollefson",
+        "J. A. Torres",
+        "S. Toscano",
+        "D. Tosi",
+        "K. Upshaw",
+        "A. Vaidyanathan",
+        "N. Valtonen-Mattila",
+        "J. Valverde",
+        "J. Vandenbroucke",
+        "T. Van Eeden",
+        "N. van Eijndhoven",
+        "L. Van Rootselaar",
+        "J. van Santen",
+        "J. Vara",
+        "F. Varsi",
+        "M. Venugopal",
+        "M. Vereecken",
+        "S. Vergara Carrasco",
+        "S. Verpoest",
+        "D. Veske",
+        "A. Vijai",
+        "J. Villarreal",
+        "C. Walck",
+        "A. Wang",
+        "E. H. S. Warrick",
+        "C. Weaver",
+        "P. Weigel",
+        "A. Weindl",
+        "J. Weldert",
+        "A. Y. Wen",
+        "C. Wendt",
+        "J. Werthebach",
+        "M. Weyrauch",
+        "N. Whitehorn",
+        "C. H. Wiebusch",
+        "D. R. Williams",
+        "L. Witthaus",
+        "G. Wrede",
+        "X. W. Xu",
+        "J. P. Yanez",
+        "Y. Yao",
+        "E. Yildizci",
+        "S. Yoshida",
+        "R. Young",
+        "F. Yu",
+        "S. Yu",
+        "T. Yuan",
+        "S. Yun-C\u00e1rcamo",
+        "A. Zander Jurowitzki",
+        "A. Zegarelli",
+        "S. Zhang",
+        "Z. Zhang",
+        "P. Zhelnin",
+        "P. Zilberman"
+      ],
+      "abstract": "IceCube is a cubic-kilometer-scale neutrino detector located at the geographic South Pole. A precise directional reconstruction of IceCube neutrinos is vital for associations with astronomical objects. In this context, we discuss neural posterior estimation of the neutrino direction via a transformer encoder that maps to a normalizing flow on the 2-sphere. It achieves a new state-of-the-art angular resolution for the two main event morphologies in IceCube - tracks and showers - while being significantly faster than traditional B-spline-based likelihood reconstructions. All-sky scans can be performed within seconds rather than hours, and take constant computation time, regardless of whether the posterior extent is arc-minutes or spans the whole sky. We utilize a combination of $C^2$-smooth rational-quadratic splines, scale transformations and rotations to define a novel spherical normalizing-flow distribution whose parameters are predicted as a whole as the output of the transformer encoder. We test several structural choices diverting from the vanilla transformer architecture. In particular, we find dual residual streams, nonlinear QKV projection and a separate class token with its own cross-attention processing to boost test-time performance. The angular resolution for both showers and tracks improves substantially over the whole trained energy range from 100 GeV to 100 PeV. At 100 TeV deposited energy, for example, the median angular resolution improves by a factor of $1.3$ for throughgoing tracks, by a factor of $1.7$ for showers and by a factor of $2.5$ for starting tracks compared to state-of-the art likelihood reconstructions based on B-splines. While previous machine-learning (ML) efforts have managed to obtain competitive shower resolutions, this is the first time an ML-based method outperforms likelihood-based muon reconstructions above 100 GeV.",
+      "publishedDate": "2026-04-21",
+      "pdfUrl": "https://arxiv.org/pdf/2604.19846v1",
+      "summaryUrl": "https://arxiv.org/abs/2604.19846v1",
+      "category": "hep-ex"
+    },
+    {
       "arxivId": "2604.19383v1",
       "title": "Multimodal Transformer for Sample-Aware Prediction of Metal-Organic Framework Properties",
       "authors": [
@@ -420,6 +1505,21 @@
       "pdfUrl": "https://arxiv.org/pdf/2604.19296v1",
       "summaryUrl": "https://arxiv.org/abs/2604.19296v1",
       "category": "cs.LG"
+    },
+    {
+      "arxivId": "2604.19841v1",
+      "title": "Spatio-temporal modelling of electric vehicle charging demand",
+      "authors": [
+        "Kaoutar Bouaachra",
+        "Yvenn Amara-Ouali",
+        "Yannig Goude",
+        "Rapha\u00ebl Lachieze-Rey"
+      ],
+      "abstract": "Accurate forecasting of electric vehicle (EV) charging demand is critical for grid management and infrastructure planning. Yet the field continues to rely on legacy benchmarks; such as the Palo Alto (2020) dataset; that fail to reflect the scale and behavioral diversity of modern charging networks. To address this, we introduce a novel large-scale longitudinal dataset collected across Scotland (2022 2025), which release it as an open benchmark for the community. Building on this dataset, we formulate EV charging demand as a spatio-temporal latent Gaussian field and perform approximate Bayesian inference via Integrated Nested Laplace Approximation (INLA). The resulting model jointly captures spatial dependence, temporal dynamics, and covariate effects within a unified proba bilistic framework. On station-level forecasting tasks, our approach achieves competitive predictive accuracy against machine learning baselines, while additionally providing principled uncertainty quan tification and interpretable spatial and temporal decompositions properties that are essential for risk-aware infrastructure planning.",
+      "publishedDate": "2026-04-21",
+      "pdfUrl": "https://arxiv.org/pdf/2604.19841v1",
+      "summaryUrl": "https://arxiv.org/abs/2604.19841v1",
+      "category": "stat.AP"
     },
     {
       "arxivId": "2604.19256v1",
@@ -629,6 +1729,19 @@
       "category": "astro-ph.GA"
     },
     {
+      "arxivId": "2604.19832v1",
+      "title": "Option Pricing on Noisy Intermediate-Scale Quantum Computers: A Quantum Neural Network Approach",
+      "authors": [
+        "Sebastian Zaj\u0105c",
+        "Rafa\u0142 Pracht"
+      ],
+      "abstract": "In a global derivatives market with notional values in the hundreds of trillions of dollars, the accuracy and efficiency of pricing models are of fundamental importance, with direct implications for risk management, capital allocation, and regulatory compliance. In this work, we employ the Black-Scholes-Merton (BSM) framework not as an end in itself, but as a controlled benchmark environment in which to rigorously assess the capabilities of quantum machine learning methods.   We propose a fully quantum approach to option pricing based on Quantum Neural Networks (QNNs), and, to the best of our knowledge, present one of the first implementations of such a methodology on currently available quantum hardware. Specifically, we investigate whether QNNs, by exploiting the geometric structure of Hilbert space, can effectively approximate option pricing functions.   Our implementation utilizes a compact 2-qubit QNN architecture evaluated across multiple state-of-the-art quantum processors, including IBM Fez, IQM Garnet, IonQ Forte, and Rigetti Ankaa-3. This cross-platform study reveals distinct hardware-dependent performance characteristics while demonstrating that accurate pricing approximations can be achieved consistently across different devices despite the constraints of Noisy Intermediate-Scale Quantum (NISQ) hardware.   The results provide empirical evidence that QNN-based approaches constitute a viable framework for derivative pricing. While the analysis is conducted within the BSM setting, the broader significance lies in the potential extension of these methods to more realistic and computationally demanding models, including local volatility, stochastic volatility, and interest rate frameworks commonly used in practice.",
+      "publishedDate": "2026-04-20",
+      "pdfUrl": "https://arxiv.org/pdf/2604.19832v1",
+      "summaryUrl": "https://arxiv.org/abs/2604.19832v1",
+      "category": "quant-ph"
+    },
+    {
       "arxivId": "2604.18859v1",
       "title": "Testing $\u039b$CDM versus dynamical dark energy in one year: A DESI spectroscopic follow-up program for Rubin supernovae",
       "authors": [
@@ -800,733 +1913,7 @@
       "pdfUrl": "https://arxiv.org/pdf/2604.18727v1",
       "summaryUrl": "https://arxiv.org/abs/2604.18727v1",
       "category": "physics.ao-ph"
-    },
-    {
-      "arxivId": "2604.18716v1",
-      "title": "TrEEStealer: Stealing Decision Trees via Enclave Side Channels",
-      "authors": [
-        "Jonas Sander",
-        "Anja Rabich",
-        "Nick Mahling",
-        "Felix Maurer",
-        "Jonah Heller",
-        "Qifan Wang",
-        "Thomas Eisenbarth",
-        "David Oswald"
-      ],
-      "abstract": "Today, machine learning is widely applied in sensitive, security-related, and financially lucrative applications. Model extraction attacks undermine current business models where a model owner sells model access, e.g., via MLaaS APIs. Additionally, stolen models can enable powerful white-box attacks, facilitating privacy attacks on sensitive training data, and model evasion.   In this paper, we focus on Decision Trees (DT), which are widely deployed in practice. Existing black-box extraction attacks for DTs are either query-intensive, make strong assumptions about the DT structure, or rely on rich API information. To limit attacks to the black-box setting, CPU vendors introduced Trusted Execution Environments (TEE) that use hardware-mechanisms to isolate workloads from external parties, e.g., MLaaS providers. We introduce TrEEStealer, a high-fidelity extraction attack for stealing TEE-protected DTs. TrEEStealer exploits TEE-specific side-channels to steal DTs efficiently and without strong assumptions about the API output or DT structure. The extraction efficacy stems from a novel algorithm that maximizes the information derived from each query by coupling Control-Flow Information (CFI) with passive information tracking. We use two primitives to acquire CFI: for AMD SEV, we follow previous work using the SEV-Step framework and performance counters. For Intel SGX, we reproduce prior findings on current Xeon 6 CPUs and construct a new primitive to efficiently extract the branch history of inference runs through the Branch-History-Register.   We found corresponding vulnerabilities in three popular libraries: OpenCV, mlpack, and emlearn. We show that TrEEStealer achieves superior efficiency and extraction fidelity compared to prior attacks. Our work establishes a new state-of-the-art for DT extraction and confirms that TEEs fail to protect against control-flow leakage.",
-      "publishedDate": "2026-04-20",
-      "pdfUrl": "https://arxiv.org/pdf/2604.18716v1",
-      "summaryUrl": "https://arxiv.org/abs/2604.18716v1",
-      "category": "cs.CR"
-    },
-    {
-      "arxivId": "2604.18714v1",
-      "title": "Efficient Routing of Quantum LDPC Codes on Programmable 2D Toric Architectures",
-      "authors": [
-        "Kun Liu",
-        "Takahiro Tsunoda",
-        "Sophia H. Xue",
-        "Evan McKinney",
-        "Zeyuan Zhou",
-        "Shifan Xu",
-        "Robert J. Schoelkopf",
-        "Yongshan Ding"
-      ],
-      "abstract": "Quantum low-density parity-check codes are promising candidates towards scalable fault-tolerant quantum computation. Among these, bivariate bicycle (BB) codes offer superior encoding rates and large code distance compared to surface codes. However, their requirement on long-range stabilizer measurements poses significant challenges for implementation on realistic hardware with limited connectivity, such as superconducting circuit platforms. In this work, we introduce a novel hardware-software co-design that leverages a programmable communication network architecture to address these limitations. Our approach utilizes a 2D toric network of oscillators as a flexible communication fabric linking qubits at each site. Such architecture significantly reduces the number of long-range couplers required from $O(n)$ to $O(\\sqrt{n})$. Dual-rail qubits, along with native gates including Swap-Wait-Swap gates and beamsplitter SWAPs, ensure that long-range two-qubit gates can be executed with high fidelity and low latency. To further enhance performance, our qubit layout and routing algorithm utilize symmetries of the codes and enable maximum parallelism for long-range two-qubit gates, maintaining a low syndrome extraction cycle duration and scalability over the code length. We perform circuit-level simulation with realistic noise modeling based on experimental hardware parameters, observing an logical error rate per logical qubit per cycle of 3.06\\% for $[[18, 4, 4]]$ BB code, 2.6$\\times$ less than the existing experimental result. These findings provide a practical roadmap and identify key technological advancements needed to achieve low-overhead fault-tolerant quantum computing at scale.",
-      "publishedDate": "2026-04-20",
-      "pdfUrl": "https://arxiv.org/pdf/2604.18714v1",
-      "summaryUrl": "https://arxiv.org/abs/2604.18714v1",
-      "category": "quant-ph"
-    },
-    {
-      "arxivId": "2604.18699v1",
-      "title": "Obstructions to universality in globally controlled qubit graphs",
-      "authors": [
-        "Roberto Gargiulo",
-        "Roberto Menta",
-        "Vittorio Giovannetti",
-        "Robert Zeier"
-      ],
-      "abstract": "Global control offers a promising route to scalable quantum computing. A recent conjecture by Hu et al. (arXiv:2508.19075) proposes that any connected qubit graph equipped with global Ising-type interactions and tunable global transverse fields achieves universality if and only if an additional control field breaks every non-trivial automorphism of the underlying graph. We disprove this conjecture by exhibiting explicit seven- and nine-qubit counterexamples: connected graphs with trivial automorphism group for which the generated Lie algebra is nonetheless not universal. Our analysis reveals that graph automorphisms capture only part of the Hamiltonian symmetry structure: there exist hidden symmetries beyond the automorphism group of the graph. Additionally, in the case of non-trivial automorphism group, we find control terms which break the graph symmetries but are still not universal. These findings sharpen the characterization of universality for globally controlled quantum systems.",
-      "publishedDate": "2026-04-20",
-      "pdfUrl": "https://arxiv.org/pdf/2604.18699v1",
-      "summaryUrl": "https://arxiv.org/abs/2604.18699v1",
-      "category": "quant-ph"
-    },
-    {
-      "arxivId": "2604.18691v1",
-      "title": "Harmoniq: Efficient Data Augmentation on a Quantum Computer Inspired by Harmonic Analysis",
-      "authors": [
-        "Kristina Kirova",
-        "Monika Doerfler",
-        "Franz Luef",
-        "Richard Kueng"
-      ],
-      "abstract": "Quantum machine learning has attracted significant interest in recent years. Most existing approaches, however, are variational in nature and require extensive parameter optimization subroutines. Here, we propose a conceptually distinct quantum machine learning approach that goes beyond the variational paradigm. Harmoniq takes a novel data augmentation technique from quantum harmonic analysis and approximates it as a stochastic mixture of n-qubit circuits with (at most) quadratic depth each. A key strength of Harmoniq is its modularity: viewed as a quantum process acting on density matrices, it can readily be combined with other quantum data processing and learning subroutines. A subsequent case study demonstrates this modularity by combining Harmoniq with stochastic amplitude encoding for the input density matrix and quantum PCA on the output density matrix. This results in a promising signal denoising pipeline that works particularly well in the small sample size regime.",
-      "publishedDate": "2026-04-20",
-      "pdfUrl": "https://arxiv.org/pdf/2604.18691v1",
-      "summaryUrl": "https://arxiv.org/abs/2604.18691v1",
-      "category": "quant-ph"
-    },
-    {
-      "arxivId": "2604.18579v1",
-      "title": "The T16 Planet Hunt: 10,000 New Planet Candidates from TESS Cycle 1 and the Confirmation of a Hot Jupiter Around TIC 183374187",
-      "authors": [
-        "Joshua T. Roth",
-        "Joel D. Hartman",
-        "G\u00e1sp\u00e1r \u00c1. Bakos",
-        "Samuel W. Yee",
-        "Luke G. Bouma",
-        "Jhon Yana Galarza",
-        "Johanna K. Teske",
-        "R. P. Butler",
-        "Jeffrey D. Crane",
-        "Steve Shectman",
-        "David Osip",
-        "Shreyas Vissapragada",
-        "Yuri Beletsky",
-        "Shubham Kanodia",
-        "Yadira Gaibor"
-      ],
-      "abstract": "The T16 project has produced a uniformly detrended and systematics-corrected set of 83,717,159 TESS Cycle 1 full-frame image light curves for stars observed by TESS in its primary mission down to T=16 mag, enabling sensitive transit searches beyond the official TESS pipelines. While most existing TESS planet searches focus on relatively bright targets, planet occurrence rates suggest that a substantial number of planets should exist around fainter stars. We therefore use the T16 light curves to conduct a semi-automated search for transiting exoplanets across the full Cycle 1 FFI sample, resulting in 11,554 planet candidates orbiting stars down to 16th magnitude in the TESS band with orbital periods between 0.5 and 27 days. Of these, 10,091 are new planet candidates, and 411 are single-transit events, for which we do not attempt to determine orbital parameters. The remaining 1,052 candidates are previously known TESS candidates. We validate our pipeline through Magellan/PFS radial-velocity follow-up measurements on one of our candidate hosts, TIC 183374187, a metal poor thick-disk star, confirming the signal as newly identified hot Jupiter. This detection demonstrates our pipeline's ability to identify real, previously undiscovered, transiting planets. Overall, this work shows that large-scale, machine learning-assisted transit searches of TESS full-frame images can significantly expand the census of transiting planet candidates, particularly around faint stars, providing a rich target set for future validation and follow-up efforts. Our findings more than double the number of known TESS exoplanet candidates.",
-      "publishedDate": "2026-04-20",
-      "pdfUrl": "https://arxiv.org/pdf/2604.18579v1",
-      "summaryUrl": "https://arxiv.org/abs/2604.18579v1",
-      "category": "astro-ph.EP"
-    },
-    {
-      "arxivId": "2604.18569v1",
-      "title": "Revisiting Active Sequential Prediction-Powered Mean Estimation",
-      "authors": [
-        "Maria-Eleni Sfyraki",
-        "Jun-Kun Wang"
-      ],
-      "abstract": "In this work, we revisit the problem of active sequential prediction-powered mean estimation, where at each round one must decide the query probability of the ground-truth label upon observing the covariates of a sample. Furthermore, if the label is not queried, the prediction from a machine learning model is used instead. Prior work proposed an elegant scheme that determines the query probability by combining an uncertainty-based suggestion with a constant probability that encodes a soft constraint on the query probability. We explored different values of the mixing parameter and observed an intriguing empirical pattern: the smallest confidence width tends to occur when the weight on the constant probability is close to one, thereby reducing the influence of the uncertainty-based component. Motivated by this observation, we develop a non-asymptotic analysis of the estimator and establish a data-dependent bound on its confidence interval. Our analysis further suggests that when a no-regret learning approach is used to determine the query probability and control this bound, the query probability converges to the constraint of the max value of the query probability when it is chosen obliviously to the current covariates. We also conduct simulations that corroborate these theoretical findings.",
-      "publishedDate": "2026-04-20",
-      "pdfUrl": "https://arxiv.org/pdf/2604.18569v1",
-      "summaryUrl": "https://arxiv.org/abs/2604.18569v1",
-      "category": "stat.ML"
-    },
-    {
-      "arxivId": "2604.18521v1",
-      "title": "IDOBE: Infectious Disease Outbreak forecasting Benchmark Ecosystem",
-      "authors": [
-        "Aniruddha Adiga",
-        "Jingyuan Chou",
-        "Anshul Chiranth",
-        "Bryan Lewis",
-        "Ana I. Bento",
-        "Shaun Truelove",
-        "Geoffrey Fox",
-        "Madhav Marathe",
-        "Harry Hochheiser",
-        "Srini Venkatramanan"
-      ],
-      "abstract": "Epidemic forecasting has become an integral part of real-time infectious disease outbreak response. While collaborative ensembles composed of statistical and machine learning models have become the norm for real-time forecasting, standardized benchmark datasets for evaluating such methods are lacking. Further, there is limited understanding on performance of these methods for novel outbreaks with limited historical data. In this paper, we propose IDOBE, a curated collection of epidemiological time series focused on outbreak forecasting. IDOBE compiles from multiple data repositories spanning over a century of surveillance and across U.S. states and global locations. We perform derivative-based segmentation to generate over 10,000 outbreaks covering multiple outcomes such as cases and hospitalizations for 13 diseases. We consider a variety of information-theoretic and distributional measures to quantify the epidemiological diversity of the dataset. Finally, we perform multi-horizon short-term forecasting (1- to 4-week-ahead) through the progression of the outbreak using 11 baseline models and report on their performance. In addition to standard metrics such as NMSE and MAPE for point forecasts, we include probabilistic scoring rules such as Normalized Weighted Interval Score (NWIS) to quantify the performance. We find that MLP-based methods have the most robust performance, with statistical methods having a slight edge during the pre-peak phase. IDOBE dataset along with baselines are released publicly on https://github.com/NSSAC/IDOBE to enable standardized, reproducible benchmarking of outbreak forecasting methods.",
-      "publishedDate": "2026-04-20",
-      "pdfUrl": "https://arxiv.org/pdf/2604.18521v1",
-      "summaryUrl": "https://arxiv.org/abs/2604.18521v1",
-      "category": "cs.LG"
-    },
-    {
-      "arxivId": "2604.18477v1",
-      "title": "Multi-Scale Reversible Chaos Game Representation: A Unified Framework for Sequence Classification",
-      "authors": [
-        "Sarwan Ali",
-        "Taslim Murad"
-      ],
-      "abstract": "Biological classification with interpretability remains a challenging task. For this, we introduce a novel encoding framework, Multi-Scale Reversible Chaos Game Representation (MS-RCGR), that transforms biological sequences into multi-resolution geometric representations with guaranteed reversibility. Unlike traditional sequence encoding methods, MS-RCGR employs rational arithmetic and hierarchical k-mer decomposition to generate scale-invariant features that preserve complete sequence information while enabling diverse analytical approaches. Our framework bridges three distinct paradigms for sequence analysis: (1) traditional machine learning using extracted geometric features, (2) computer vision models operating on CGR-generated images, and (3) hybrid approaches combining protein language model embeddings with CGR features. Through comprehensive experiments on synthetic DNA and protein datasets encompassing seven distinct sequence classes, we demonstrate that MS-RCGR features consistently enhance classification performance across all paradigms. Notably, our hybrid approach combining pre-trained language model embeddings (ESM2, ProtT5) with MS-RCGR features achieves superior performance compared to either method alone. The reversibility property of our encoding ensures no information loss during transformation, while multi-scale analysis captures patterns ranging from individual nucleotides to complex motif structures. Our results indicate that MS-RCGR provides a flexible, interpretable, and high-performing foundation for biological sequence analysis.",
-      "publishedDate": "2026-04-20",
-      "pdfUrl": "https://arxiv.org/pdf/2604.18477v1",
-      "summaryUrl": "https://arxiv.org/abs/2604.18477v1",
-      "category": "cs.LG"
-    },
-    {
-      "arxivId": "2604.18469v1",
-      "title": "A Generalized Synthetic Control Method for Baseline Estimation in Demand Response Services",
-      "authors": [
-        "Jonas Sievers",
-        "Mardavij Roozbehani"
-      ],
-      "abstract": "Baseline estimation is critical to Demand Response (DR) settlement in electricity markets, yet existing machine learning methods remain limited in predictive performance, while methodologies from causal inference and counterfactual prediction are still underutilized in this domain. We introduce a Generalized Synthetic Control Method that builds on the classical Synthetic Control Method (SCM) from econometrics. While SCM provides a powerful framework for counterfactual estimation, classical SCM remains a static estimator: it fits the treated unit as a combination of contemporaneous donor units and therefore ignores predictable temporal structure in the residual error. We develop a generalized SCM framework that transforms baseline estimation into a dynamic counterfactual prediction problem by augmenting the donor representation with exogenous features, lagged treated load, and selected lagged donor signals. This enriched representation allows the estimator to capture autoregressive dependence, delayed donor-response patterns, and error-correction effects beyond the scope of standard SCM. The framework further accommodates nonlinear predictors when linear weighting is inadequate, with the greatest benefit arising in limited-data settings. Experiments on the Ausgrid smart-meter dataset show consistent improvements over classical SCM and strong benchmark methods, with the dominant performance gains driven by dynamic augmentation.",
-      "publishedDate": "2026-04-20",
-      "pdfUrl": "https://arxiv.org/pdf/2604.18469v1",
-      "summaryUrl": "https://arxiv.org/abs/2604.18469v1",
-      "category": "cs.AI"
-    },
-    {
-      "arxivId": "2604.18416v1",
-      "title": "Classical and quantum evolution of inflationary fluctuations",
-      "authors": [
-        "Guillermo Ballesteros",
-        "Jes\u00fas Gamb\u00edn Egea",
-        "Alejandro P\u00e9rez Rodr\u00edguez"
-      ],
-      "abstract": "We compare the correlation functions of inflationary perturbations computed either with quantum or classical dynamics. Even if they are enforced to agree at a specific time during inflation, classical and quantum correlations will differ at the end of inflation, provided that interactions are relevant. The difference between the results of the classical and quantum computations is exponentially sensitive to the number of e-folds elapsed from the time of agreement. We illustrate this finding with the tree-level bispectrum of the primordial curvature fluctuation and the one-loop power spectrum of tensor modes. We also show that classical evolution from a finite time does not imply the appearance of poles in the scalar bispectrum.",
-      "publishedDate": "2026-04-20",
-      "pdfUrl": "https://arxiv.org/pdf/2604.18416v1",
-      "summaryUrl": "https://arxiv.org/abs/2604.18416v1",
-      "category": "hep-th"
-    },
-    {
-      "arxivId": "2604.18407v2",
-      "title": "The Rise of Quantum Computing -- Take a BITE for Built Environment and Urban Microclimate Research",
-      "authors": [
-        "Liangzhu Leon Wang",
-        "Huiheng Liu",
-        "Honghao Fu",
-        "Zhipeng Deng",
-        "Bing Dong",
-        "Naiping Gao"
-      ],
-      "abstract": "Quantum computing is a new approach to computation that utilizes superposition, entanglement, interference, and tunneling to solve problems too complex for classical computers. This paper discusses the basic concepts and development of quantum computing, exploring its potential applications in the built environment and urban microclimate research. In buildings, quantum computing may help optimize energy management, control HVAC systems, and plan electric vehicle charging networks more efficiently. For urban microclimates, it could accelerate renewable energy planning and support multi-objective design, making it easier to balance urban building performance with climate conditions. Since current quantum hardware is still in the Noisy Intermediate-Scale Quantum (NISQ) stage, we propose the \"BITE\" principle to guide researchers in choosing suitable problems for quantum acceleration: B (Big search), I (Input-light), T (Tiny computation), and E (Evaluation polish). Although quantum computing still faces challenges such as noise and hardware limits, it offers great potential for developing more climate-resilient, sustainable, and energy-efficient cities of the future.",
-      "publishedDate": "2026-04-20",
-      "pdfUrl": "https://arxiv.org/pdf/2604.18407v2",
-      "summaryUrl": "https://arxiv.org/abs/2604.18407v2",
-      "category": "physics.pop-ph"
-    },
-    {
-      "arxivId": "2604.18368v1",
-      "title": "DSA-CycleGAN: A Domain Shift Aware CycleGAN for Robust Multi-Stain Glomeruli Segmentation",
-      "authors": [
-        "Zeeshan Nisar",
-        "Friedrich Feuerhake",
-        "Thomas Lampert"
-      ],
-      "abstract": "A key challenge in segmentation in digital histopathology is inter- and intra-stain variations as it reduces model performance. Labelling each stain is expensive and time-consuming so methods using stain transfer via CycleGAN, have been developed for training multi-stain segmentation models using labels from a single stain. Nevertheless, CycleGAN tends to introduce noise during translation because of the one-to-many nature of some stain pairs, which conflicts with its cycle consistency loss. To address this, we propose the Domain Shift Aware CycleGAN, which reduces the presence of such noise. Furthermore, we evaluate several advances from the field of machine learning aimed at resolving similar problems and compare their effectiveness against DSA-CycleGAN in the context of multi-stain glomeruli segmentation. Experiments demonstrate that DSA-CycleGAN not only improves segmentation performance in glomeruli segmentation but also outperforms other methods in reducing noise. This is particularly evident when translating between biologically distinct stains. The code is publicly available at https://github.com/zeeshannisar/DSA-CycleGAN.",
-      "publishedDate": "2026-04-20",
-      "pdfUrl": "https://arxiv.org/pdf/2604.18368v1",
-      "summaryUrl": "https://arxiv.org/abs/2604.18368v1",
-      "category": "cs.CV"
-    },
-    {
-      "arxivId": "2604.18363v1",
-      "title": "Effect Sizes in Marketing Research: Why Cohen's Local f^2 Belongs in the Toolkit",
-      "authors": [
-        "Wolfgang Messner"
-      ],
-      "abstract": "In an editorial in the Journal of Marketing, Steenkamp et al. (2026) make a valuable and timely intervention by urging marketing scholars to move beyond dichotomous significance testing and to report effect sizes that speak to substantive significance. Their editorial is especially strong in its insistence on exact p-values, richer statistical reporting, and closer alignment between rigor and relevance. Yet, their framework omits the local form of Cohen's f^2, that is f(B)^2 as an effect-size measure for the contribution of an individual predictor or predictor block B within a multivariable model. That omission matters because much of marketing research relies on regression-type models in which the central theoretical question is not merely whether a model fits globally, but whether a focal construct adds meaningful explanatory power beyond competing predictors and controls. This commentary argues that the R-squared foundation of local Cohen's f(B)^2 is a strength, especially in large-sample settings. Moreover, f-squared-type local effect sizes can be extended beyond ordinary least squares to multilevel models and, more tentatively, to neural networks and other machine-learning models.",
-      "publishedDate": "2026-04-20",
-      "pdfUrl": "https://arxiv.org/pdf/2604.18363v1",
-      "summaryUrl": "https://arxiv.org/abs/2604.18363v1",
-      "category": "stat.ME"
-    },
-    {
-      "arxivId": "2604.18325v1",
-      "title": "An Adaptive Smoothing Algorithm for Non-Lipschitz Optimization on Manifolds with Complexity Guarantees",
-      "authors": [
-        "Lei Wang",
-        "Xiaojun Chen"
-      ],
-      "abstract": "We study a class of optimization problems on Riemannian manifolds, where the objective function consists of a smooth term and quasi-norm type penalties with exponent $p \\in (0, 1]$. The essential difficulty lies in the fact that the objective function may not be locally Lipschitz continuous, which places this type of problems beyond the reach of existing Riemannian techniques. To overcome this obstacle, this paper constructs a general smoothing framework and establishes fundamental properties for developing efficient algorithms. In particular, we propose a smoothing Riemannian gradient algorithm equipped with a smoothing-aware AdaGrad-type stepsize rule. Its global convergence is demonstrated together with an iteration complexity of $O (\u03b5^{p - 4})$, which includes the best available iteration complexity of $O (\u03b5^{- 3})$ for Lipschitz problems with $p = 1$ as a special case. To the best of our knowledge, this is the first complexity result for non-Lipschitz optimization on Riemannian manifolds. Preliminary numerical experiments corroborate the practical efficiency of the proposed approach in real-world applications arsing from machine learning and data science.",
-      "publishedDate": "2026-04-20",
-      "pdfUrl": "https://arxiv.org/pdf/2604.18325v1",
-      "summaryUrl": "https://arxiv.org/abs/2604.18325v1",
-      "category": "math.OC"
-    },
-    {
-      "arxivId": "2604.18322v1",
-      "title": "Uncertainty-aware phase fraction prediction and active-learning-guided out-of-domain discovery of refractory multi-principal element alloys",
-      "authors": [
-        "A. K. Shargh",
-        "C. D. Stiles",
-        "J. A. El-Awady"
-      ],
-      "abstract": "Refractory multi-principal element alloys (RMPEAs) represent a novel class of alloys characterized by an extensive compositional design space and the potential for exceptional mechanical performance under extreme conditions. While accurate phase stability prediction is essential for their robust design, existing machine learning approaches rely on deterministic mappings from composition-derived features to phase labels, neglecting the uncertainty inherent in such predictions. In this study, we present a deep learning framework based on Mixture Density Networks (MDNs) to predict phase fractions in RMPEAs and quantify the associated aleatoric uncertainty across a wide temperature range. By training separate models for up to six constituent phases of RMPEAs using CALPHAD derived data, our approach achieves high predictive accuracy while capturing the probabilistic nature of phase formation. To address epistemic uncertainty arising from incomplete knowledge of the most informative features, we perform a perturbation-based feature importance analysis and identify a minimally sufficient input set that maintains both predictive performance and uncertainty calibration. Finally, we propose an uncertainty-based active learning strategy to discover novel RMPEAs with the target phase incorporating previously unseen elements, while investigating the exploration-exploitation trade-off in model-guided discovery. Our uncertainty-aware framework has the potential to accelerate and improve the reliability of discovering novel high-performance alloys and is broadly applicable.",
-      "publishedDate": "2026-04-20",
-      "pdfUrl": "https://arxiv.org/pdf/2604.18322v1",
-      "summaryUrl": "https://arxiv.org/abs/2604.18322v1",
-      "category": "cond-mat.mtrl-sci"
-    },
-    {
-      "arxivId": "2604.18316v1",
-      "title": "Predictive Modeling of Natural Medicinal Compounds for Alzheimer Disease Using Cheminformatics",
-      "authors": [
-        "Hafiza Syeda Yusra Tirmizi",
-        "Syed Ibad Hasnain",
-        "Muhammad Faris",
-        "Rabail Khowaja",
-        "Saad Abdullah"
-      ],
-      "abstract": "The most common cause of dementia is Alzheimer disease, a progressive neurodegenerative disorder affecting older adults that gradually impairs memory, cognition, and behavior. It is characterized by the accumulation of abnormal proteins in the brain, including amyloid-beta plaques and neurofibrillary tangles of tau protein, which disrupt neuronal communication and lead to neuronal death. Early manifestations typically include mild memory impairment and reduced ability to acquire new information. As the disease progresses, patients experience severe cognitive decline, loss of independence, and significant personality and behavioral changes. Although the exact etiology of Alzheimer disease remains unclear, factors such as age, genetic predisposition, lifestyle, and cardiovascular health contribute to its development. While no definitive cure exists, early diagnosis, pharmacological interventions, and supportive care can slow progression and improve quality of life. This study presents a predictive cheminformatics-based model for identifying natural medicinal compounds with potential therapeutic efficacy against Alzheimer disease. The model functions as a drug screening system utilizing molecular descriptors and machine learning to detect anti-Alzheimer activity. More than 7,000 compounds from ChEBI, SynSysNet, and INDOFINE were preprocessed using Open Babel and analyzed with Dragon descriptors. A Random Forest classifier trained on approved treatments achieved moderate performance, with precision of 0.5970 and recall of 0.6590, identifying 73 candidate compounds. Key descriptors included atomic polarizability, bond multiplicity, and non-hydrogen bond counts.These findings demonstrate the value of cheminformatics in early-stage drug discovery for Alzheimer disease.",
-      "publishedDate": "2026-04-20",
-      "pdfUrl": "https://arxiv.org/pdf/2604.18316v1",
-      "summaryUrl": "https://arxiv.org/abs/2604.18316v1",
-      "category": "q-bio.OT"
-    },
-    {
-      "arxivId": "2604.18311v1",
-      "title": "On the Importance and Evaluation of Narrativity in Natural Language AI Explanations",
-      "authors": [
-        "Mateusz Cedro",
-        "David Martens"
-      ],
-      "abstract": "Explainable AI (XAI) aims to make the behaviour of machine learning models interpretable, yet many explanation methods remain difficult to understand. The integration of Natural Language Generation into XAI aims to deliver explanations in textual form, making them more accessible to practitioners. Current approaches, however, largely yield static lists of feature importances. Although such explanations indicate what influences the prediction, they do not explain why the prediction occurs. In this study, we draw on insights from social sciences and linguistics, and argue that XAI explanations should be presented in the form of narratives. Narrative explanations support human understanding through four defining properties: continuous structure, cause-effect mechanisms, linguistic fluency, and lexical diversity. We show that standard Natural Language Processing (NLP) metrics based solely on token probability or word frequency fail to capture these properties and can be matched or exceeded by tautological text that conveys no explanatory content. To address this issue, we propose seven automatic metrics that quantify the narrative quality of explanations along the four identified dimensions. We benchmark current state-of-the-art explanation generation methods on six datasets and show that the proposed metrics separate descriptive from narrative explanations more reliably than standard NLP metrics. Finally, to further advance the field, we propose a set of problem-agnostic XAI Narrative generation rules for producing natural language XAI explanations, so that the resulting XAI Narratives exhibit stronger narrative properties and align with the findings from the linguistic and social science literature.",
-      "publishedDate": "2026-04-20",
-      "pdfUrl": "https://arxiv.org/pdf/2604.18311v1",
-      "summaryUrl": "https://arxiv.org/abs/2604.18311v1",
-      "category": "cs.CL"
-    },
-    {
-      "arxivId": "2604.18310v1",
-      "title": "Symmetry Guarantees Statistic Recovery in Variational Inference",
-      "authors": [
-        "Daniel Marks",
-        "Dario Paccagnan",
-        "Mark van der Wilk"
-      ],
-      "abstract": "Variational inference (VI) is a central tool in modern machine learning, used to approximate an intractable target density by optimising over a tractable family of distributions. As the variational family cannot typically represent the target exactly, guarantees on the quality of the resulting approximation are crucial for understanding which of its properties VI can faithfully capture. Recent work has identified instances in which symmetries of the target and the variational family enable the recovery of certain statistics, even under model misspecification. However, these guarantees are inherently problem-specific and offer little insight into the fundamental mechanism by which symmetry forces statistic recovery. In this paper, we overcome this limitation by developing a general theory of symmetry-induced statistic recovery in variational inference. First, we characterise when variational minimisers inherit the symmetries of the target and establish conditions under which these pin down identifiable statistics. Second, we unify existing results by showing that previously known statistic recovery guarantees in location-scale families arise as special cases of our theory. Third, we apply our framework to distributions on the sphere to obtain novel guarantees for directional statistics in von Mises-Fisher families. Together, these results provide a modular blueprint for deriving new recovery guarantees for VI in a broad range of symmetry settings.",
-      "publishedDate": "2026-04-20",
-      "pdfUrl": "https://arxiv.org/pdf/2604.18310v1",
-      "summaryUrl": "https://arxiv.org/abs/2604.18310v1",
-      "category": "stat.ML"
-    },
-    {
-      "arxivId": "2604.18227v1",
-      "title": "FSEVAL: Feature Selection Evaluation Toolbox and Dashboard",
-      "authors": [
-        "Muhammad Rajabinasab",
-        "Arthur Zimek"
-      ],
-      "abstract": "Feature selection is a fundamental machine learning and data mining task, involved with discriminating redundant features from informative ones. It is an attempt to address the curse of dimensionality by removing the redundant features, while unlike dimensionality reduction methods, preserving explainability. Feature selection is conducted in both supervised and unsupervised settings, with different evaluation metrics employed to determine which feature selection algorithm is the best. In this paper, we propose FSEVAL, a feature selection evaluation toolbox accompanied with a visualization dashboard, with the goal to make it easy to comprehensively evaluate feature selection algorithms. FSEVAL aims to provide a standardized, unified, evaluation and visualization toolbox to help the researchers working in the field, conduct extensive and comprehensive evaluation of feature selection algorithms with ease.",
-      "publishedDate": "2026-04-20",
-      "pdfUrl": "https://arxiv.org/pdf/2604.18227v1",
-      "summaryUrl": "https://arxiv.org/abs/2604.18227v1",
-      "category": "cs.LG"
-    },
-    {
-      "arxivId": "2604.18152v1",
-      "title": "mlr3torch: A Deep Learning Framework in R based on mlr3 and torch",
-      "authors": [
-        "Sebastian Fischer",
-        "Lukas Burk",
-        "Carson Zhang",
-        "Bernd Bischl",
-        "Martin Binder"
-      ],
-      "abstract": "Deep learning (DL) has become a cornerstone of modern machine learning (ML) praxis. We introduce the R package mlr3torch, which is an extensible DL framework for the mlr3 ecosystem. It is built upon the torch package, and simplifies the definition, training, and evaluation of neural networks for both tabular data and generic tensors (e.g., images) for classification and regression. The package implements predefined architectures, and torch models can easily be converted to mlr3 learners. It also allows users to define neural networks as graphs. This representation is based on the graph language defined in mlr3pipelines and allows users to define the entire modeling workflow, including preprocessing, data augmentation, and network architecture, in a single graph. Through its integration into the mlr3 ecosystem, the package allows for convenient resampling, benchmarking, preprocessing, and more. We explain the package's design and features and show how to customize and extend it to new problems. Furthermore, we demonstrate the package's capabilities using three use cases, namely hyperparameter tuning, fine-tuning, and defining architectures for multimodal data. Finally, we present some runtime benchmarks.",
-      "publishedDate": "2026-04-20",
-      "pdfUrl": "https://arxiv.org/pdf/2604.18152v1",
-      "summaryUrl": "https://arxiv.org/abs/2604.18152v1",
-      "category": "stat.ML"
-    },
-    {
-      "arxivId": "2604.18137v1",
-      "title": "AQPIM: Breaking the PIM Capacity Wall for LLMs with In-Memory Activation Quantization",
-      "authors": [
-        "Kosuke Matsushima",
-        "Yasuyuki Okoshi",
-        "Masato Motomura",
-        "Daichi Fujiki"
-      ],
-      "abstract": "Processing-in-Memory (PIM) architectures offer a promising solution to the memory bottlenecks in data-intensive machine learning, yet often overlook the growing challenge of activation memory footprint. Conventional PIM approaches struggle with massive KV cache sizes generated in long-context scenarios by Transformer-based models, frequently exceeding PIM's limited memory capacity, while techniques like sparse attention can conflict with PIM's need for data locality. Existing PIM approaches and quantization methods are often insufficient or poorly suited for leveraging the unique characteristics of activations. This work identifies an opportunity for PIM-specialized activation quantization to enhance bandwidth and compute efficiency.   We explore clustering-based vector quantization approaches, which align well with activation characteristics and PIM's internal bandwidth capabilities. Building on this, we introduce AQPIM, a novel PIM-aware activation quantization framework based on Product Quantization (PQ), optimizing it for modern Large Language Models (LLMs). By performing quantization directly within memory, AQPIM leverages PIM's high internal bandwidth and enables direct computation on compressed data, significantly reducing both memory footprint and computational overhead for attention computation. AQPIM addresses PQ's accuracy challenges by introducing several algorithmic optimizations. Evaluations demonstrate that AQPIM achieves significant performance improvements, drastically reducing of GPU-CPU communication that can account for 90$\\sim$98.5\\% of decoding latency, together with 3.4$\\times$ speedup over a SOTA PIM approach.",
-      "publishedDate": "2026-04-20",
-      "pdfUrl": "https://arxiv.org/pdf/2604.18137v1",
-      "summaryUrl": "https://arxiv.org/abs/2604.18137v1",
-      "category": "cs.AR"
-    },
-    {
-      "arxivId": "2604.18086v1",
-      "title": "Materials Informatics Across the Length Scales",
-      "authors": [
-        "Jamal Abdul Nasir",
-        "Hamide Kavak",
-        "Oguzhan Der",
-        "Ali Ercetin",
-        "Amila Akagic",
-        "Jesper Friis",
-        "Francesca L. Bleken",
-        "Andrea Lorenzoni",
-        "Francesco Mercuri",
-        "Scott M. Woodley",
-        "Keith T. Butler"
-      ],
-      "abstract": "Materials informatics is increasingly used to support modelling, analysis and design across the length scales of materials science, from atomistic simulations to microstructural characterisation and continuum descriptions. Despite rapid progress, the reliability and transferability of these approaches vary strongly with scale. Here we survey data-driven methods at the nanoscale, mesoscale, and micro-to-continuum levels, highlighting established capabilities as well as unresolved challenges. Machine-learning interatomic potentials, mesoscale surrogate and operator-learning models, and learning-based analysis of experimental microstructures are discussed, with emphasis on data quality, uncertainty, interpretability, and cross-scale consistency. We further examine the role of data standards, ontologies, and emerging tools, such as autonomous laboratories, where they directly affect multiscale workflows. This perspective clarifies what can be considered reliable today and identifies key obstacles to the broader integration of materials informatics across scales.",
-      "publishedDate": "2026-04-20",
-      "pdfUrl": "https://arxiv.org/pdf/2604.18086v1",
-      "summaryUrl": "https://arxiv.org/abs/2604.18086v1",
-      "category": "cond-mat.mtrl-sci"
-    },
-    {
-      "arxivId": "2604.18062v1",
-      "title": "Towards a Foundation-Model Paradigm for Aerodynamic Prediction in Three-dimensional Design",
-      "authors": [
-        "Yunjia Yang",
-        "Babak Gholami",
-        "Caglar Gurbuz",
-        "Mohammad Rashed",
-        "Nils Thuerey"
-      ],
-      "abstract": "Accurate machine-learning models for aerodynamic prediction are essential for accelerating shape optimization, yet remain challenging to develop for complex three-dimensional configurations due to the high cost of generating training data. This work introduces a methodology for efficiently constructing accurate surrogate models for design purposes by first pre-training a large-scale model on diverse geometries and then fine-tuning it with a few more detailed task-specific samples. A Transformer-based architecture, AeroTransformer, is developed and tailored for large-scale training to learn aerodynamics. The methodology is evaluated on transonic wings, where the model is pre-trained on SuperWing, a dataset of nearly 30000 samples with broad geometric diversity, and subsequently fine-tuned to handle specific wing shapes perturbed from the Common Research Model. Results show that, with 450 task-specific samples, the proposed methodology achieves 0.36% error on surface-flow prediction, reducing 84.2% compared to training from scratch. The influence of model configurations and training strategies is also systematically studied to provide guidance on effectively training and deploying such models under limited data and computational budgets. To facilitate reuse, we release the datasets and the pre-trained models at https://github.com/tum-pbs/AeroTransformer. An interactive design tool is also built on the pre-trained model and is available online at https://webwing.pbs.cit.tum.de.",
-      "publishedDate": "2026-04-20",
-      "pdfUrl": "https://arxiv.org/pdf/2604.18062v1",
-      "summaryUrl": "https://arxiv.org/abs/2604.18062v1",
-      "category": "cs.LG"
-    },
-    {
-      "arxivId": "2604.18035v1",
-      "title": "Variational Autoencoder Domain Adaptation for Cross-System Generalization in ML-Based SOP Monitoring",
-      "authors": [
-        "Leyla Sadighi",
-        "Stefan Karlsson",
-        "Carlos Natalino",
-        "Mojtaba Eshghie",
-        "Fehmida Usmani",
-        "Eoin Kenny",
-        "Lena Wosinska",
-        "Paolo Monti",
-        "Marija Furdek",
-        "Marco Ruffini"
-      ],
-      "abstract": "Machine learning (ML) models trained to detect physical-layer threats on one optical fiber system often fail catastrophically when applied to a different system, due to variations in operating wavelength, fiber properties, and network architecture. To overcome this, we propose a Domain Adaptation (DA) framework based on a Variational Autoencoder (VAE) that learns a shared representation capturing event signatures common to both systems while suppressing system-specific differences. The shared encoder is first trained on the combined data from two distinct optical systems: a 21 km O-band dark-fiber testbed (System 1) and a 63.4 km C-band live metro ring (System 2). The encoder is then frozen, and a classifier is trained using labels from an individual system. The proposed approach achieves 95.3% and 73.5% cross-system accuracy when moving from System 1 to System 2 and vice versa, respectively. This corresponds to gains of 83.4% and 51% over a fully supervised Deep Neural Network (DNN) baseline trained on a single system, while preserving intra-system performance.",
-      "publishedDate": "2026-04-20",
-      "pdfUrl": "https://arxiv.org/pdf/2604.18035v1",
-      "summaryUrl": "https://arxiv.org/abs/2604.18035v1",
-      "category": "cs.LG"
-    },
-    {
-      "arxivId": "2604.18022v1",
-      "title": "Boltzmann Machine Learning with a Parallel, Persistent Markov chain Monte Carlo method for Estimating Evolutionary Fields and Couplings from a Protein Multiple Sequence Alignment",
-      "authors": [
-        "Sanzo Miyazawa"
-      ],
-      "abstract": "The inverse Potts problem for estimating evolutionary single-site fields and pairwise couplings in homologous protein sequences from their single-site and pairwise amino acid frequencies observed in their multiple sequence alignment would be still one of useful methods in the studies of protein structure and evolution. Since the reproducibility of fields and couplings are the most important, the Boltzmann machine method is employed here, although it is computationally intensive. In order to reduce computational time required for the Boltzmann machine, parallel, persistent Markov chain Monte Carlo method is employed to estimate the single-site and pairwise marginal distributions in each learning step. Also, stochastic gradient descent methods are used to reduce computational time for each learning. Another problem is how to adjust the values of hyperparameters; there are two regularization parameters for evolutionary fields and couplings. The precision of contact residue pair prediction is often used to adjust the hyperparameters. However, it is not sensitive to these regularization parameters. Here, they are adjusted for the fields and couplings to satisfy a specific condition that is appropriate for protein conformations. This method has been applied to eight protein families.",
-      "publishedDate": "2026-04-20",
-      "pdfUrl": "https://arxiv.org/pdf/2604.18022v1",
-      "summaryUrl": "https://arxiv.org/abs/2604.18022v1",
-      "category": "q-bio.BM"
-    },
-    {
-      "arxivId": "2604.18014v1",
-      "title": "Exponential quantum space advantage for Shannon entropy estimation in data streams",
-      "authors": [
-        "Weijun Feng",
-        "Yongzhen Xu",
-        "Lvzhou Li",
-        "Gongde Guo",
-        "Song Lin"
-      ],
-      "abstract": "Near-term quantum devices with limited qubits motivate the study of space-bounded quantum computation in the data stream model. We show that Shannon entropy estimation exhibits an exponential separation between quantum and classical space complexity in this setting. Technically, we develop a two-stage quantum streaming algorithm based on a quantum procedure with an explicitly constructed oracle derived from the streaming input. This algorithm achieves logarithmic space complexity in the accuracy parameter, whereas any classical streaming algorithm requires polynomial space. In sharp contrast, existing results for Shannon entropy estimation in the quantum query model achieve only a quadratic speedup. Our work establishes a natural problem with practical applications in computer networking that admits an exponential quantum space advantage, revealing a fundamental gap between quantum query complexity and streaming space complexity.",
-      "publishedDate": "2026-04-20",
-      "pdfUrl": "https://arxiv.org/pdf/2604.18014v1",
-      "summaryUrl": "https://arxiv.org/abs/2604.18014v1",
-      "category": "quant-ph"
-    },
-    {
-      "arxivId": "2604.18008v1",
-      "title": "Multi-stream Quickest Change Detection: Foundations and Recent Advances",
-      "authors": [
-        "Topi Halme",
-        "Visa Koivunen"
-      ],
-      "abstract": "This paper provides an overview of recent developments in quickest change detection (QCD) for high-dimensional multi-sensor systems, with an emphasis on settings involving structural constraints and limited sensing resources. Classical QCD methodologies, while well understood in low-dimensional and fully observed regimes, face significant challenges when extended to modern applications characterized by large-scale data, constrained sampling or communication, and heterogeneous signal structures. We review key approaches for handling high dimensionality, including methods that exploit sparsity, and other forms of signal heterogeneity. Additionally, we discuss sampling constraints, where observations must be selected or acquired sequentially under resource limitations. Multi-stream applications can require making multiple detections, for example when detecting changes separately in different streams. The underlying assumptions on probability models, the types of changes taking place, commonly used decision-making criteria, performance indices, and error types are described. We also briefly discuss the application of machine learning in cases where the underlying probability models are not known or there is a need to select which sensors should monitor the phenomena because of the large scale of the system.",
-      "publishedDate": "2026-04-20",
-      "pdfUrl": "https://arxiv.org/pdf/2604.18008v1",
-      "summaryUrl": "https://arxiv.org/abs/2604.18008v1",
-      "category": "math.ST"
-    },
-    {
-      "arxivId": "2604.18656v1",
-      "title": "It's all in your head -- fine-tuning arguments do not require aleatoric uncertainty",
-      "authors": [
-        "Andrew Fowlie"
-      ],
-      "abstract": "Prompted by misconceptions in the recent literature, we review the justifications for naturalness arguments and Occam's razor found in Bayesian statistics. We discuss the automatic Occam's razor that emerges in Bayesian formalism, bringing together points of view from diverse fields, including statistics, social sciences, physics and machine learning. In pedagogical calculations, we demonstrate that this automatic razor disfavors unnatural models in which predictions must be fine-tuned to agree with observation.",
-      "publishedDate": "2026-04-20",
-      "pdfUrl": "https://arxiv.org/pdf/2604.18656v1",
-      "summaryUrl": "https://arxiv.org/abs/2604.18656v1",
-      "category": "physics.hist-ph"
-    },
-    {
-      "arxivId": "2604.17976v1",
-      "title": "ltzGLUE: Luxembourgish General Language Understanding Evaluation",
-      "authors": [
-        "Alistair Plum",
-        "Felicia K\u00f6rner",
-        "Anne-Marie Lutgen",
-        "Laura Bernardy",
-        "Fred Philippy",
-        "Emilia Milano",
-        "Nils Rehlinger",
-        "C\u00e9dric Lothritz",
-        "Tharindu Ranasinghe",
-        "Barbara Plank",
-        "Christoph Purschke"
-      ],
-      "abstract": "This paper presents ltzGLUE, the first Natural Language Understanding (NLU) benchmark for Luxembourgish (LTZ) based on the popular GLUE benchmark for English. Although NLU tasks are available for many European languages nowadays, LTZ is one of the official national languages that is often overlooked. We construct new tasks and reuse existing ones to introduce the first official NLU benchmark and accompanying evaluation of encoder models for the language. Our tasks include common natural language processing tasks in binary and multi-class classification settings, including named entity recognition, topic classification, and intent classification. We evaluate various pre-trained language models for LTZ to present an overview of the current capabilities of these models on the LTZ language.",
-      "publishedDate": "2026-04-20",
-      "pdfUrl": "https://arxiv.org/pdf/2604.17976v1",
-      "summaryUrl": "https://arxiv.org/abs/2604.17976v1",
-      "category": "cs.CL"
-    },
-    {
-      "arxivId": "2604.17956v1",
-      "title": "Federated Rule Ensemble Method in Medical Data",
-      "authors": [
-        "Ke Wan",
-        "Kensuke Tanioka",
-        "Toshio Shimokawa"
-      ],
-      "abstract": "Machine learning has become integral to medical research and is increasingly applied in clinical settings to support diagnosis and decision-making; however, its effectiveness depends on access to large, diverse datasets, which are limited within single institutions. Although integrating data across institutions can address this limitation, privacy regulations and data ownership constraints hinder these efforts. Federated learning enables collaborative model training without sharing raw data; however, most methods rely on complex architectures that lack interpretability, limiting clinical applicability. Therefore, we proposed a federated RuleFit framework to construct a unified and interpretable global model for distributed environments. It integrates three components: preprocessing based on differentially private histograms to estimate shared cutoff values, enabling consistent rule definitions and reducing heterogeneity across clients; local rule generation using gradient boosting decision trees with shared cutoffs; and coefficient estimation via $\\ell_1$-regularized optimization using a Federated Dual Averaging algorithm for sparse and consistent variable selection. In simulation studies, the proposed method achieved a performance comparable to that of centralized RuleFit while outperforming existing federated approaches. Real-world analysis demonstrated its ability to provide interpretable insights with competitive predictive accuracy. Therefore, the proposed framework offers a practical and effective solution for interpretable and reliable modeling in federated learning environments.",
-      "publishedDate": "2026-04-20",
-      "pdfUrl": "https://arxiv.org/pdf/2604.17956v1",
-      "summaryUrl": "https://arxiv.org/abs/2604.17956v1",
-      "category": "cs.LG"
-    },
-    {
-      "arxivId": "2604.17936v1",
-      "title": "Replica Theory of Spherical Boltzmann Machine Ensembles",
-      "authors": [
-        "Thomas Tulinski",
-        "Jorge Fernandez-De-Cossio-Diaz",
-        "Simona Cocco",
-        "R\u00e9mi Monasson"
-      ],
-      "abstract": "Training in machine learning generally consists in finding one model, whose parameters minimize a data-dependent loss. Yet, empirical work shows that ensemble learning, an approach in which multiple models are sampled, can improve performance. Here, we provide an analytical framework to understand these observations in the case of Boltzmann machines, exploiting a duality between ensemble learning and large deviations of the free energy in spin-glass models. Replica calculations allow us to fully solve the case of spherical Boltzmann machine ensembles, and clarify when ensemble learning improves over standard loss minimization. Our findings are corroborated by numerical simulations on deep networks. Special care is brought to the case of nearly finite-dimensional data, for which we show that replica predictions are valid for arbitrarily large number of data points compared to the (large) embedding dimension.",
-      "publishedDate": "2026-04-20",
-      "pdfUrl": "https://arxiv.org/pdf/2604.17936v1",
-      "summaryUrl": "https://arxiv.org/abs/2604.17936v1",
-      "category": "cond-mat.dis-nn"
-    },
-    {
-      "arxivId": "2604.17925v1",
-      "title": "State-Averaged Quantum Algorithms for Multiconfigurational Surface Chemistry: A Benchmark on Rh@TiO2(110)",
-      "authors": [
-        "Ernst Dennis L\u00e6gteskov Binau Larsson",
-        "Erik Kjellgren",
-        "Peter Reinholdt",
-        "Jacob Kongsted"
-      ],
-      "abstract": "Accurate modeling of surface catalytic processes often requires methods capable of describing strong correlation, charge transfer, and multiple closely lying electronic states. While density functional theory remains widely used, its limitations for localized electronic states motivate the use of wavefunction-based approaches and, more recently, quantum computing algorithms. However, the performance of quantum ans\u00e4tze in chemically motivated, multistate settings remains largely unexplored.   Here, we benchmark state-averaged factorized unitary coupled cluster with singles and doubles (SA-fUCCSD) and the adaptive, problem-tailored ansatz (SA-ADAPT) using an embedded cluster model of NO adsorption on Rh-doped TiO2(110). The system exhibits pronounced multiconfigurational character and multiple state crossings, providing a stringent test. State-averaged CASSCF serves as a reference, and the quantum ans\u00e4tze are evaluated as solvers for the corresponding CASCI problem within a fixed orbital basis.   We find that SA-fUCCSD improves with increasing circuit depth but requires many parameters and shows sensitivity to initialization. In contrast, SA-ADAPT achieves near-CASSCF accuracy with significantly fewer operators. A modified operator selection scheme, incorporating multiple operators per iteration, substantially accelerates convergence.   Our results demonstrate the efficiency of adaptive ans\u00e4tze for multistate problems and establish a controlled benchmark for quantum algorithms in chemically motivated systems beyond minimal models.",
-      "publishedDate": "2026-04-20",
-      "pdfUrl": "https://arxiv.org/pdf/2604.17925v1",
-      "summaryUrl": "https://arxiv.org/abs/2604.17925v1",
-      "category": "quant-ph"
-    },
-    {
-      "arxivId": "2604.17922v1",
-      "title": "Optimal Linear Interpolation under Differential Information: application to the prediction of perfect flows",
-      "authors": [
-        "Soumyodeep Mukhopadhyay",
-        "Didier Rulli\u00e8re",
-        "Rodolphe Le Riche",
-        "David Gaudrie",
-        "Xavier Bay",
-        "Laurent Genest",
-        "David Gaudrie"
-      ],
-      "abstract": "Approximation of functions satisfying partial differential equations (PDEs) is paramount for simulation of physical fluid flows and other problems in physics. Recently, physics-informed machine learning approaches have proven useful as a data-driven complement to numerical models for partial differential equations, bringing faster responses and allowing us to capitalize on past observations. However, their efficiency and convergence depend on the availability of vast training datasets. For sparse observations, Gaussian process regression or Kriging has emerged as a powerful interpolation model, offering principled estimates and uncertainty quantification. Several attempts have been made to condition Gaussian processes on linear PDEs via artificial or collocation observations and kernel design.These methods suffer from scalability issues in higher dimensions and limited generalizability. The aim of this study is to explore the extension of the Kriging predictor in the presence of linear PDE information at a finite number of collocation points. Two approaches are proposed: 1) A collocated co-Kriging with primary observations of the physical field and auxiliary differential observations; 2) A constrained Kriging optimization problem strongly satisfying linear PDE constraints at the points of prediction through a Lagrangian formulation. Numerical experiments are given for ordinary differential equations, 2D harmonic PDEs and an application to perfect flows around a cylinder. This work highlights a trade-off between the computational efficiency of the Lagrange multipliers approach and the strict interpolation of observations.",
-      "publishedDate": "2026-04-20",
-      "pdfUrl": "https://arxiv.org/pdf/2604.17922v1",
-      "summaryUrl": "https://arxiv.org/abs/2604.17922v1",
-      "category": "math.NA"
-    },
-    {
-      "arxivId": "2604.17859v1",
-      "title": "Producing High-Resolution Martian Surface Temperature Maps Using VIR-TIR Relationships",
-      "authors": [
-        "Michael A. Frazer",
-        "Eriita G. Jones",
-        "Katarina Miljkovic",
-        "Gretchen K. Benedix"
-      ],
-      "abstract": "Thermal infrared data (TIR; 8 - 15 $\u03bcm$) has a wide range of applications in Earth and planetary remote sensing. On Mars, this includes deriving thermal inertia (TI), which describes surface physical characteristics (e.g. particle size, degree of cementation) and is key for understanding geologic processes, assessing in-situ resource utilisation (ISRU) environments, and assisting mission planning. However, TI data from the THEMIS instrument is limited to 100 m/pixel resolution. Hyperspectral visible and near-infrared data (VIR; 0.5 - 5 $\u03bcm$) compliments TIR data by providing information on surface composition and is provided by the CRISM instrument at 12 m/pixel. In this work, we generate a machine learning regressor-based model to constrain relationships between THEMIS TI and CRISM VIR images at THEMIS resolution, and predict TI values from CRISM spectra with high accuracy (R2 $\\sim$ 0.90, RMSE $\\sim$ 23.6 TIU). We use the model to produce a downscaled TI map at a spatial resolution of 12 m/pixel, an order of magnitude finer than currently available, revealing decametre-scale features previously unresolved in THEMIS data.",
-      "publishedDate": "2026-04-20",
-      "pdfUrl": "https://arxiv.org/pdf/2604.17859v1",
-      "summaryUrl": "https://arxiv.org/abs/2604.17859v1",
-      "category": "astro-ph.EP"
-    },
-    {
-      "arxivId": "2604.17845v1",
-      "title": "Low-Complexity Learning-Based Beamforming for Ultra-Massive MIMO THz Communications",
-      "authors": [
-        "Sourabh Solanki",
-        "Abuzar Babikir Mohammad Adam",
-        "Chandan Kumar Sheemar",
-        "Zaid Abdullah",
-        "Eva Lagunas",
-        "George C. Alexandropoulos",
-        "Symeon Chatzinotas"
-      ],
-      "abstract": "Terahertz (THz) communications have emerged as a key technology for escalating data rates in future generation wireless networks. However, severe propagation losses at THz frequencies pose significant challenges, which can be mitigated via ultra-massive multiple-input multiple-output (UM-MIMO) systems employing highly directional transmissions. To this end, codebook-based analog beamforming constitutes a realistic solution, eliminating the need for explicit channel estimation. However, in UM-MIMO systems, the use of extremely narrow beams makes beam training and alignment increasingly challenging, leading to a substantial increase in the number of codewords to be tested and, thus, to high computational complexity. In this paper, a novel artificial neural network architecture for low-complexity beam training in UM-MIMO THz systems is presented, which does not require a constant feedback link between transmitter and receiver to obtain the best beamformer and combiner pair. An inception and residual network, which is trained based on the received signal powers using the transmit and receive codewords generated from predefined hierarchical codebooks, is designed. Our numerical investigations demonstrate that the proposed machine learning approach significantly reduces the complexity of UM-MIMO transmit and receive beamforming design, as compared to the standard exhaustive and hierarchical beam searching methods.",
-      "publishedDate": "2026-04-20",
-      "pdfUrl": "https://arxiv.org/pdf/2604.17845v1",
-      "summaryUrl": "https://arxiv.org/abs/2604.17845v1",
-      "category": "eess.SP"
-    },
-    {
-      "arxivId": "2604.17834v1",
-      "title": "AsyncSparse: Accelerating Sparse Matrix-Matrix Multiplication on Asynchronous GPU Architectures",
-      "authors": [
-        "Jie Liu",
-        "Huanzhi Pu",
-        "Zhiru Zhang"
-      ],
-      "abstract": "Sparse Matrix-Matrix Multiplication (SpMM) is a fundamental kernel across scientific computing and machine learning. While prior work accelerates SpMM using Tensor Cores, no existing sparse kernel exploits the asynchronous features of modern GPU architectures, such as NVIDIA's Tensor Memory Accelerator (TMA) and warp specialization. This work systematically studies how these features impact SpMM performance and introduces two co-designed kernels. For structured sparsity, we optimize a warp-specialized producer-consumer pipeline overlapping TMA data transfer with WGMMA computation using Block Compressed Sparse Row (BCSR) format. For irregular sparsity, we design a Window Compressed Sparse Row (WCSR) kernel that loads the sparse operand via TMA and splits large row-windows across thread blocks for load balancing. Our WCSR kernel outperforms all prior SpMM kernels on SuiteSparse matrices (1.47x over AccSpMM, 6.24x over cuSPARSE). Our BCSR kernel achieves a combined 2.66x end-to-end speedup on Qwen2.5-7B prefill at 90% block sparsity with 64K tokens over cuDNN/cuBLAS.",
-      "publishedDate": "2026-04-20",
-      "pdfUrl": "https://arxiv.org/pdf/2604.17834v1",
-      "summaryUrl": "https://arxiv.org/abs/2604.17834v1",
-      "category": "cs.DC"
-    },
-    {
-      "arxivId": "2604.18649v1",
-      "title": "Position: No Retroactive Cure for Infringement during Training",
-      "authors": [
-        "Satoru Utsunomiya",
-        "Masaru Isonuma",
-        "Junichiro Mori",
-        "Ichiro Sakata"
-      ],
-      "abstract": "As generative AI faces intensifying legal challenges, the machine learning community has increasingly relied on post-hoc mitigation -- especially machine unlearning and inference-time guardrails -- to argue for compliance. This paper argues that such post-hoc mitigation methods cannot retroactively cure liability from unlawful acquisition and training, because compliance hinges on data lineage, not the outputs. Our argument has three parts. First, unauthorized copying/ingestion can be a legally complete completed act, and model weights may operate as fixed copies that retain training-derived expressive value, making later filtering beside the point for infringement. Second, contract and tort/unfair-competition rules -- via licenses, terms of service, and anti-free-riding principles -- can independently restrict access and use, often bypassing copyright defenses (e.g., fair use or TDM exceptions). Third, since value from protected inputs can persist in weights, remedies such as unjust enrichment and disgorgement may require stripping gains and, in some cases, reaching the model itself. We therefore argue for a shift from Post-Hoc Sanitization to verifiable Ex-Ante Process Compliance.",
-      "publishedDate": "2026-04-20",
-      "pdfUrl": "https://arxiv.org/pdf/2604.18649v1",
-      "summaryUrl": "https://arxiv.org/abs/2604.18649v1",
-      "category": "cs.CR"
-    },
-    {
-      "arxivId": "2604.17770v1",
-      "title": "LLM-AUG: Robust Wireless Data Augmentation with In-Context Learning in Large Language Models",
-      "authors": [
-        "Pranshav Gajjar",
-        "Manan Tiwari",
-        "Sayanta Seth",
-        "Vijay K. Shah"
-      ],
-      "abstract": "Data scarcity remains a fundamental bottleneck in applying deep learning to wireless communication problems, particularly in scenarios where collecting labeled Radio Frequency (RF) data is expensive, time-consuming, or operationally constrained. This paper proposes LLM-AUG, a data augmentation framework that leverages in-context learning in large language models (LLMs) to generate synthetic training samples directly in a learned embedding space. Unlike conventional generative approaches that require training task-specific models, LLM-AUG performs data generation through structured prompting, enabling rapid adaptation in low-shot regimes. We evaluate LLM-AUG on two representative tasks: modulation classification and interference classification using the RadioML 2016.10A dataset, and the Interference Classification (IC) dataset respectively. Results show that LLM-AUG consistently outperforms traditional augmentation and deep generative baselines across low-shot settings and reaches near oracle performance using only 15% labeled data. LLM-AUG further demonstrates improved robustness under distribution shifts, yielding a 29.4% relative gain over diffusion-based augmentation at a lower SNR value. On the RadioML and IC datasets, LLM-AUG yields a relative gain of 67.6% and 35.7% over the diffusion-based baseline. The t-SNE visualizations further validate that synthetic samples generated by better preserve class structure in the embedding space, leading to more consistent and informative augmentations. These results demonstrate that LLMs can serve as effective and practical data augmenters for wireless machine learning, enabling robust and data-efficient learning in evolving wireless environments.",
-      "publishedDate": "2026-04-20",
-      "pdfUrl": "https://arxiv.org/pdf/2604.17770v1",
-      "summaryUrl": "https://arxiv.org/abs/2604.17770v1",
-      "category": "cs.LG"
-    },
-    {
-      "arxivId": "2604.17694v1",
-      "title": "Improving reproducibility by controlling random seed stability in machine learning based estimation via bagging",
-      "authors": [
-        "Nicholas Williams",
-        "Alejandro Schuler"
-      ],
-      "abstract": "Predictions from machine learning algorithms can vary across random seeds, inducing instability in downstream debiased machine learning estimators. We formalize random seed stability via a concentration condition and prove that subbagging guarantees stability for any bounded-outcome regression algorithm. We introduce a new cross-fitting procedure, adaptive cross-bagging, which simultaneously eliminates seed dependence from both nuisance estimation and sample splitting in debiased machine learning. Numerical experiments confirm that the method achieves the targeted level of stability whereas alternatives do not. Our method incurs a small computational penalty relative to standard practice whereas alternative methods incur large penalties.",
-      "publishedDate": "2026-04-20",
-      "pdfUrl": "https://arxiv.org/pdf/2604.17694v1",
-      "summaryUrl": "https://arxiv.org/abs/2604.17694v1",
-      "category": "stat.ME"
-    },
-    {
-      "arxivId": "2604.17690v1",
-      "title": "Path-Based Quantum Meta-Learning for Adaptive Optimization of Reconfigurable Intelligent Surfaces",
-      "authors": [
-        "Noha Hassan",
-        "Xavier Fernando",
-        "Halim Yanikomeroglu"
-      ],
-      "abstract": "Reconfigurable intelligent surfaces (RISs) modify signal reflections to enhance wireless communication capabilities. Classical RIS phase optimization is highly non convex and challenging in dynamic environments due to high interference and user mobility. Here we propose a hierarchical multi-objective quantum metalearning algorithm that switches among specific quantum paths based on historical success, energy cost, and current data rate. Candidate RIS control directions are arranged as switch paths between quantum neural network layers to minimize inference, and a scoring mechanism selects the top performing paths per layer. Instead of merely storing past successful settings of the RIS and picking the closest match when a new problem is encountered, the algorithm learns how to select and recombine the best parts of different solutions to solve new scenarios. In our model, high-dimensional RIS scenario features are compressed into a quantum state using the tensor product, then superimposed during quantum path selection, significantly improving quantum computational advantage. Results demonstrate efficient performance with enhanced spectral efficiency, convergence rate, and adaptability.",
-      "publishedDate": "2026-04-20",
-      "pdfUrl": "https://arxiv.org/pdf/2604.17690v1",
-      "summaryUrl": "https://arxiv.org/abs/2604.17690v1",
-      "category": "eess.SY"
-    },
-    {
-      "arxivId": "2604.17680v1",
-      "title": "MasterSet: A Large-Scale Benchmark for Must-Cite Citation Recommendation in the AI/ML Literature",
-      "authors": [
-        "Md Toyaha Rahman Ratul",
-        "Zhiqian Chen",
-        "Kaiqun Fu",
-        "Taoran Ji",
-        "Lei Zhang"
-      ],
-      "abstract": "The explosive growth of AI and machine learning literature -- with venues like NeurIPS and ICLR now accepting thousands of papers annually -- has made comprehensive citation coverage increasingly difficult for researchers. While citation recommendation has been studied for over a decade, existing systems primarily focus on broad relevance rather than identifying the critical set of ``must-cite'' papers: direct experimental baselines, foundational methods, and core dependencies whose omission would misrepresent a contribution's novelty or undermine reproducibility. We introduce MasterSet, a large-scale benchmark specifically designed to evaluate must-cite recommendation in the AI/ML domain. MasterSet incorporates over 150,000 papers collected from official conference proceedings/websites of 15 leading venues, serving as a comprehensive candidate pool for retrieval. We annotate citations with a three-tier labeling scheme: (I) experimental baseline status, (II) core relevance (1--5 scale), and (III) intra-paper mention frequency. Our annotation pipeline leverages an LLM-based judge, validated by human experts on a stratified sample. The benchmark task requires retrieving must-cite papers from the candidate pool given only a query paper's title and abstract, evaluated by Recall@$K$. We establish baselines using sparse retrieval, dense scientific embeddings, and graph-based methods, demonstrating that must-cite retrieval remains a challenging open problem.",
-      "publishedDate": "2026-04-20",
-      "pdfUrl": "https://arxiv.org/pdf/2604.17680v1",
-      "summaryUrl": "https://arxiv.org/abs/2604.17680v1",
-      "category": "cs.IR"
-    },
-    {
-      "arxivId": "2604.17649v1",
-      "title": "Holography and Optimal Transport: Emergent Wasserstein Spacetime in Harmonic Oscillator, SYK and Krylov Complexity",
-      "authors": [
-        "Koji Hashimoto",
-        "Norihiro Tanahashi"
-      ],
-      "abstract": "Optimal transport and Wasserstein distance are prominent tools to quantify the space of probability distributions. From a novel viewpoint of manifold hypothesis in machine learning being a possible guide for the holographic principle, we study how holographic spacetime can emerge from quantum systems in general as a Wasserstein space through optimal transport. We employ the simplest example of a single quantum harmonic oscillator and demonstrate that, among various definitions of distance, the manifold hypothesis selects the 1-Wasserstein distance of optimal transport between Husimi Q-representations of states, and it gives rise to an emergent space. Furthermore, the Lindblad time evolution of the harmonic oscillator coupled to a bath, of the form of a Fokker-Planck equation, provides a time trajectory in the Wasserstein space, yielding an emergent Wasserstein spacetime that shares properties with black hole spacetimes and their event horizons. The methodology is applied to a Lindbladian subsystem of SYK model, revealing that the Wasserstein space is consistent with the AdS${}_2$ black hole geometry of the standard holographic dictionary. We remark that, in our examples, the 1-Wasserstein distance is identified as a generalized Krylov complexity, and argue that optimal transport with the manifold hypothesis can yield general emergent spacetimes, positioning the holographic principle on a broader basis.",
-      "publishedDate": "2026-04-19",
-      "pdfUrl": "https://arxiv.org/pdf/2604.17649v1",
-      "summaryUrl": "https://arxiv.org/abs/2604.17649v1",
-      "category": "hep-th"
-    },
-    {
-      "arxivId": "2604.17628v1",
-      "title": "Does Welsh media need a review? Detecting bias in Nation.Cymru's political reporting",
-      "authors": [
-        "Cai Parry-Jones"
-      ],
-      "abstract": "Wales' political landscape has been marked by growing accusations of bias in Welsh media. This paper takes the first computational step toward testing those claims by examining Nation.Cymru, a prominent Welsh political news outlet. I use a two-stage natural language processing (NLP) pipeline: (1) a robustly optimized BERT approach (RoBERTa) bias detector for efficient bias discovery and (2) a large language model (LLM) for target-attributed sentiment classification of bias labels from (1). A primary analysis of 15,583 party mentions across 2022-2026 news articles finds that Reform UK attracts biased framing at twice the rate of Plaid Cymru and over three times as negative in mean sentiment (p<0.001). A secondary analysis across four parties across both news and opinion articles shows that Plaid Cymru is the outlier, receiving markedly more favourable framing than any other party. These findings provide evidence of measurable differential framing in a single Welsh political media outlet, supporting calls for a broader review of Welsh media coverage. Furthermore, the two-stage pipeline offers a low-cost, replicable framework for extending this analysis to other Welsh outlets, as well as media ecosystems outside of Wales.",
-      "publishedDate": "2026-04-19",
-      "pdfUrl": "https://arxiv.org/pdf/2604.17628v1",
-      "summaryUrl": "https://arxiv.org/abs/2604.17628v1",
-      "category": "cs.CL"
-    },
-    {
-      "arxivId": "2604.17622v1",
-      "title": "STRIKE: Additive Feature-Group-Aware Stacking Framework for Credit Default Prediction",
-      "authors": [
-        "Swattik Maiti",
-        "Ritik Pratap Singh",
-        "Fardina Fathmiul Alam"
-      ],
-      "abstract": "Credit risk default prediction remains a cornerstone of risk management in the financial industry. The task involves estimating the likelihood that a borrower will fail to meet debt obligations, an objective critical for lending decisions, portfolio optimization, and regulatory compliance. Traditional machine learning models such as logistic regression and tree-based ensembles are widely adopted for their interpretability and strong empirical performance. However, modern credit datasets are high-dimensional, heterogeneous, and noisy, increasing overfitting risk in monolithic models and reducing robustness under distributional shift. We introduce STRIKE (Stacking via Targeted Representations of Isolated Knowledge Extractors), a feature-group-aware stacking framework for structured tabular credit risk data. Rather than training a single monolithic model on the complete dataset, STRIKE partitions the feature space into semantically coherent groups and trains independent learners within each group. This decomposition is motivated by an additive perspective on risk modeling, where distinct feature sources contribute complementary evidence that can be combined through a structured aggregation. The resulting group-specific predictions are integrated through a meta-learner that aggregates signals while maintaining robustness and modularity. We evaluate STRIKE on three real-world datasets spanning corporate bankruptcy and consumer lending scenarios. Across all settings, STRIKE consistently outperforms strong tree-based baselines and conventional stacking approaches in terms of AUC-ROC. Ablation studies confirm that performance gains stem from meaningful feature decomposition rather than increased model complexity. Our findings demonstrate that STRIKE is a stable, scalable, and interpretable framework for credit risk default prediction tasks.",
-      "publishedDate": "2026-04-19",
-      "pdfUrl": "https://arxiv.org/pdf/2604.17622v1",
-      "summaryUrl": "https://arxiv.org/abs/2604.17622v1",
-      "category": "cs.LG"
-    },
-    {
-      "arxivId": "2604.17611v1",
-      "title": "STEP-PD: Stage-Aware and Explainable Parkinson's Disease Severity Classification Using Multimodal Clinical Assessments",
-      "authors": [
-        "Md Mezbahul Islam",
-        "John Michael Templeton",
-        "Christian Poellabauer",
-        "Ananda Mohan Mondal"
-      ],
-      "abstract": "Parkinson's disease (PD) is a progressive disorder in which symptom burden and functional impairment evolve over time, making severity staging essential for clinical monitoring and treatment planning. However, many computational studies emphasize binary PD detection and do not fully use repeated follow-up clinical assessments for stage-aware prediction. This study proposes STEP-PD, a severity-aware machine learning framework to classify PD severity using clinically interpretable boundaries. It leverages all available visits from the Parkinson's Progression Markers Initiative (PPMI) and integrates routinely collected subjective questionnaires and objective clinician-assessed measures. Disease severity is defined using Hoehn and Yahr staging and grouped into three clinically meaningful categories: Healthy, Mild PD (stages 1-2), and Moderate-to-Severe PD (stages 3-5). Three binary classification problems and a three-class severity task were evaluated using stratified cross-validation with imbalance-aware training. To enhance interpretability, SHAP was used to provide global explanations and local patient-level waterfall explanations. Across all tasks, XGBoost achieved the strongest and most stable performance, with accuracies of 95.48% (Healthy vs. Mild), 99.44% (Healthy vs. Moderate-to-Severe), and 96.78% (Mild vs. Moderate-to-Severe), and 94.14% accuracy with 0.8775 Macro-F1 for three-class severity classification. Explainability results highlight a shift from early motor features to progression-related axial and balance impairments. These findings show that multimodal clinical assessments within the PPMI cohort can support accurate and interpretable visit-level PD severity stratification.",
-      "publishedDate": "2026-04-19",
-      "pdfUrl": "https://arxiv.org/pdf/2604.17611v1",
-      "summaryUrl": "https://arxiv.org/abs/2604.17611v1",
-      "category": "cs.LG"
-    },
-    {
-      "arxivId": "2604.17596v1",
-      "title": "Terminal Wrench: A Dataset of 331 Reward-Hackable Environments and 3,632 Exploit Trajectories",
-      "authors": [
-        "Ivan Bercovich",
-        "Ivgeni Segal",
-        "Kexun Zhang",
-        "Shashwat Saxena",
-        "Aditi Raghunathan",
-        "Ziqian Zhong"
-      ],
-      "abstract": "We release Terminal Wrench, a subset of 331 terminal-agent benchmark environments, copied from the popular open benchmarks that are demonstrably reward-hackable. The data set includes 3,632 hack trajectories and 2,352 legitimate baseline trajectories across three frontier models (Claude Opus 4.6, Gemini 3.1 Pro, GPT-5.4). Each entry preserves the original task definition alongside full attack trajectories that show how the verifier was bypassed. It also includes cases where the task was not solved as intended. The tasks span system administration, machine learning, software engineering, and security challenges; the exploits range from simple output spoofing to stack-frame introspection, standard-library patching, and rootkit-style binary hijacking. Crucially, these exploits are specific to each task, rather than the evaluation harness, making them harder to patch. We also present a monitorability study in which hack trajectories are sanitized or stripped of reasoning traces and then scored by an LLM judge, showing that detection degrades meaningfully when chain-of-thought is removed (AUC drops from 0.97 to 0.92). The data set is publicly available at https://github.com/few-sh/terminal-wrench.",
-      "publishedDate": "2026-04-19",
-      "pdfUrl": "https://arxiv.org/pdf/2604.17596v1",
-      "summaryUrl": "https://arxiv.org/abs/2604.17596v1",
-      "category": "cs.CR"
-    },
-    {
-      "arxivId": "2604.17566v1",
-      "title": "Target Parameterization in Diffusion Models for Nonlinear Spatiotemporal System Identification",
-      "authors": [
-        "Achraf El Messaoudi",
-        "Noureddine Khaous",
-        "Karim Cherifi"
-      ],
-      "abstract": "Machine learning is becoming increasingly important for nonlinear system identification, including dynamical systems with spatially distributed outputs. However, classical identification and forecasting approaches become markedly less reliable in turbulent-flow regimes, where the dynamics are high-dimensional, strongly nonlinear, and highly sensitive to compounding rollout errors. Diffusion-based models have recently shown improved robustness in this setting and offer probabilistic inference capabilities, but many current implementations inherit target parameterizations from image generation, most commonly noise or velocity prediction. In this work, we revisit this design choice in the context of nonlinear spatiotemporal system identification. We consider a simple, self-contained patch-based transformer that operates directly on physical fields and use turbulent flow simulation as a representative testbed. Our results show that clean-state prediction consistently improves rollout stability and reduces long-horizon error relative to velocity- and noise-based objectives, with the advantage becoming more pronounced as the per-token dimensionality increases. These findings identify target parameterization as a key modeling choice in diffusion-based identification of nonlinear systems with spatial outputs in turbulent regimes.",
-      "publishedDate": "2026-04-19",
-      "pdfUrl": "https://arxiv.org/pdf/2604.17566v1",
-      "summaryUrl": "https://arxiv.org/abs/2604.17566v1",
-      "category": "eess.SY"
     }
   ],
-  "fetchedAt": "2026-04-22T23:38:39.611727Z"
+  "fetchedAt": "2026-04-23T01:47:54.079530Z"
 }
