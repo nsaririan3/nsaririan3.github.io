@@ -1,6 +1,50 @@
 {
   "papers": [
     {
+      "arxivId": "2605.04049v1",
+      "title": "FTPrimitiveBench: A Benchmark Suite For Logical Computation Under Hardware-Motivated and Biased Noise Models",
+      "authors": [
+        "Shuwen Kan",
+        "Adrian Harkness",
+        "Zefan Du",
+        "Rod Rofougaran",
+        "Sean Garner",
+        "Chenxu Liu",
+        "Ying Mao",
+        "Samuel Stein"
+      ],
+      "abstract": "Fault-tolerant quantum computing requires understanding how error-correcting codes perform on diverse physical hardware. This is typically assessed via noisy stabilizer simulation of logical circuits at HPC scale, combined with a noise model that yields a logical error rate for the relevant code distances and depths. The uniform depolarizing model is the standard baseline, but its homogeneous assumptions fail to capture the heterogeneity, asymmetries, and correlations of real devices, where Pauli, measurement, and spatio-temporal errors are not weakly coupled. Yet these same structured features create opportunities for joint code-hardware co-design, motivating noise models that more faithfully reflect target hardware while remaining tractable to simulate.   We introduce FTPrimitiveBench, a systematic benchmarking approach for studying how logical primitives interact with hardware-motivated noise. It supports both custom specifications and representative structured noise families: Pauli bias, measurement bias, and spatial or spatio-temporal non-uniformity -- together with generators for core surface-code Clifford primitives: logical memory, lattice surgery, transversal logical Hadamard, and the logical phase gate via lattice surgery. We find that structured noise affects these primitives in qualitatively distinct ways, with outcomes shaped by the interplay between noise model, primitive, and decoder choice. These results extend memory benchmarks to active logical computation, where the interaction between noise structure and primitive implementation matters. By standardizing the link between noise-model specification and primitive construction, FTPrimitiveBench enables reproducible comparative studies of QEC protocols and decoders, supporting hardware-aware co-design of fault-tolerant architectures. Code: https://github.com/ShuwenKan/FTPrimitiveBench.",
+      "publishedDate": "2026-05-05",
+      "pdfUrl": "https://arxiv.org/pdf/2605.04049v1",
+      "summaryUrl": "https://arxiv.org/abs/2605.04049v1",
+      "category": "quant-ph"
+    },
+    {
+      "arxivId": "2605.04033v1",
+      "title": "Probabilistic-bit Guided CDCL for SAT Solving using Ising Consensus Assumptions",
+      "authors": [
+        "Melki Bino"
+      ],
+      "abstract": "Boolean satisfiability (SAT) solvers are widely used in hardware verification, cryptanalysis, automatic test-pattern generation, and side-channel reasoning workflows. Modern conflict-driven clause-learning (CDCL) solvers are highly effective, but satisfiable instances may still require substantial conflict analysis and Boolean propagation before identifying productive regions of the search space. This paper studies a hybrid SAT-solving framework in which a probabilistic-bit (p-bit) Ising sampler proposes high-agreement literals that are passed to CDCL as temporary assumptions. The goal is not to replace CDCL, but to evaluate whether stochastic low-violation samples can reduce CDCL internal search effort while retaining correctness through CDCL fallback. On selected controlled-backbone random 3-SAT benchmarks, the hybrid method reduces median conflicts by 80.8-85.5% and median propagations by 80.2-84.6% relative to pure CDCL. The observed benefit is distribution-sensitive, suggesting that p-bit guidance is effective only for certain instance classes. We further report exploratory machine-learning gates that estimate when hybrid solving is likely to help. On the selected run, a random-forest gate retains 94.8% of hybrid wins, indicating that lightweight gating may help avoid unproductive hybrid calls.",
+      "publishedDate": "2026-05-05",
+      "pdfUrl": "https://arxiv.org/pdf/2605.04033v1",
+      "summaryUrl": "https://arxiv.org/abs/2605.04033v1",
+      "category": "cs.CR"
+    },
+    {
+      "arxivId": "2605.04016v1",
+      "title": "Entangling gates for the SU(N) anyons",
+      "authors": [
+        "Sergey Mironov",
+        "Andrey Morozov"
+      ],
+      "abstract": "The model of a topological quantum computer is a promising one due to its natural resistance to noise and other errors. Operations in such a computer are implemented by braiding the trajectories of anyons. While it is easy to understand how to build one-qubit operations, two-qubit operations are more difficult. In arXiv:2412.20931 we suggested an approach to build such operations for a topological quantum computer based on SU(2) Chern-Simons theory with arbitrary level using cabling of knots. In this paper we discuss how this approach should be generalized to the SU(N) case, what the differences are, and which new problems arise.",
+      "publishedDate": "2026-05-05",
+      "pdfUrl": "https://arxiv.org/pdf/2605.04016v1",
+      "summaryUrl": "https://arxiv.org/abs/2605.04016v1",
+      "category": "hep-th"
+    },
+    {
       "arxivId": "2605.03737v1",
       "title": "Discovering Reaction Mechanisms with Transition Path Sampling-Based Active Learning of Machine-Learned Potentials",
       "authors": [
@@ -14,6 +58,23 @@
       "pdfUrl": "https://arxiv.org/pdf/2605.03737v1",
       "summaryUrl": "https://arxiv.org/abs/2605.03737v1",
       "category": "physics.chem-ph"
+    },
+    {
+      "arxivId": "2605.04013v1",
+      "title": "Conditional Diffusion Sampling",
+      "authors": [
+        "Francisco M. Castro-Mac\u00edas",
+        "Pablo Morales-\u00c1lvarez",
+        "Saifuddin Syed",
+        "Daniel Hern\u00e1ndez-Lobato",
+        "Rafael Molina",
+        "Jos\u00e9 Miguel Hern\u00e1ndez-Lobato"
+      ],
+      "abstract": "Sampling from unnormalized multimodal distributions with limited density evaluations remains a fundamental challenge in machine learning and natural sciences. Successful approaches construct a bridge between a tractable reference and the target distribution. Parallel Tempering (PT) serves as the gold standard, while recent diffusion-based approaches offer a continuous alternative at the cost of neural training. In this work, we introduce Conditional Diffusion Sampling (CDS), a framework that combines these two paradigms. To this end, we derive Conditional Interpolants, a class of stochastic processes whose transport dynamics are governed by an exact, closed-form stochastic differential equation (SDE), requiring no neural approximation. Although these dynamics require sampling from a non-trivial initialization distribution, we show both theoretically and empirically that the cost of this initialization diminishes for sufficiently short diffusion times. CDS leverages this by a two-stage procedure: (1) PT is used to efficiently sample the initial distribution, and then (2) samples are transported via the transport SDE. This combination couples the robust global exploration of PT with efficient local transport. Experiments suggest that CDS has the potential to achieve a superior trade-off between sample quality and density evaluation cost compared to state-of-the-art samplers.",
+      "publishedDate": "2026-05-05",
+      "pdfUrl": "https://arxiv.org/pdf/2605.04013v1",
+      "summaryUrl": "https://arxiv.org/abs/2605.04013v1",
+      "category": "stat.ML"
     },
     {
       "arxivId": "2605.03964v1",
@@ -1405,73 +1466,7 @@
       "pdfUrl": "https://arxiv.org/pdf/2605.02066v1",
       "summaryUrl": "https://arxiv.org/abs/2605.02066v1",
       "category": "quant-ph"
-    },
-    {
-      "arxivId": "2605.02065v1",
-      "title": "Multiscale computational approaches to magnetic behaviour in Cobalt Ferrite (CoFe$_2$O$_4$) nanostructures",
-      "authors": [
-        "Soham Chandra",
-        "Soumyajit Sarkar"
-      ],
-      "abstract": "Cobalt ferrite (CoFe$_2$O$_4$) is a prototypical ferrimagnetic spinel oxide whose exceptional magnetic anisotropy, magnetoelastic coupling, and thermal stability underpin applications in spintronics, magnetic hyperthermia, energy harvesting, and catalysis. This chapter presents a comprehensive computational framework that integrates electronic$-$structure calculations with atomistic spin modeling, statistical mechanics, and continuum micromagnetics to predict magnetic functionality across length and time scales. Starting from density functional theory with Hubbard corrections (DFT$+$U), we derive exchange constants J$_{ij}$, magnetocrystalline anisotropy K$_1$, and magnetoelastic coefficients B$_1$, accounting for cation inversion, strain, and correlation effects. These parameters feed into generalized Heisenberg Hamiltonians, enabling Monte Carlo and Landau-Lifshitz-Gilbert simulations of finite-size effects, hysteresis, coercivity, and hyperthermia response in nanoparticles and thin films. Coarse-graining strategies bridge to micromagnetic modeling, ensuring consistent parameter flow without empirical fitting. Computational case studies demonstrate size-dependent anisotropy enhancement, surface spin disorder, strain-tunable switching, and doping trends, revealing design principles inaccessible to experiment alone. Validation against benchmarks, e.g. Curie temperature, anisotropy constants, coercivity, magnetostriction, confirms predictive accuracy. Current challenges, e.g., U$-$parameter sensitivity, realistic surface chemistry, spin-lattice coupling, and large-scale integration are discussed alongside emerging directions including DFT$+$DMFT, coupled dynamics, and machine-learned potentials.",
-      "publishedDate": "2026-05-03",
-      "pdfUrl": "https://arxiv.org/pdf/2605.02065v1",
-      "summaryUrl": "https://arxiv.org/abs/2605.02065v1",
-      "category": "cond-mat.mtrl-sci"
-    },
-    {
-      "arxivId": "2605.02057v1",
-      "title": "Exponential speedups in fault-tolerant processing of quantum experiments",
-      "authors": [
-        "Ishaan Kannan",
-        "Harald Putterman",
-        "Jordan Cotler"
-      ],
-      "abstract": "Quantum information processing has the potential to substantially enhance how we learn from physical experiments, but coupling a quantum processor to an experimental sample introduces noise that can exponentially degrade learning even when the processor itself is fault-tolerant. In this work, we show that fault tolerance can nevertheless be leveraged to recover exponential speedups by embedding the unknown system into an arbitrarily high-distance quantum code with only constant error overhead and running a fault-tolerant learning algorithm. Using this $\\textit{quantum uploading}$ procedure, we prove that both classical shadow tomography and the estimation of cubic observables can be performed exponentially faster than by any adaptive strategy that does not immediately upload the state into encoded memory. These separations hold even when the uploading stage is substantially noisier than the bare experimental interface. To prove them, we introduce the Heisenberg learning tree method, a flexible tool for obtaining learning lower bounds when the limited resource is not quantum replicas but an experimentally motivated constraint such as noise. We numerically illustrate the speedups in an astronomical imaging application, where quantum processing of individual uploaded photons locates an exoplanet obscured by a bright star using orders of magnitude fewer shots than unencoded baselines. Our results establish fault-tolerant quantum computation as a valuable tool for learning from quantum experiments.",
-      "publishedDate": "2026-05-03",
-      "pdfUrl": "https://arxiv.org/pdf/2605.02057v1",
-      "summaryUrl": "https://arxiv.org/abs/2605.02057v1",
-      "category": "quant-ph"
-    },
-    {
-      "arxivId": "2605.02015v1",
-      "title": "Robust and Explainable Divide-and-Conquer Learning for Intrusion Detection",
-      "authors": [
-        "Yan Zhou",
-        "Kevin Hamlen",
-        "Michael De Lucia",
-        "Murat Kantarcioglu",
-        "Latifur Khan",
-        "Sharad Mehrotra",
-        "Ananthram Swami",
-        "Bhavani Thuraisingham"
-      ],
-      "abstract": "Machine learning-based intrusion detection requires complex models to capture patterns in high-dimensional, noisy, and class-imbalanced raw network traffic, yet deploying such models remains impractical on resource-constrained devices with limited processing power and memory. In this paper, we present a correlation-aware divide-and-conquer learning technique that decomposes a complex learning problem into smaller, more manageable subproblems. This enables lightweight models as simple as decision trees to be trained on focused subtasks, yielding up to 43.3% higher local accuracy and up to 257 times reduction in model size on real-world network intrusion detection datasets, while also improving adversarial robustness and explainability.",
-      "publishedDate": "2026-05-03",
-      "pdfUrl": "https://arxiv.org/pdf/2605.02015v1",
-      "summaryUrl": "https://arxiv.org/abs/2605.02015v1",
-      "category": "cs.LG"
-    },
-    {
-      "arxivId": "2605.02003v1",
-      "title": "RamanBench: A Large-Scale Benchmark for Machine Learning on Raman Spectroscopy",
-      "authors": [
-        "Mario Koddenbrock",
-        "Christoph Lange",
-        "Robin Legner",
-        "Martin J\u00e4ger",
-        "Martin K\u00f6gler",
-        "Mariano N. Cruz Bournazou",
-        "Peter Neubauer",
-        "Felix Biessmann",
-        "Erik Rodner"
-      ],
-      "abstract": "Machine Learning (ML) has transformed many scientific fields, yet key applications still lack standardized benchmarks. Raman spectroscopy, a widely used technique for non-invasive molecular analysis, is one such field where progress is limited by fragmented datasets, inconsistent evaluation, and models that fail to capture the structure of spectral data. We introduce RamanBench, the first large-scale, fully reproducible benchmark for ML on Raman spectroscopy, consisting of streamlined data access, evaluation protocols and code, as well as a live leaderboard. It unifies 74 datasets (including 16 first released with this benchmark) across four domains, comprising 325,668 spectra and spanning classification and regression tasks under diverse experimental conditions. We benchmark 28 models under a standardized protocol, including classical methods (e.g., PLS), Raman-specific (e.g., RamanNet), Tabular Foundation Model (TFM) (e.g., TabPFN), and time-series approaches (e.g., ROCKET). TFM consistently outperform domain-specific and gradient boosting baselines, while time-series models remain competitive. However, no method generalizes across datasets, revealing a fundamental gap. Therefore, we invite the community to contribute new approaches to our living benchmark, with the potential to accelerate advances in critical applications such as medical diagnostics, biological research, and materials science.",
-      "publishedDate": "2026-05-03",
-      "pdfUrl": "https://arxiv.org/pdf/2605.02003v1",
-      "summaryUrl": "https://arxiv.org/abs/2605.02003v1",
-      "category": "cs.LG"
     }
   ],
-  "fetchedAt": "2026-05-06T01:56:13.822668Z"
+  "fetchedAt": "2026-05-06T05:24:07.427606Z"
 }
