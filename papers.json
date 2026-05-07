@@ -1,7 +1,7 @@
 {
   "metadata": {
     "totalCount": 100,
-    "lastUpdated": "2026-05-07T01:59:55.869873Z",
+    "lastUpdated": "2026-05-07T05:34:30.885527Z",
     "keywords": [
       "machine learning",
       "natural language processing",
@@ -9,6 +9,56 @@
     ]
   },
   "papers": [
+    {
+      "arxivId": "2605.05179v1",
+      "title": "Estimating the expected output of wide random MLPs more efficiently than sampling",
+      "authors": [
+        "Wilson Wu",
+        "Victor Lecomte",
+        "Michael Winer",
+        "George Robinson",
+        "Jacob Hilton",
+        "Paul Christiano"
+      ],
+      "abstract": "By far the most common way to estimate an expected loss in machine learning is to draw samples, compute the loss on each one, and take the empirical average. However, sampling is not necessarily optimal. Given an MLP at initialization, we show how to estimate its expected output over Gaussian inputs without running samples through the network at all. Instead, we produce approximate representations of the distributions of activations at each layer, leveraging tools such as cumulants and Hermite expansions. We show both theoretically and empirically that for sufficiently wide networks, our estimator achieves a target mean squared error using substantially fewer FLOPs than Monte Carlo sampling. We find moreover that our methods perform particularly well at estimating the probabilities of rare events, and additionally demonstrate how they can be used for model training. Together, these findings suggest a path to producing models with a greatly reduced probability of catastrophic tail risks.",
+      "publishedDate": "2026-05-06",
+      "pdfUrl": "https://arxiv.org/pdf/2605.05179v1",
+      "summaryUrl": "https://arxiv.org/abs/2605.05179v1",
+      "category": "cs.LG"
+    },
+    {
+      "arxivId": "2605.05158v1",
+      "title": "The Saturable Electronic Reluctance Switch: Switchable low-power and low-noise generation of magnetic fields using permanent magnets",
+      "authors": [
+        "P. D. Taylor-Burdett",
+        "C. A. Burhan",
+        "S. Mason",
+        "F. R. Lebrun-Gallagher",
+        "S. Weidt",
+        "W. K. Hensinger"
+      ],
+      "abstract": "Across many areas of science, there is a need to generate magnetic fields that are both ultra-stable and switchable on and off. While permanent and superconducting magnets offer exceptionally low-noise fields, they are not readily switchable. Conversely, electromagnets are switchable but are susceptible to current noise. We present a hybrid technique to switch the field of any arbitrary magnet through use of a non-linear ferromagnetic circuit, named the Saturable Electronic Reluctance Switch (SERS). The circuit achieves bi-stable switching of the field by applying a current above a given threshold, akin to a transistor for magnetic fields. Crucially, the applied current has minimal influence on the magnetic field output and demagnetisation of the magnet is avoided, drastically reducing power dissipation. SERS is also robust to fabrication errors, suppressing noise in the control current by several orders of magnitude in a non-ideal device. To illustrate its application, a SERS-driven device is proposed for generating ultra-stable magnetic field gradients in a scalable trapped-ion quantum computer. We find this device offers an order of magnitude reduction in power dissipation compared to state-of-the-art current carrying wires, while reducing magnetic field noise originating from current fluctuations by up to five orders of magnitude.",
+      "publishedDate": "2026-05-06",
+      "pdfUrl": "https://arxiv.org/pdf/2605.05158v1",
+      "summaryUrl": "https://arxiv.org/abs/2605.05158v1",
+      "category": "quant-ph"
+    },
+    {
+      "arxivId": "2605.05120v1",
+      "title": "Physiologically Grounded Driver Behavior Classification: SHAP-Driven Elite Feature Selection and Hybrid Gradient Boosting for Multimodal Physiological Signals",
+      "authors": [
+        "Sahar Askari",
+        "Mohammad Mahdi Mirza Ali Mohammadi",
+        "Fatemeh Ensafdoust",
+        "Amin Golnari",
+        "Saeid Sanei"
+      ],
+      "abstract": "An interpretable and scalable framework for decoding driving behaviors from multimodal physiological signals is proposed in this study. We utilize multimodal physiological driving behavior large-scale dataset comprising synchronized electroencephalogram (EEG), electromyography (EMG), and galvanic skin response (GSR) signals. Our approach involves rigorous preprocessing followed by a domain-specific feature extraction pipeline targeting time-domain, frequency-domain, and derived physiological indices. To address high dimensionality, we employ SHAP-based elite feature selection, retaining the top 250 features to reduce computational overhead while preserving predictive power. Hyperparameter optimization for extreme gradient boosting (XGBoost) and light gradient boosting machine (LightGBM) models is conducted using Bayesian optimization via Optuna. Finally, a weighted soft-voting ensemble is constructed to leverage the complementary strengths of both gradient boosting frameworks. The results demonstrate that the proposed ensemble achieves a test accuracy of 80.91% and a macro-F1 score of 0.79, significantly outperforming single-modality baselines and traditional machine learning models. Ablation studies confirm an 8% performance gain over the best single modality (EEG), validating the necessity of multimodal fusion. SHAP analysis further validates the physiological plausibility of the model, revealing that the EEG contributes the majority of predictive weight, GSR and EMG features provide critical discriminatory signals for high-arousal and motor-intensive maneuvers.",
+      "publishedDate": "2026-05-06",
+      "pdfUrl": "https://arxiv.org/pdf/2605.05120v1",
+      "summaryUrl": "https://arxiv.org/abs/2605.05120v1",
+      "category": "cs.LG"
+    },
     {
       "arxivId": "2605.05084v1",
       "title": "Order Matters: Improving Domain Adaptation by Reordering Data",
@@ -1505,49 +1555,6 @@
       "pdfUrl": "https://arxiv.org/pdf/2605.03362v1",
       "summaryUrl": "https://arxiv.org/abs/2605.03362v1",
       "category": "physics.bio-ph"
-    },
-    {
-      "arxivId": "2605.03346v1",
-      "title": "Provable Accuracy Collapse in Embedding-Based Representations under Dimensionality Mismatch",
-      "authors": [
-        "Dionysis Arvanitakis",
-        "Vaggos Chatziafratis",
-        "Yiyuan Luo"
-      ],
-      "abstract": "Embedding-based representations in Euclidean space $\\mathbb{R}^d$ are a cornerstone of modern machine learning, where a major goal is to use the \\emph{smallest dimension} that faithfully captures data relations. In this work, we prove sharp dimension--accuracy tradeoffs and identify a fundamental information-theoretic limitation: unless the embedding dimension $d$ is chosen close to the ground-truth dimension $D$, accuracy undergoes a sudden collapse. Our main result shows that this phenomenon arises even in standard contrastive learning settings, where supervision is limited to a set of $m$ anchor--positive--negative triplets $(i,j,k)$ encoding distance comparisons $\\mathrm{dist}(i,j) < \\mathrm{dist}(i,k)$. Specifically, given triplets realizable by an unknown ground-truth embedding in $D$ dimensions, we prove that there exists constant $c < 1$, such that \\emph{every embedding of dimension at most $cD$ violates half of the triplets}, yielding accuracy as low as a trivial one-dimensional solution that ignores the input. We complement our information-theoretic bounds with strong computational hardness results: under the Unique Games Conjecture, even if the given triplets are nearly realizable in $D=1$ dimension, no polynomial-time algorithm -- \\textit{regardless of its dimension} -- can achieve accuracy above the trivial $50\\%$ baseline.",
-      "publishedDate": "2026-05-05",
-      "pdfUrl": "https://arxiv.org/pdf/2605.03346v1",
-      "summaryUrl": "https://arxiv.org/abs/2605.03346v1",
-      "category": "cs.DS"
-    },
-    {
-      "arxivId": "2605.03267v1",
-      "title": "Partial Effective Information Decomposition for Synergistic Causality",
-      "authors": [
-        "Mingzhe Yang",
-        "Shuo Wang",
-        "Jiang Zhang"
-      ],
-      "abstract": "Causality is a central topic in scientific inquiry, yet for complex systems, the identification and analysis of synergistic causation remain a challenging and fundamental problem. In the context of causal relations among multivariate variables, a decomposition framework grounded in interventionist causation is still lacking. To address this gap, this paper proposes Partial Effective Information Decomposition (PEID), a framework that decomposes the influence of multiple source variables on a target variable under maximum-entropy interventions into unique and synergistic information, thereby providing a unified and computable characterization of synergistic causal relations. Theoretically, in the three-variable case, the proposed framework is compatible with the major axioms of Partial Information Decomposition (PID). Empirically, under maximum-entropy interventions, correlations among input variables are removed, causing redundancy to vanish and thereby enabling PEID to compute synergistic relations. Furthermore, based on this framework, it is possible to define causal graphs containing hyperedges as well as downward causation, thus offering a unified toolkit for analyzing cross-scale and multivariate causal mechanisms in complex systems. Finally, applying the framework to a machine-learning-based air quality forecasting task on KnowAir-V2, we demonstrate that PEID can extract interpretable inter-station causal structures from a learned dynamical model. These results suggest that PEID provides a general interventionist information-theoretic tool for analyzing multivariate and synergistic causal mechanisms in complex systems.",
-      "publishedDate": "2026-05-05",
-      "pdfUrl": "https://arxiv.org/pdf/2605.03267v1",
-      "summaryUrl": "https://arxiv.org/abs/2605.03267v1",
-      "category": "stat.ML"
-    },
-    {
-      "arxivId": "2605.03214v1",
-      "title": "Canonical Optimization for MIMO MAC Design",
-      "authors": [
-        "Muhammad Umer",
-        "Muhammad Ahmed Mohsin",
-        "Ahsan Bilal",
-        "John M. Cioffi"
-      ],
-      "abstract": "Resource allocation in the multiple-input multiple-output (MIMO) multiple access channel (MAC) is a fundamental problem in multiuser communications, yet it is increasingly treated as non-convex and computationally intractable. This has motivated a large body of heuristic machine learning and successive-approximation methods. Results here show that the MIMO MAC admits canonical convex formulations and present four solvers that together characterize its capacity region. maxRMAC performs weighted sum-rate maximization under per-user energy constraints, minPMAC finds the minimum weighted energy required to support target rates, maxRESMAC performs weighted sum-rate maximization under a total energy constraint, and admMAC tests rate-region feasibility. The solvers exploit the polymatroid structure of the MAC rate region and the separability of the dual Lagrangian across frequency tones, which reduces the problem to parallel per-tone covariance optimizations solved via limited-memory Broyden-Fletcher-Goldfarb-Shanno (L-BFGS) over Cholesky-like covariance factors. Experiments on spatially correlated MIMO orthogonal frequency-division multiplexing (OFDM) channels show that the proposed solvers match a commercial convex solver in solution quality while running up to two orders of magnitude faster and scaling to regimes where the commercial solver times out. Through broadcast channel (BC) to MAC duality, the same solvers also enable optimal precoder design for the MIMO BC. All solvers are open-sourced and available at https://github.com/muhd-umer/canonical-mac.",
-      "publishedDate": "2026-05-04",
-      "pdfUrl": "https://arxiv.org/pdf/2605.03214v1",
-      "summaryUrl": "https://arxiv.org/abs/2605.03214v1",
-      "category": "eess.SP"
     }
   ]
 }
