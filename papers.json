@@ -1,7 +1,7 @@
 {
   "metadata": {
     "totalCount": 100,
-    "lastUpdated": "2026-07-15T01:24:25.107744Z",
+    "lastUpdated": "2026-07-15T04:40:54.083284Z",
     "keywords": [
       "machine learning",
       "natural language processing",
@@ -9,6 +9,90 @@
     ]
   },
   "papers": [
+    {
+      "arxivId": "2607.12996v1",
+      "title": "Expressibility and trainability of a two-dimensional pairwise quantum-circuit ansatz",
+      "authors": [
+        "Shuai Zhang",
+        "Wei Liu",
+        "Ji-Chong Yang"
+      ],
+      "abstract": "Parameterized quantum circuits~(PQCs) constitute a central building block of variational quantum algorithms~(VQAs) and quantum machine learning~(QML) methods. Existing ansatz designs often adopt hardware-agnostic or simplified 1D chain/ring entanglement patterns. However, as quantum hardware continues to develop, native 2D connectivity patterns, such as planar superconducting-qubit architectures, are becoming increasingly important. Inspired by this hardware structure, we construct a native 2D pairwise ansatz and compare its expressibility and trainability with representative 1D ansatze at identical layer depths, despite their different circuit depths. For the fixed 16-qubit system, the 2D ansatz has the smallest KL divergence at $L=1$ and $2$, and its second-order frame potential approaches the theoretical lower bound more rapidly at shallow layer counts than the frame potentials of the three 1D ansatze. We also evaluate the gradient variance of the Pauli-$Z$-string expectation value $\\langle Z_0\\otimes\\cdots\\otimes Z_{15}\\rangle$ with respect to the first $R_y$ angle. For this Pauli-$Z$ string and fixed parameter, the gradient variance is smaller for the 2D circuit at $L=1$--$4$. The differences narrow at $L=5$, and the four ansatze yield statistically compatible variances at $L=6$.",
+      "publishedDate": "2026-07-14",
+      "pdfUrl": "https://arxiv.org/pdf/2607.12996v1",
+      "summaryUrl": "https://arxiv.org/abs/2607.12996v1",
+      "category": "quant-ph"
+    },
+    {
+      "arxivId": "2607.12988v1",
+      "title": "A cryogenic neutral-atom platform with full optical access and 2-hour trap lifetime",
+      "authors": [
+        "Akhil Kumar",
+        "Lorenzo Festa",
+        "Avishay Grinberg",
+        "Eran Reches",
+        "Dimitrios Tsevas",
+        "Kevin P. Mours",
+        "Zhao Zhang",
+        "Robin Eberhard",
+        "Sebastian Blatt",
+        "Andrea Alberti",
+        "Johannes Zeiher",
+        "Immanuel Bloch",
+        "Max Melchner"
+      ],
+      "abstract": "Neutral-atom quantum processors are rapidly scaling toward system sizes of more than ten thousand qubits, allowing for the realization of a new class of quantum computing algorithms and quantum simulation experiments. However, current neutral-atom platforms generally have to find a compromise between the optical accessibility and the storage time of atoms in optical potentials, limiting the available qubit numbers. Here we report on the operation of a novel, cryogenically enhanced, neutral-atom apparatus that overcomes these apparently conflicting requirements. We demonstrate vacuum-limited trapping lifetimes of up to two hours of single $^{88}\\mathrm{Sr}$ atoms in an optical tweezer array while preserving full optical access and without the need for complex cryogenic enclosures. Our measurements show that exceptionally long single-atom lifetimes can be achieved with a relatively simple cryostat design. Our architecture can be straightforwardly ported to other atomic species and shows a viable path for scaling up to sorted arrays of tens of thousands of atoms.",
+      "publishedDate": "2026-07-14",
+      "pdfUrl": "https://arxiv.org/pdf/2607.12988v1",
+      "summaryUrl": "https://arxiv.org/abs/2607.12988v1",
+      "category": "physics.atom-ph"
+    },
+    {
+      "arxivId": "2607.12981v1",
+      "title": "An Agentic Formalization for Certified Quantum Neural Network Design",
+      "authors": [
+        "Mingrui Jing",
+        "Lei Zhang",
+        "Yusheng Zhao",
+        "Hongshun Yao",
+        "Xin Wang"
+      ],
+      "abstract": "A central model in quantum machine learning is the quantum neural network (QNN), whose design requires balancing expressivity and trainability. Technically, expressivity is studied through circuit-function analysis, such as quantum signal processing, while trainability is analyzed using dynamical-Lie-algebra (DLA) methods. To support certified QNN design, we formalize these major components of QNN theory in a connected lean 4 development checked by a proof kernel, where every analytic input is either proved or exposed as a named hypothesis. On the expressivity side, we prove exact if-and-only-if characterizations of single-qubit QNNs, a resource-counted quantum phase processing theorem, and an overparameterization ceiling that bounds the quantum Fisher information rank by the DLA dimension. On the trainability side, we derive the direct-sum loss-variance law through a de-circularized second-moment interface. A parameterized Casimir-uniqueness engine discharges the required inputs for fully controllable, orthogonal, and matchgate circuit families, while single-qubit and product-Clifford ensembles close the two-design assumptions directly. A capstone theorem pairs the conditional variance law with exact loss reconstruction in DLA coordinates. The development record identifies eight corrections and clarifications that were not explicit in the informal arguments. We expect this work to provide a machine-checkable foundation for QNN theory and a step toward AI-assisted or automated design of quantum machine learning algorithms.",
+      "publishedDate": "2026-07-14",
+      "pdfUrl": "https://arxiv.org/pdf/2607.12981v1",
+      "summaryUrl": "https://arxiv.org/abs/2607.12981v1",
+      "category": "quant-ph"
+    },
+    {
+      "arxivId": "2607.12954v1",
+      "title": "Robustness of Deep Learning Models for PV Power Forecasting under NWP Forecast Errors: A Spatiotemporal and Physically Interpretable Analysis",
+      "authors": [
+        "Dandan Chen",
+        "Yan Zhao",
+        "Xuepeng Chen"
+      ],
+      "abstract": "Engineering use of AI forecasting models requires not only high nominal accuracy but also predictable behavior under uncertain inputs. In photovoltaic (PV) forecasting, this requirement is especially challenging because numerical weather prediction (NWP) errors are temporally correlated, state dependent, and physically coupled across variables. Existing evaluations, however, often rely on perfect forecast assumptions or simplistic perturbations that do not reflect these characteristics. This study presents a physically constrained robustness evaluation framework based on simulation, using virtual PV power as a controlled response variable to isolate the propagation of input uncertainty from confounders at the plant level. Six representative machine learning and deep sequence models, including PatchTST, GRU, N-HITS, and LightGBM, are evaluated under dynamic NWP perturbations with heteroscedasticity modulated by clear-sky conditions and Erbs reconstruction that preserves radiation consistency. The results show that sequence models provide stronger noise filtering and temporal resilience than a strong tabular baseline under medium to high disturbance regimes. SHapley Additive exPlanations (SHAP) and Integrated Gradients (IG) further support a feature reallocation tendency at the case level, in which predictive reliance shifts from corrupted future forecasts toward more stable historical observations and deterministic physical priors. A Pareto analysis of accuracy under clean conditions, robustness, and computational latency then translates these findings into engineering implications for robustness assessment and model selection under forecast uncertainty.",
+      "publishedDate": "2026-07-14",
+      "pdfUrl": "https://arxiv.org/pdf/2607.12954v1",
+      "summaryUrl": "https://arxiv.org/abs/2607.12954v1",
+      "category": "physics.ao-ph"
+    },
+    {
+      "arxivId": "2607.12948v1",
+      "title": "Logical Entangling with Phantom Codes in Hypergraph Products",
+      "authors": [
+        "Keming He",
+        "Ziao Tang",
+        "Zetong Li",
+        "Ge Bai",
+        "Xin Wang"
+      ],
+      "abstract": "Logical entangling gates are a major source of physical spacetime overhead in fault-tolerant quantum computation. Phantom codes reduce this cost by implementing every ordered in-block logical CNOT through physical qubit permutations and Pauli-frame updates. Whether this mechanism can coexist with the low-weight stabilizer structure of qLDPC codes is a central question for low-overhead fault-tolerant architectures. We give a deterministic answer within binary CSS hypergraph product (HGP) codes. Up to natural equivalences, the simplex-repetition family is the unique HGP family satisfying the phantom condition. We then evaluate this family under circuit-level noise in logical GHZ-state preparation and Trotterized many-body quantum simulation. The codes retain low-weight stabilizer checks and yield concrete advantages over rotated surface-code baselines in both benchmarks. Reconfigurable neutral-atom arrays offer a natural setting for this approach, supporting nonlocal qLDPC operations while enabling in-block logical CNOTs without additional physical operations. Together, these results make precise how permutation-based logical entangling constrains code design within the HGP framework, demonstrate the circuit-level benefits of the unique family, and guide the search for phantom qLDPC families with better asymptotic parameters for low-overhead fault tolerance on neutral-atom hardware.",
+      "publishedDate": "2026-07-14",
+      "pdfUrl": "https://arxiv.org/pdf/2607.12948v1",
+      "summaryUrl": "https://arxiv.org/abs/2607.12948v1",
+      "category": "quant-ph"
+    },
     {
       "arxivId": "2607.12900v1",
       "title": "Establishing baseline model performances for optical turbulence forecasting",
@@ -1555,85 +1639,6 @@
       "publishedDate": "2026-07-11",
       "pdfUrl": "https://arxiv.org/pdf/2607.10364v1",
       "summaryUrl": "https://arxiv.org/abs/2607.10364v1",
-      "category": "cs.LG"
-    },
-    {
-      "arxivId": "2607.10333v1",
-      "title": "NeuroForge: A Self-Correcting, Geometry-Native Neural CFD Engine with Calibrated Physics-Residual Trust",
-      "authors": [
-        "Ali Jabbary",
-        "Kasra Ghanavati"
-      ],
-      "abstract": "Machine-learning surrogates for computational fluid dynamics (CFD) predict steady flow fields orders of magnitude faster than classical solvers, but emit a single field with no built-in way to know whether to trust it -- especially out of distribution. We close the loop with the governing physics: we compute the discretised steady-RANS residual of the prediction and ask what jobs it can do. Our central finding is a two-way dissociation: the physics residual is a reliable, backbone-robust trust signal (it tells you where the prediction is wrong) but a poor correction objective (it does not tell you how to fix it). As a trust signal, the residual's per-case rank correlation with field error is consistently positive across three architecturally distinct backbones (Transolver 0.625+-0.019; grid Geo-FNO ~0.40, lifted to 0.83 by a learned corrector; MeshGraphNet 0.851+-0.058) and generalizes to a second dataset and flow regime (DeepCFD laminar bluff bodies, rho=0.77+-0.12). A split-conformal layer attains target coverage (0.902+-0.008 at the 0.90 target) and, paired with a deep-ensemble sigma, yields an input-adaptive band (ECE 0.074). As a correction objective or acceptance gate the residual fails: iteration sweeps raise the PDE residual while lowering field error. Alongside the trust layer we deploy a supervised deep-equilibrium corrector trained toward ground truth that reduces volume-field MSE on all three seeds (mse_u -9%, mse_v -21%, mse_p -25%) on the SOTA backbone; a controlled ablation zeroing the corrector's residual input matches it, so the gain is attributable to the learned correction, not residual-conditioning. We report caveats plainly: correction quality is backbone-dependent, and the coverage guarantee holds under exchangeability. The contribution is a self-auditing trust layer, the residual's two roles, and the learned self-correction it accompanies.",
-      "publishedDate": "2026-07-11",
-      "pdfUrl": "https://arxiv.org/pdf/2607.10333v1",
-      "summaryUrl": "https://arxiv.org/abs/2607.10333v1",
-      "category": "physics.flu-dyn"
-    },
-    {
-      "arxivId": "2607.10263v1",
-      "title": "Sharper Analysis of Single-Loop Methods for Bilevel Optimization",
-      "authors": [
-        "Yubo Zhou",
-        "Jun Shu",
-        "Luo Luo",
-        "Junmin Liu",
-        "Deyu Meng",
-        "Guang Dai",
-        "Haishan Ye"
-      ],
-      "abstract": "Bilevel optimization underpins many machine learning applications, including hyperparameter optimization, meta-learning, neural architecture search, and reinforcement learning. While hypergradient-based methods have advanced significantly, a gap persists between theoretical guarantees and practical single-loop implementations required for efficiency. We bridge this gap by establishing sharper convergence results for single-loop approximate implicit differentiation (AID) and iterative differentiation (ITD) methods, leveraging our proposed analytical framework, decoupled norm analysis (DNA). For AID, we improve the convergence rate from $\\mathcal{O}(\u03ba^6/K)$ to $\\mathcal{O}(\u03ba^5/K)$, where $\u03ba$ is the condition number of the inner-level problem. For ITD, we prove that the asymptotic error is $\\mathcal{O}(\u03ba^2)$, exactly matching the known lower bound and improving upon the previous $\\mathcal{O}(\u03ba^3)$ guarantee. Numerical experiments on synthetic and real tasks corroborate our theoretical findings.",
-      "publishedDate": "2026-07-11",
-      "pdfUrl": "https://arxiv.org/pdf/2607.10263v1",
-      "summaryUrl": "https://arxiv.org/abs/2607.10263v1",
-      "category": "cs.LG"
-    },
-    {
-      "arxivId": "2607.10260v1",
-      "title": "Data-Driven Telecom Marketing Optimization: A Machine Learning-Based Churn Prediction and Customer Segmentation Framework",
-      "authors": [
-        "Nada Ali",
-        "Lina Ahmed",
-        "Tahani Abdalla Attia Gasmalla"
-      ],
-      "abstract": "Customer churn is a major challenge for telecommunication companies, directly eroding revenue and long term customer relationships. Traditional retention programs rely on generic, not personalized incentives and lack the precision to identify high risk customers before they leave. This paper presents a data driven marketing optimization framework integrating machine learning based churn prediction, customer segmentation combining churn risk with customer value, and tailored, segment specific marketing and Return on Investment ROI strategies. Using the IBM Telco Customer Churn dataset with 7043 customers and 21 features, three gradient boosting ensembles, XGBoost, LightGBM, and CatBoost, were trained and tuned via randomized search with stratified 5 fold cross validation, class weighting, and F1 score driven decision threshold optimization to counter a class imbalance of 73.4% versus 26.6%. CatBoost was selected as the deployment model, achieving 77.68% accuracy, an F1 score of 0.6366, a PR AUC of 0.6553, and a ROC AUC of 0.8403 on the held out test set. Customers were partitioned with K Means clustering, validated via the Elbow method and visualized with Principal Component Analysis, into High, Medium, and Low Value segments, cross tabulated against churn risk labels to define four actionable clusters. Segment specific retention, upsell, and engagement strategies were designed for each cluster, and a theoretical ROI and CLV framework quantifies the financial impact of the proposed interventions. The pipeline was operationalized in an interactive Streamlit web application allowing marketing teams to upload data, filter by segment, visualize churn drivers via SHAP, and download automated segment reports. Results confirm that combining predictive churn modeling with value aware segmentation yields more actionable and profitable marketing decisions than churn prediction alone.",
-      "publishedDate": "2026-07-11",
-      "pdfUrl": "https://arxiv.org/pdf/2607.10260v1",
-      "summaryUrl": "https://arxiv.org/abs/2607.10260v1",
-      "category": "cs.LG"
-    },
-    {
-      "arxivId": "2607.10249v2",
-      "title": "Branch-resolved Pauli-block spectroscopy of residual conditional phase in two-qubit gates",
-      "authors": [
-        "Xudan Chai",
-        "Yanwu Gu",
-        "Huiqi Xue",
-        "Kerui Li",
-        "Dong E. Liu"
-      ],
-      "abstract": "Recent progress in quantum physics and quantum technologies is driving quantum computing from the noisy intermediate-scale (NISQ) era toward fault-tolerant operation. High-precision control of two-qubit gates is among the most critical requirements in this transition and hinges on accurate two-qubit calibration. For controlled-phase and CZ-style operations, the residual conditional phase (the nonlocal ZZ-type deviation after local compensation) is weakly resolved at leading order in average infidelity and randomized benchmarking, and repeated Ramsey amplification does not reliably isolate it from ordinary target detuning, SPAM errors, and contrast loss in long sequences. We introduce branch-resolved Pauli-block spectroscopy to estimate the per-cycle residual ZZ-rotation angle theta_c with its sign, from which the controlled-phase residual follows by a fixed convention. The protocol repeats a fixed probe for N cycles, measures the closed Pauli block IX, IY, ZX, and ZY, and forms branch coherences C+ and C- conditioned on the control qubit; theta_c splits the two branch phase slopes in opposite directions, while local target phase beta_c shifts them together. An echoed-cycle variant suppresses removable local terms while preserving the nonlocal contribution. Numerical simulations with injected theta_c, detuning, damping, and SPAM confirm unbiased signed readout where scalar-sector alternatives fail and distinguish opposite-sign errors at equal infidelity. On one superconducting cloud qubit-coupler pair, a pulse-level calibration closed loop shows near-linear injection, preserved branch contrast, and tracking of the native residual conditional phase through one iteration. The approach yields a low-overhead, signed per-cycle estimate of residual conditional phase that standard fidelity benchmarks underresolve at leading order.",
-      "publishedDate": "2026-07-11",
-      "pdfUrl": "https://arxiv.org/pdf/2607.10249v2",
-      "summaryUrl": "https://arxiv.org/abs/2607.10249v2",
-      "category": "quant-ph"
-    },
-    {
-      "arxivId": "2607.10196v1",
-      "title": "Generative Augmentation of Raman Spectra for Glioma Classification",
-      "authors": [
-        "Andrei Iu\u015fan",
-        "Iulian Vasile",
-        "Daria Voiculescu",
-        "Ion Petre",
-        "Andrei P\u0103un",
-        "Bogdan Oancea",
-        "Mihaela P\u0103un"
-      ],
-      "abstract": "Access to sufficiently large biomedical datasets remains a major obstacle for machine learning in Raman spectroscopy-based diagnostics. In particular, for glioma analysis, datasets are typically small and heterogeneous, affected by acquisition-specific variability. This work investigates the utility of deep generative augmentation in such a small-cohort setting. We analyze glioma biopsy spectra acquired from 58 tumor samples and consider both binary IDH-status classification and 6-class methylation subtype classification problems. To address the limited size and imbalance of the dataset, we develop a conditional variational autoencoder ($\u03b2$-CVAE) capable of generating class-conditioned synthetic Raman spectra. The generated data are evaluated in Train-on-Synthetic, Test-on-Real (TS/TR) and Train-on-Synthetic+Real, Test-on-Real (TSR/TR) settings under a strict patient-isolated cross-validation protocol. Models trained exclusively on synthetic data underperform models trained on real spectra, indicating a substantial domain gap between synthetic and real distributions. However, augmenting the real training data with synthetic spectra consistently improves classification performance across multiple models. These findings indicate that, even with a limited number of independent patient samples, generative models can capture sufficient structure to provide useful regularization for downstream classifiers. We also investigate a reconstruction-based inference strategy, termed Classification by Reconstruction (CbR), in which class prediction is based on reconstruction error under different class conditions. Overall, the results support the use of deep generative augmentation as a practical strategy for improving machine learning robustness in Raman spectroscopy applications characterized by limited biomedical datasets.",
-      "publishedDate": "2026-07-11",
-      "pdfUrl": "https://arxiv.org/pdf/2607.10196v1",
-      "summaryUrl": "https://arxiv.org/abs/2607.10196v1",
       "category": "cs.LG"
     }
   ]
