@@ -1,7 +1,7 @@
 {
   "metadata": {
     "totalCount": 100,
-    "lastUpdated": "2026-08-05T01:42:06.114651Z",
+    "lastUpdated": "2026-08-05T04:55:36.155229Z",
     "keywords": [
       "machine learning",
       "natural language processing",
@@ -9,6 +9,179 @@
     ]
   },
   "papers": [
+    {
+      "arxivId": "2608.03984v1",
+      "title": "string2string Studio: An Interactive, In-Browser Platform for String-to-String Algorithms",
+      "authors": [
+        "Mirac Suzgun",
+        "James Zou",
+        "Stuart M. Shieber",
+        "Dan Jurafsky"
+      ],
+      "abstract": "We present string2string Studio, an interactive in-browser platform for string-to-string analysis across natural language processing, computational biology, and the digital humanities. The system integrates six main modules (alignment, distance, similarity, search, generation metrics, and BLAST homology search), operating at character, word, token, line, and residue levels. Its C++-based algorithms compile to WebAssembly, so core operations run locally by default without any installation or data upload. The interface reports scores with their \"evidence\" (alignments, edit paths, metric matches, search hits, and homology traces), making methods inspectable, debuggable, and comparable on shared inputs. Internal benchmarks show speedups of up to 2,500x over the Python predecessor, faster global/local alignment than a general-purpose native C aligner, and exact agreement with independent references under declared settings. For homology search, the scoped client-side blastn path closely matches NCBI BLAST+ rankings and statistics under matched parameters. A curated showcase and Learn mode present canonical algorithms and metrics as reusable demonstrations. string2string Studio is open-source and freely available at string2string.org.",
+      "publishedDate": "2026-08-04",
+      "pdfUrl": "https://arxiv.org/pdf/2608.03984v1",
+      "summaryUrl": "https://arxiv.org/abs/2608.03984v1",
+      "category": "cs.CL"
+    },
+    {
+      "arxivId": "2608.03962v1",
+      "title": "Separating quantum circuits from classical LLMs",
+      "authors": [
+        "Srinivasan Arunachalam",
+        "Arkopal Dutt",
+        "Hari Krovi",
+        "Rik Sengupta"
+      ],
+      "abstract": "Modern large language models - transformers and diffusion language models - are built around two canonical algorithmic tasks: prediction and generation. We prove unconditional separations between low-depth quantum computation and the corresponding bounded-resource classical language-model architectures in both regimes. Concretely, we exhibit the following:   1. Distributional separation. We give a distribution that is sampleable by $\\textsf{QNC}^0$ circuits (i.e., a family of constant-depth quantum circuits consisting of bounded fan-in gates) that no constant-round diffusion language model ($\\textsf{DLM}$) with shallow scheduling and denoising can sample within constant distance, even when allowed sublinear chain-of-thought and output-token revision/remasking events, the very features modern $\\textsf{DLM}$s rely on.   2. Functional separation. We exhibit a function computable in $\\land \\circ \\textsf{QNC}^0[\\log\\log n]$ (i.e., a family of O$(\\log\\log n)$-depth $\\textsf{QNC}^0$ circuits, where $n$ is the input length, followed by a single classical $\\mathsf{AND}$ gate) such that any constant-depth decoder-only transformer computing the function must be large: it would have to have width $n^{\u03a9(1)}$.   Together, our work initiates the study of quantum advantage in the era of large language models.",
+      "publishedDate": "2026-08-04",
+      "pdfUrl": "https://arxiv.org/pdf/2608.03962v1",
+      "summaryUrl": "https://arxiv.org/abs/2608.03962v1",
+      "category": "quant-ph"
+    },
+    {
+      "arxivId": "2608.03950v1",
+      "title": "Joint spectral characterization of SPDC photon pairs near 2 $\u03bc$m in (Al)GaAs-on-insulator waveguides",
+      "authors": [
+        "Alexandre Z. Leger",
+        "Emil Z. Ulsig",
+        "Samuel E. Fontaine",
+        "Dileep V. Reddy",
+        "Eric J. Stanton",
+        "Lynden K. Shalm",
+        "Richard P. Mirin",
+        "Martin J. Stevens",
+        "J. E. Sipe",
+        "Nicolas Volet",
+        "Deny R. Hamel"
+      ],
+      "abstract": "Integrated photon-pair sources are a core component of chip-based quantum computing, communication, and metrology. Although such sources have been demonstrated at conventional telecom wavelengths, the 2 $\u03bc$m band remains comparatively less explored, despite offering advantages for free-space quantum communication, low-loss transmission in emerging fiber networks, and integration with silicon photonic platforms. In this paper, we demonstrate spontaneous parametric down-conversion (SPDC) in straight GaAs- and AlGaAs-on-insulator waveguides. This platform offers strong second-order nonlinearity and geometry-tunable dispersion, which are advantageous for efficient on-chip pair generation. Measurements of the joint spectral intensity and heralded second-order correlation function show broadband emission around 2 $\u03bc$m with strong spectral anti-correlations. To our knowledge, this is the first direct joint-spectral characterization of an integrated SPDC source in this wavelength regime.",
+      "publishedDate": "2026-08-04",
+      "pdfUrl": "https://arxiv.org/pdf/2608.03950v1",
+      "summaryUrl": "https://arxiv.org/abs/2608.03950v1",
+      "category": "physics.optics"
+    },
+    {
+      "arxivId": "2608.03948v1",
+      "title": "Real-time decoding of quantum error correction codes using high-performance computing",
+      "authors": [
+        "Lingling Lao",
+        "Qiang Wang",
+        "Yuanqi Liu",
+        "Yantong Liu",
+        "Haowen Wang",
+        "Yitao Chen",
+        "Yankang Zhao",
+        "Zhenwei Wu",
+        "Wei Zhang",
+        "Yong Dong",
+        "Yingwen Liu",
+        "Mingche Lai",
+        "Junjie Wu"
+      ],
+      "abstract": "Quantum error correction (QEC) is indispensable for building scalable fault-tolerant quantum computers. Effective QEC demands stringent real-time decoding: the decoder must process syndrome measurements and determine corrections within a time scale--typically on the order of microseconds, to avoid data backlog. Scaling to large number of logical qubits further necessitates significant computational resources. In this work, we propose an architecture, called \\emph{THQLink}, for real-time decoding of quantum error correction codes using high-performance computing (HPC) resources. The network connecting the HPC and the control system of quantum processing unit (QPU) is built on TH-Express and can be adapted to different quantum technologies and their associated control stacks. We report a round-trip latency of 2.944 $\u03bc$s on average, with an incremental overhead of 130 ns per additional hop. Using a parallel window strategy, we demonstrate real-time decoding (1 $\u03bc$s per QEC round) of the surface code up to distance 19 using a matching-based decoder on CPUs. Our work presents a scalable framework for real-time decoding in fault-tolerant quantum computing. It can be readily applied to quantum-centric supercomputers that feature tight integration between QPU and HPC resources, thereby enabling efficient support for hybrid quantum-classical algorithms and computation-intensive workloads offloaded from the QPU.",
+      "publishedDate": "2026-08-04",
+      "pdfUrl": "https://arxiv.org/pdf/2608.03948v1",
+      "summaryUrl": "https://arxiv.org/abs/2608.03948v1",
+      "category": "quant-ph"
+    },
+    {
+      "arxivId": "2608.03914v1",
+      "title": "First fast radio burst search campaign at the Argentine Institute of Radio Astronomy",
+      "authors": [
+        "Carlos O. Lousto",
+        "Harsh Prajapati",
+        "Ezequiel Zubieta",
+        "Susana B. Araujo Furlan",
+        "Guillermo Gancio",
+        "Joaqu\u00edn Pelle",
+        "Gustavo E. Romero",
+        "Federico Garc\u00eda",
+        "Santiago del Palacio",
+        "Nathan Cahill"
+      ],
+      "abstract": "Fast radio bursts (FRBs) are intense millisecond-duration radio transients of extragalactic origin whose physical nature remains under active investigation, and which also serve as probes of the intergalactic medium. We report on the first FRB search campaign carried out at the Argentine Institute of Radio Astronomy (IAR) between December 2024 and March 2026, targeting nearby galaxy superclusters in the southern sky. We observed fields in the Ophiuchus, Shapley, and Sculptor/Phoenix supercluster regions with one of the two 30~m antennas of the IAR, using a ROACH-based backend with 400~MHz of bandwidth centred at 1400~MHz and a time resolution of 41--82~$\u03bc$s, for a total net observing time of 212~h. The data were searched for dispersed single pulses with \\texttt{PRESTO} in the dispersion measure range $100 \\leq \\mathrm{DM} \\leq 500$, and candidates were classified with the FETCH machine learning classifier. The pipeline was validated on archival Parkes data containing known FRBs and on synthetic bursts injected into IAR observations. One FRB candidate, FRB~20251018, was identified on 18 October 2025 in an observation pointed towards the galaxy cluster A2870, in the Phoenix supercluster, with a dispersion measure of $243$, a signal-to-noise ratio of 8.2, and a FETCH probability of $p=0.99$. To the best of our knowledge, this would be the first FRB detected from South America. A set of more marginal candidates is also presented. These results demonstrate the capability of the IAR antennas to detect FRBs and support the continuation and extension of the monitoring campaign, including coincident dual-antenna observations and cross-matches with gravitational-wave events and electromagnetic transients.",
+      "publishedDate": "2026-08-04",
+      "pdfUrl": "https://arxiv.org/pdf/2608.03914v1",
+      "summaryUrl": "https://arxiv.org/abs/2608.03914v1",
+      "category": "astro-ph.HE"
+    },
+    {
+      "arxivId": "2608.03881v1",
+      "title": "Difference-in-differences with \"bad controls\"",
+      "authors": [
+        "Carolina Caetano",
+        "Brantly Callaway",
+        "Stroud Payne",
+        "Hugo Sant'Anna"
+      ],
+      "abstract": "This paper considers difference-in-differences identification strategies when the parallel trends assumption holds after conditioning on covariates that may themselves be affected by the treatment (often referred to as \"bad controls\"). We show that common approaches such as simply dropping bad controls are often ill-advised and develop two alternative approaches that allow bad controls to function as genuine controls despite being affected by treatment. First, we derive explicit conditions that rationalize conditioning only on pre-treatment values of the bad control, leading naturally to the Callaway and Sant'Anna (2021) estimator with pre-treatment values as covariates. Second, under a covariate unconfoundedness condition, we develop imputation and double/debiased machine learning estimators that recover the average treatment effect on the treated. We extend these results to staggered treatment adoption, provide pre-tests for the identifying assumptions, and apply the methods to study the effects of job displacement on earnings.",
+      "publishedDate": "2026-08-04",
+      "pdfUrl": "https://arxiv.org/pdf/2608.03881v1",
+      "summaryUrl": "https://arxiv.org/abs/2608.03881v1",
+      "category": "econ.EM"
+    },
+    {
+      "arxivId": "2608.03873v1",
+      "title": "High-level quantum structured programs as quantum registers compositions",
+      "authors": [
+        "David Chamizo",
+        "Jose Garcia-Alonso",
+        "Juan M. Murillo"
+      ],
+      "abstract": "Current quantum programs are mainly designed at the level of quantum gates acting on individual qubits; on a large scale and for complex problems this may involve a high cognitive load on the programmer, making the program specification nontrivial and error-prone. In this context, providing quantum programming with higher abstraction mechanisms will assist in making this task more manageable and robust against design errors. In this work, a conceptual framework is addressed following the notion of the whole quantum computation as a structure composed of quantum registers representing each an undivided entity. Thus, computation progresses through semantically well-defined transformations that act on, or entangle, quantum registers, thereby modifying the global state. Ultimately, the program reaches the desired state by following a specific composition strategy. With this in mind, high-level syntax is presented through an algebraic formalism that bridges them with their low-level semantics. Proposed syntax is based on certain well-know operations used on quantum algorithms that apply phase shifts upon logical condition satisfaction or leverage on parallel evaluation. Based solely on the formalized operations, a quantum satisfiability modulo theories (SMT) solver can be designed. At its core, this work contributes to establishing some methodological principles towards realizing a high-level quantum structured programming.",
+      "publishedDate": "2026-08-04",
+      "pdfUrl": "https://arxiv.org/pdf/2608.03873v1",
+      "summaryUrl": "https://arxiv.org/abs/2608.03873v1",
+      "category": "quant-ph"
+    },
+    {
+      "arxivId": "2608.03862v1",
+      "title": "CRS-Triage: Confidence- and Reliability-Aware Selective Triage under Incomplete Clinical Evidence",
+      "authors": [
+        "Guan Qiang",
+        "Yushen Chen",
+        "Tianlong Liu",
+        "David Rotenberg",
+        "Ethan H. Kim",
+        "Fang Fang"
+      ],
+      "abstract": "Emergency triage requires reliable decisions within a short time period. However, the available electronic health record (EHR) data, including structured data and clinical text, are often incomplete, unreliable, and inconsistent. This makes machine learning (ML)-based triage prediction more challenging, as existing ML models typically rely on complete and reliable EHR data to accurately predict patients' acuity levels. To address this, we propose confidence- and reliability-aware selective triage (CRS-Triage) to predict patients' acuity levels with a confidence score. By comparing the confidence score with a predefined threshold, CRS-Triage can selectively determine whether the model should make the decision or defer the case. Specifically, CRS-Triage separately evaluates the reliability of structured data and clinical text and then jointly considers the consistency between the two modalities to estimate the confidence of each prediction. Moreover, to reduce the risk of missing high-acuity patients, namely under-triage, CRS-Triage prefers to assign patients slightly higher acuity levels, namely over-triage, by penalizing under-triage errors. Experiments on the MIMIC-IV-ED dataset show that CRS-Triage achieves strong predictive performance. It also provides a better risk-coverage trade-off and remains reliable when the available EHR data are incomplete, degraded, or inconsistent across modalities.",
+      "publishedDate": "2026-08-04",
+      "pdfUrl": "https://arxiv.org/pdf/2608.03862v1",
+      "summaryUrl": "https://arxiv.org/abs/2608.03862v1",
+      "category": "cs.LG"
+    },
+    {
+      "arxivId": "2608.03855v1",
+      "title": "Bi-semantic Chemical Embedder for Joint Representation Learning of SMILES and Natural Language",
+      "authors": [
+        "David Ming Segura",
+        "Jeremy Goumaz",
+        "Joshua W. Sin",
+        "Bojana Rankovi\u0107",
+        "Philippe Schwaller"
+      ],
+      "abstract": "Transformer models have revolutionized natural language processing (NLP), and text-based molecular representations like SMILES have successfully extended these architectures to chemistry. However, domain-adaptive pre-training often causes models to overfit to chemical syntax, catastrophically forgetting their foundational semantic capabilities. To address this challenge, we introduce CheMatE, a chemistry-oriented embedding model that jointly captures molecular structure and domain-specific natural language within the same representation space. Built on a ModernBERT backbone, CheMatE learns bi-semantic representations through a two-stage training procedure: continued masked language modeling (MLM) followed by a Matryoshka contrastive learning stage via Multiple Negative Ranking Loss (MNRL). First, we train the model using MLM on a novel, large-scale corpus of SMILES-annotated, long-context scientific documents that were constructed and curated from FineWeb and ChemPile (comprising 10.4B and 11.5B tokens, respectively). Subsequently, the model undergoes contrastive learning using a synthetic dataset of SMILES-text pairs algorithmically derived from our original training corpus. This design exposes the model to SMILES-enriched scientific literature, enabling bi-semantic understanding. We evaluate CheMatE across a range of downstream tasks covering molecular property prediction and scientific language understanding. Our results demonstrate that coupling our custom-curated datasets with this sequential training strategy yields robust, highly transferable representations. By effectively unifying structural and contextual signals within a single text-based framework, CheMatE achieves competitive performance across both specialized chemistry models and general-purpose language model baselines.",
+      "publishedDate": "2026-08-04",
+      "pdfUrl": "https://arxiv.org/pdf/2608.03855v1",
+      "summaryUrl": "https://arxiv.org/abs/2608.03855v1",
+      "category": "cs.LG"
+    },
+    {
+      "arxivId": "2608.03805v1",
+      "title": "Physics-Informed Machine Learning for Refractory Alloy Design",
+      "authors": [
+        "Blaise Awola Ayirizia",
+        "Bimal K C",
+        "Jorge A. Munoz San Martin"
+      ],
+      "abstract": "Refractory complex concentrated alloys (CCAs) exhibit exceptional mechanical properties at elevated temperatures, but their vast compositional space (approximately 10^15 possible combinations) poses significant challenges for experimental exploration. We develop a physics-informed machine learning framework combining quantile gradient boosting with Born stability constraints to predict eight mechanical properties (bulk modulus B, shear modulus G, Vickers hardness Hv, elastic constants C11, C12, C44, Young's modulus E, and Poisson's ratio nu) of refractory CCAs. Using 393 density functional theory (DFT)-computed alloys from a 10-element design space (Cr, Hf, Mo, Nb, Re, Ta, Ti, V, W, Zr), we achieve coefficient of determination (R^2) values of 0.89 to 0.97 with mean absolute errors of 0.85 to 14.74 GPa across six properties on a held-out test set (n = 59). Remarkably, all test predictions satisfy the Born stability criteria (100% compliance), demonstrating the efficacy of physics-informed constraints. Compositional screening in valence electron concentration (VEC)-atomic size mismatch (delta) space identifies high-performance candidates, with MoReW exhibiting the highest predicted shear rigidity (C44 = 139 GPa). Elemental analysis reveals that rhenium appears in 100% of the top-performing alloys, molybdenum in 90%, and chromium in 80%, establishing quantitative design rules: VEC = 6.0 to 6.4, delta < 10%, and Re-Mo-Cr ternary systems maximize shear resistance. This physics-informed screening framework enables accelerated discovery of mechanically stable, high-performance refractory alloys from the trillion-scale compositional space.",
+      "publishedDate": "2026-08-04",
+      "pdfUrl": "https://arxiv.org/pdf/2608.03805v1",
+      "summaryUrl": "https://arxiv.org/abs/2608.03805v1",
+      "category": "cond-mat.mtrl-sci"
+    },
     {
       "arxivId": "2608.03760v1",
       "title": "Guided Synthesis of EMT Zeolites by Machine Learning",
@@ -1429,164 +1602,6 @@
       "pdfUrl": "https://arxiv.org/pdf/2608.01162v1",
       "summaryUrl": "https://arxiv.org/abs/2608.01162v1",
       "category": "cond-mat.soft"
-    },
-    {
-      "arxivId": "2608.01137v1",
-      "title": "Double Machine Learning with High-dimensional Interactive Fixed Effects",
-      "authors": [
-        "Binzhi Chen",
-        "Annalivia Polselli",
-        "Paul S. Clarke"
-      ],
-      "abstract": "Factor structures are central to empirical work in economics and finance, and are usually used to model time-varying unobserved heterogeneity through interactive fixed effects (IFE). Existing IFE estimators rest on low-dimensional and linear specifications in the covariates, assumptions which are increasingly restrictive in applications drawing on rich datasets with controls of unknown functional form. This paper develops a Double Machine Learning estimator for the high-dimensional partially linear panel model with interactive fixed effects (panel DML-IFE). The method combines projection-based defactorisation of the data, in the spirit of Common Correlated Effects (CCE), with a Neyman-orthogonal score function and cross-fitting procedure, and accommodates low-rank factor structures in outcomes and treatments alongside high-dimensional, potentially nonlinear covariate effects estimated by machine learning algorithms. Monte Carlo simulations show that panel DML-IFE outperforms conventional IFE estimator outside the correctly-specified linear case, with bias reduction driven primarily by the time and covariate dimensions. An empirical application to U.S. stock returns shows that several effects documented under linear specifications lose statistical significance once high-dimensional nonlinear confounding and the presence of IFE are jointly accounted for.",
-      "publishedDate": "2026-08-02",
-      "pdfUrl": "https://arxiv.org/pdf/2608.01137v1",
-      "summaryUrl": "https://arxiv.org/abs/2608.01137v1",
-      "category": "econ.EM"
-    },
-    {
-      "arxivId": "2608.01112v1",
-      "title": "Fighting Fire with Fire: On the Feasibility of Protecting Exercises Against AI Cheating",
-      "authors": [
-        "Tobias Braun",
-        "Jonas Grebe",
-        "Louis Rethfeld",
-        "Marcus Rohrbach"
-      ],
-      "abstract": "The widespread adoption of generative AI enables students to outsource cognitive effort to increasingly capable assistants, creating an illusion of competence while undermining the independent reasoning that education aims to cultivate. We investigate whether adversarial machine learning can be repurposed to protect educational exercises against such corrosive reliance. Our approach uses multimodal multiple-choice questions whose visual components can be protected with subtle visual perturbations that steer AI solvers toward designated incorrect answers. These responses form a statistical fingerprint: students who blindly copy a solver reproduce the induced answer pattern more frequently than genuine students. We study the feasibility of this paradigm under realistic black-box assistant assumptions using three of the most common state-of-the-art multimodal language models: Anthropic's Claude, Google's Gemini, and OpenAI's ChatGPT. By using accessible surrogate models, we optimize adversarial perturbations that induce consistent response patterns. Those patterns enable principled detection through statistical hypothesis testing. These findings establish both the promise and the limitations of fighting machine-assisted reasoning with the vulnerabilities of the machines themselves.",
-      "publishedDate": "2026-08-02",
-      "pdfUrl": "https://arxiv.org/pdf/2608.01112v1",
-      "summaryUrl": "https://arxiv.org/abs/2608.01112v1",
-      "category": "cs.AI"
-    },
-    {
-      "arxivId": "2608.01111v1",
-      "title": "Fault-tolerant quantum computing with a microwave Cat Bus",
-      "authors": [
-        "Yanyan Chen",
-        "Xinyang Yu",
-        "Yueyang Min",
-        "Zhihao Zhang",
-        "Shuaifan Cao",
-        "Xiaopeng Li"
-      ],
-      "abstract": "The scalability of fault-tolerant neutral-atom quantum computers is constrained by the latency of shuttling with optical tweezers, imposing a stringent trade-off between qubit overhead and circuit depth in quantum algorithm compilation. Here we propose a hardware-efficient, shuttling-free architecture that achieves all-to-all connectivity. Remote Rydberg atoms are resonantly entangled through a microwave ``Cat Bus''---a cavity mode autonomously stabilized in a bosonic cat state. The Cat Bus natively supports the highly parallelized execution of one-to-many $\\mathrm{CZ}^n$ gates with exponentially suppressed crosstalk. We derive the resulting cat--atom error channel from the underlying interactions and physical constraints. For fault-tolerant operation, we develop a hardware-aware scheduling scheme that exploits the native cat--atom $\\mathrm{CZ}^{n}$ gate to construct a syndrome-extraction circuit with minimum depth. We benchmark the architecture using hypergraph-product (HGP) codes and estimate a 180-fold reduction in syndrome-extraction cycle time at $N=10^5$ data qubits compared with an atom-rearrangement-based architecture. Under matched two-qubit depolarizing noise, the corresponding error threshold increases from $0.55\\%$ to $0.72\\%$. Under the hardware-derived error model, we obtain a threshold of $0.80\\%$, corresponding to a threshold cooperativity of $C_{\\mathrm{th}}=7.8 \\times 10^4$, compatible with experimentally accessible parameters for Rydberg-coupled microwave-cavity systems. By avoiding atom transport, the Cat Bus provides a route towards high-speed, fault-tolerant neutral-atom quantum computation.",
-      "publishedDate": "2026-08-02",
-      "pdfUrl": "https://arxiv.org/pdf/2608.01111v1",
-      "summaryUrl": "https://arxiv.org/abs/2608.01111v1",
-      "category": "quant-ph"
-    },
-    {
-      "arxivId": "2608.01054v1",
-      "title": "Identification and Study of Irregular Radio Sources with SKA Continuum Surveys",
-      "authors": [
-        "Tapan K. Sasmal",
-        "Xuelei Chen",
-        "Baoqiang Lao",
-        "Soumen Kumar Bera",
-        "Yougang Wang",
-        "Soumen Mondal",
-        "Taotao Fang",
-        "Renyue Cen"
-      ],
-      "abstract": "Radio galaxies show a wide range of morphologies, from regular double-lobed systems to more complex and distorted radio structures. In this chapter, we focus on irregular radio morphologies, defined as sources in which the radio jets and lobes deviate from a straight and symmetric structure. Bent-tail radio galaxies and winged radio galaxies are two important examples of such sources. Bent-tail radio galaxies show curved jets or lobes, mainly shaped by the interaction between radio plasma and the dense intracluster or intragroup medium. Winged radio galaxies show faint off-axis emission, which may be related to plasma backflow, jet reorientation, episodic activity, galaxy mergers, or environmental asymmetry. The Square Kilometre Array (SKA) continuum surveys will provide the sensitivity, angular resolution, frequency coverage, and image quality required to identify and study large samples of such irregular radio galaxies. These data will make it possible to detect faint extended structures, including diffuse tails, weak bridges, remnant lobes, and low-surface-brightness wings. The identification and classification of these sources will require a combination of machine-learning methods, quantitative morphology measurements, multi-wavelength host-galaxy association, and expert visual inspection. The study of irregular radio galaxies with SKA data will help to connect radio morphology with host-galaxy properties, Active Galactic Nucleus (AGN) activity, jet power, and surrounding environment. Such studies will provide important insight into jet-environment interactions, AGN feedback, the dynamical state of galaxy groups and clusters, and the evolution of radio galaxies across cosmic time.",
-      "publishedDate": "2026-08-02",
-      "pdfUrl": "https://arxiv.org/pdf/2608.01054v1",
-      "summaryUrl": "https://arxiv.org/abs/2608.01054v1",
-      "category": "astro-ph.GA"
-    },
-    {
-      "arxivId": "2608.01041v1",
-      "title": "On the Limits of Machine-Learned Ranking for Modern Microarchitectural Policies",
-      "authors": [
-        "Yanxin Zhang",
-        "Shayne Wadle",
-        "Yuxuan Xiong",
-        "Zheyu Fu",
-        "Trivikram Krishnamurthy",
-        "Karu Sankaralingam"
-      ],
-      "abstract": "Machine-learning predictors estimate processor performance far faster than cycle-level simulation. For design-space exploration, however, the valuable test is not merely reproducing the usual hardware ordering, but identifying how different hardware configurations rank on individual program phases. We evaluate four ML-predictors in two design regimes: \\emph{Structural Parameters} (SP), varying hardware resources such as issue width, ROB size, and cache capacity; and \\emph{Behavioral Policies} (BP), varying prefetching and replacement algorithms. In the SP regime, aggregate ranking is strong, yet counter-intuitive windows(CIW)---where the configuration expected to be slower is faster---constitute $22.4\\%$ of non-tied windows across five pairs with a clear architectural prior. CIW match across these pairs is only $23.3$--$39.9\\%$; every point estimate is below the $50\\%$ random strict-ordering reference. The BP regime presents a different failure: ground-truth ties cover $37.8\\%$ of pair-windows, most strict pairs have margins of only a few cycles, and no model family reliably beats a feature-free majority baseline. NeuroScalar and SimNet fall below that baseline, Concorde is statistically tied with it, and the best selected OneDSE head improves by only $2.1$ percentage points. Accuracy rises mainly at large margins. We further show that this failure is not a matter of model capacity: an information-theoretic analysis reveals that when ranking outcomes depend on hidden microarchitectural state absent from the instruction stream, no trace-based predictor can exceed the Bayes accuracy determined by observable inputs alone. Thus high cycle or aggregate ranking accuracy can reflect mastery of easy, high-margin cases while missing the local reversals that carry the most architectural insight and for which cycle-level simulation remains indispensable.",
-      "publishedDate": "2026-08-02",
-      "pdfUrl": "https://arxiv.org/pdf/2608.01041v1",
-      "summaryUrl": "https://arxiv.org/abs/2608.01041v1",
-      "category": "cs.AR"
-    },
-    {
-      "arxivId": "2608.01005v1",
-      "title": "Hierarchical Solomonoff Induction: An Unbounded Machine Learning Model",
-      "authors": [
-        "Nathan Young"
-      ],
-      "abstract": "Solomonoff Induction, or SolInd, provides an ideal unbounded model of a priori sequence prediction but cannot naturally describe extrapolation from a given training dataset, as performed by Large Language Models. We apply de Finetti's theorem on exchangeable distributions to SolInd to produce what we call Hierarchical Solomonoff Induction, or HSI, which maintains a hyperprior over all Solomonoff priors that can be conditioned on previously observed sequences.   We extend Wood et al.'s proof that universal mixtures of semimeasures are equivalent to SolInd to show that universal mixtures of these mixtures are also equivalent, proving that HSI=SolInd. We also prove that HSI's excess error on any distribution, compared to its true generator, is bounded by that generator's complexity in the hyperprior. This result is directly comparable to SolInd's prediction error being bounded by the Kolmogorov complexity of the sequence being predicted, and forces HSI's average excess error to converge to 0 as a dataset grows, leading to optimal prediction in the limit. We claim that HSI is an ideal unbounded model of sequence prediction given a dataset in the same way that SolInd is ideal over individual sequences.",
-      "publishedDate": "2026-08-02",
-      "pdfUrl": "https://arxiv.org/pdf/2608.01005v1",
-      "summaryUrl": "https://arxiv.org/abs/2608.01005v1",
-      "category": "cs.LG"
-    },
-    {
-      "arxivId": "2608.01001v1",
-      "title": "From AI Technical Debt to Agentic Technical Debt: A Systematic Mapping of Root Causes and Manifestations in Agentic AI Systems",
-      "authors": [
-        "Muhammad Tukur",
-        "Hayatullahi B. Adeyemo",
-        "Tao Chen",
-        "Nour Ali",
-        "Anis Zarrad",
-        "Marco Agus",
-        "Rick Kazman",
-        "Rami Bahsoon"
-      ],
-      "abstract": "The emergence of Agentic AI systems, characterized by autonomous reasoning, multi-agent collaboration, tool orchestration, adaptive decision-making, and persistent memory, represents a fundamental shift from traditional AI pipelines to dynamic software ecosystems. While AI Technical Debt (AITD) has been widely studied in machine learning and software engineering, existing models assume static, component-level architectures and fail to capture the dynamic and emergent behaviors of agentic environments. To address this gap, this paper introduces Agentic Technical Debt (AgTD), defined as technical debt that emerges, accumulates, propagates, and amplifies due to the autonomous and collaborative nature of Agentic AI systems. Building on our prior systematic scoping review of 31 AITDs across seven root-cause categories, we employ a theory-informed transformation methodology to reinterpret these debts in Agentic AI through direct transformation, contextual transformation, and manifestation expansion. We present the first systematic mapping of established AITDs to their agentic manifestations, showing how conventional debts evolve into system-level liabilities, including memory inconsistencies, orchestration fragility, cascading failures, and unsafe autonomous decision-making. Our findings show that technical debt extends beyond software artifacts to encompass agent behaviors, coordination mechanisms, and interactions among agents, tools, and execution environments. We further examine its implications for AI Trust, Risk, and Security Management (AI TRiSM), highlighting impacts on trustworthiness, governance, security, operational resilience, and Sustainability Technical Debt. Overall, this work establishes AgTD as a foundational software engineering construct and provides a transformation framework, taxonomy, and research agenda for managing technical debt in autonomous multi-agent AI systems.",
-      "publishedDate": "2026-08-02",
-      "pdfUrl": "https://arxiv.org/pdf/2608.01001v1",
-      "summaryUrl": "https://arxiv.org/abs/2608.01001v1",
-      "category": "cs.AI"
-    },
-    {
-      "arxivId": "2608.00984v1",
-      "title": "Unsupervised Multidomain Approaches to Named Entity Recognition with Small Datasets",
-      "authors": [
-        "Israel Fianyi",
-        "James Montgomery",
-        "Soonja Yeom"
-      ],
-      "abstract": "This paper explores the challenges and the methodologies associated with learning quality representations in scenarios with unlabelled small or limited datasets for downstream information extraction task (Multidomain Named Entity Recognition (NER). The study adopts a Transfer Learning on small datasets. Traditional NER systems often rely on large, labelled data, which is impractical for many domains. This study, therefore, applies an unsupervised pre-training approach to precondition and identify entities without annotated datasets, then applies transfer learning models to different simulated limited datasets for a named entity recognition task. Entity Recognition (NER) is essential in natural language processing (NLP), it identifies and classifies related entities within the text. This study addresses the complexities of domain variability, data sparsity, and overfitting and investigates innovative approaches such as data augmentation, few-shot learning, and domain adversarial training. Integrating these techniques promises to enhance the performance and generalizability of NER systems across diverse and resource-constrained domains, paving the way for more efficient and adaptable NLP applications.",
-      "publishedDate": "2026-08-02",
-      "pdfUrl": "https://arxiv.org/pdf/2608.00984v1",
-      "summaryUrl": "https://arxiv.org/abs/2608.00984v1",
-      "category": "cs.CL"
-    },
-    {
-      "arxivId": "2608.00956v1",
-      "title": "Interpretable machine learning for predicting splitting strength of asphalt concrete: insights from SHAP analysis",
-      "authors": [
-        "Jianglei Xing",
-        "Xiao Tan",
-        "Dongzhao Jin",
-        "Pengwei Guo",
-        "Yuhuan Wang",
-        "Huiya Niu"
-      ],
-      "abstract": "This paper presents an interpretable machine-learning framework for predicting the splitting strength (ST) of asphalt concrete and supporting data-driven mixture design. A database consisting of 296 samples was established, and 14 input variables related to asphalt properties, aggregate gradation, and fiber characteristics were selected for modeling. Six machine-learning models, namely TabPFN, ANN, SVR, RF, XGBoost, and LightGBM, were developed and compared. Hyperparameter optimization was performed for five models using NSGA-II, while TabPFN was directly applied with its default configuration. The results show that all six models achieved satisfactory predictive capability, whereas TabPFN delivered the best overall performance on the testing set, with the lowest RMSE of 0.28, MAE of 0.21, MAPE of 18.01%, MAD of 0.14, the highest R^2 of 0.88, and the highest composite score of 0.91. SHAP analysis further revealed that nine dominant variables accounted for 92.0% of the total average contribution, among which Ag9.5, FT, Ag4.75, AC, and Du were the most influential. In addition, favorable parameter ranges for improving ST were quantified, such as Ag9.5 < 66.8%, Ag4.75 < 45.0%, AC < 5.4 wt.%, AV < 3.6%, and Du > 134.7 cm. Finally, a GUI platform integrating prediction and SHAP-based explanation was developed to improve the accessibility and practical applicability of the proposed framework.",
-      "publishedDate": "2026-08-02",
-      "pdfUrl": "https://arxiv.org/pdf/2608.00956v1",
-      "summaryUrl": "https://arxiv.org/abs/2608.00956v1",
-      "category": "cs.LG"
-    },
-    {
-      "arxivId": "2608.00954v1",
-      "title": "NoisePQC++: A Unified NIST-Compliant PQC and Hybrid-PQC Implementation of the Noise Protocol",
-      "authors": [
-        "Nadeem Ahmed",
-        "Aryya Gangopadhyay",
-        "Lei Zhang"
-      ],
-      "abstract": "The threat of quantum computers to classical public-key cryptography has created an urgent need to evolve secure communication protocols with post-quantum cryptographic (PQC) primitives. The Noise Protocol Framework, widely used in systems such as WireGuard and WhatsApp, traditionally relies on the Elliptic Curve Diffie-Hellman (ECDH) public-key exchange scheme, which is vulnerable to quantum threats. In this paper, we present NoisePQC++, a unified C++23 implementation of the Noise Protocol framework augmented with post-quantum Key Encapsulation Mechanisms and Hybrid Forward Secrecy. Our design integrates the National Institute of Standards and Technology (NIST) standardized ML-KEM algorithm alongside classical ECDH, enabling full PQC, hybrid ECDH+PQC handshakes, and unified support for all 57 classical Noise handshake pattern variants, 13 post-quantum Noise handshakes, and their hybrid variants. Compared with prior work, NoisePQC++ offers broader protocol coverage, more complete implementation support, and greater flexibility. Our evaluation shows minimal overhead under normal network conditions and acceptable overhead in adverse cases, while significantly improving resistance against quantum adversaries. These results indicate that NIST-standardized post-quantum and hybrid Noise handshakes are practical and provide a credible basis for future deployment.",
-      "publishedDate": "2026-08-02",
-      "pdfUrl": "https://arxiv.org/pdf/2608.00954v1",
-      "summaryUrl": "https://arxiv.org/abs/2608.00954v1",
-      "category": "cs.CR"
     }
   ]
 }
