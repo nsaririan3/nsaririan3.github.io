@@ -1,7 +1,7 @@
 {
   "metadata": {
     "totalCount": 100,
-    "lastUpdated": "2026-09-07T01:54:29.385014Z",
+    "lastUpdated": "2026-09-07T06:47:49.227959Z",
     "keywords": [
       "machine learning",
       "natural language processing",
@@ -9,6 +9,69 @@
     ]
   },
   "papers": [
+    {
+      "arxivId": "2609.05412v1",
+      "title": "Tracing the Cosmic Origins: Machine Learning Reconstruction of the Primordial Density Field from EoR Observations",
+      "authors": [
+        "Anchal Saxena",
+        "P. Daniel Meerburg",
+        "Guochao Sun",
+        "Tzu-Ching Chang",
+        "Llu\u00eds Mas-Ribas"
+      ],
+      "abstract": "Reconstructing the initial conditions of the Universe from late-time tracers would unlock cosmological information buried by non-linear structure formation and astrophysics. We reconstruct the initial density field at $z\\sim300$ from simulated 21-cm and CO(1-0) line-intensity maps at $z\\sim8$ generated with LIMFAST. Using a three-dimensional U-Net, we reconstruct the initial conditions and evaluate its impact on cosmological parameter constraints. The two tracers probe complementary environments: 21-cm emission traces neutral, low-density regions of the intergalactic medium, while CO traces overdense, star-forming regions. To emulate realistic observations, we model instrumental effects for SKA1-Low- and COMAP-ERA-like surveys, including finite angular resolution and thermal noise. We assess reconstruction performance through the cross-correlation coefficient between reconstructed and true initial density fields, $|C(k)|$. In the noiseless case, combining both tracers delivers the most accurate recovery across ionisation states, with $|C(k)| \\gtrsim$ 0.90 for $k \\lesssim$ 0.75 Mpc$^{-1}$. With observational effects, small-scale information is degraded, but combining tracers still achieves $|C(k)| \\gtrsim$ 0.70 for $k \\lesssim$ 0.3 Mpc$^{-1}$. To quantify information gain, we perform simulation-based inference of cosmological parameters from power-spectrum summaries before and after reconstruction. In both noiseless and noisy settings, reconstruction tightens parameter constraints: uncertainties on $\u03c3_8$ and $n_{\\rm s}$ improve by $\\sim2\\times$, with smaller but consistent gains for other parameters. This is further confirmed using Kullback-Leibler divergence diagnostics for an ensemble of observations. These results indicate that joint analysis of future 21-cm and CO surveys, combined with such reconstruction, can partially recover otherwise inaccessible cosmological information.",
+      "publishedDate": "2026-09-04",
+      "pdfUrl": "https://arxiv.org/pdf/2609.05412v1",
+      "summaryUrl": "https://arxiv.org/abs/2609.05412v1",
+      "category": "astro-ph.CO"
+    },
+    {
+      "arxivId": "2609.05364v1",
+      "title": "Design Docs Are All You Need: An AI-native Machine-Learning Performance Tool",
+      "authors": [
+        "Samuel Kushnir",
+        "Kimia Noorbakhsh",
+        "Kavya Sreedhar",
+        "Liqun Cheng",
+        "Ming Liu",
+        "Parthasarathy Ranganathan",
+        "Mohammad Alizadeh",
+        "Fred Kjolstad",
+        "Suvinay Subramanian"
+      ],
+      "abstract": "Machine-learning performance modeling is a uniquely hostile terrain for long-lived software: the assumptions baked into today's abstractions are invalidated by tomorrow's models and systems, forcing perpetual refactoring of performance-modeling frameworks. Meanwhile, AI coding agents have become fast and capable enough that regenerating an entire library is cheaper than paying down the tech debt of incrementally patching it. We describe SMART, a rigorous symbolic performance-modeling library for ML systems whose main branch contains almost no code: the repository is a DAG of self-contained natural-language design docs, coding sub-agents regenerate the implementation from only the docs on new version updates, and every human change is a natural-language edit to a doc--self-documenting by construction. Two ingredients make regeneration reliable: (i) a design-doc style built around step-by-step worked examples that act as in-context demonstrations for the generating agents, and (ii) a minimal, recursively defined operator IR with symbolic (SymPy) cost expressions, a fast analytical roll-up mode for large sweeps, and a slow modulo-scheduling mode for fine-grained schedule studies. Regenerated implementations reproduce hand-audited reference models--including DeepSeek-V3 serving on a TPU pod slice--to round-off precision, suggesting that design docs--not code--can be the durable artifact for ML-systems co-design tools.",
+      "publishedDate": "2026-09-04",
+      "pdfUrl": "https://arxiv.org/pdf/2609.05364v1",
+      "summaryUrl": "https://arxiv.org/abs/2609.05364v1",
+      "category": "cs.PL"
+    },
+    {
+      "arxivId": "2609.05337v1",
+      "title": "Variational Continuation for Double Pendulum Periodic Orbits",
+      "authors": [
+        "Leo Yao",
+        "Ziming Liu",
+        "Max Tegmark"
+      ],
+      "abstract": "We present a Hessian-based approach to numerically continue periodic orbits in dynamical systems. A loop (periodic orbit candidate) is parametrized as a Fourier series; a loss function is defined based on the deviation of the loop from the physical differential equations. Unlike previous work relying on hand-derived Jacobians, our method automates the process by leveraging automatic differentiation, a common machine learning technique. The continuation direction can be determined by the flat directions of the loss landscapes (directions with zero eigenvalues), making the search of periodic orbits efficient and guided. Our method is integrator-free, precisely initializes oscillations around unstable fixed points, and efficiently detects orbit family intersections and subharmonic bifurcations. As a demonstration, we present full continuations of periodic double pendulum oscillations from fixed points, showing bifurcations along orbit families and categorizing branches of periodic orbits. In particular, we find periodic orbits where both pendulum masses are never simultaneously at rest, which to our knowledge has been missing in the literature.",
+      "publishedDate": "2026-09-04",
+      "pdfUrl": "https://arxiv.org/pdf/2609.05337v1",
+      "summaryUrl": "https://arxiv.org/abs/2609.05337v1",
+      "category": "cs.LG"
+    },
+    {
+      "arxivId": "2609.05330v1",
+      "title": "Joint Distributions of Minimum and Maximum Angles on High-Dimensional Spheres",
+      "authors": [
+        "Yongcheng Qi",
+        "Lijian Yang"
+      ],
+      "abstract": "Consider $n$ independent random vectors sampled from uniform distribution on $(p-1)$-dimensional unit sphere. This paper investigates the limiting joint distribution for the minimum and the maximum values of their pairwise angles. It proves that the minimum and the maximum angles are asymptotically independent when both $n$ and $p$ tend to infinity, which solves an open problem raised in Cai, Fan and Jiang (2013) [\\emph{Journal of Machine Learning Research} 14, 1837-1864]. Cai, Fan and Jiang (2013) obtained the limiting marginal distributions for both the minimum and the maximum angles under assumption $\\lim_{n\\to\\infty}{\\ln n}/p=\u03b2$ according to whether $\u03b2=0$, $\u03b2\\in (0,\\infty)$, or $\u03b2=\\infty$. This paper presents unified limits for both joint distributions and marginal distributions regardless of the relative divergence rate of $n$ and $p$. The paper also derives the limiting distributions for some statistics based on the minimum and the maximum angles,",
+      "publishedDate": "2026-09-04",
+      "pdfUrl": "https://arxiv.org/pdf/2609.05330v1",
+      "summaryUrl": "https://arxiv.org/abs/2609.05330v1",
+      "category": "math.ST"
+    },
     {
       "arxivId": "2609.05316v1",
       "title": "Compiling the 2D Fermi-Hubbard ground-state energy estimation algorithm for active volume quantum architectures",
@@ -1535,72 +1598,6 @@
       "pdfUrl": "https://arxiv.org/pdf/2609.02744v1",
       "summaryUrl": "https://arxiv.org/abs/2609.02744v1",
       "category": "cond-mat.mtrl-sci"
-    },
-    {
-      "arxivId": "2609.02736v1",
-      "title": "QArray+: A physics-informed GPU-accelerated simulator for quantum dot arrays",
-      "authors": [
-        "Pranav Vaidhyanathan",
-        "Barnaby van Straaten",
-        "Alice Petrillo",
-        "Rahul Marchand",
-        "Edwin De Nicolo",
-        "Menno Veldhorst",
-        "Brucek Khailany",
-        "Taylor L. Patti",
-        "Natalia Ares"
-      ],
-      "abstract": "Semiconductor quantum-dot arrays are a compelling platform for scalable quantum technologies, yet their practical operation is hindered by the complexity of tuning large-scale devices. Existing automation tools rely on simplified physical models---such as constant-capacitance approximations and equilibrium Hubbard models---which assume instantaneous relaxation to a steady state. These frameworks fail in experimentally critical regimes where measurement rates exceed tunneling dynamics, necessitating more sophisticated non-equilibrium control strategies. To bridge this gap, we introduce QArray+, an extension of the QArray framework that incorporates gate-dependent tunnel coupling and a quantum open-system description of dissipative processes. This approach enables the unified simulation of coherent interdot charge-state hybridization and the non-equilibrium latching dynamics essential for training robust machine-learning models for automated device operation. Implemented in JAX with GPU acceleration, QArray+ scales across GPUs and multi-node systems. For example, a charge stability diagram for a 100X100 grid of gate voltages over 64 dots can be computed in $\\sim0.17\\,\\mathrm{s}$ on multiple GPUs. Since interdot interactions are short-ranged and the corresponding tuning corrections are local, simulations at these scales capture the physics relevant to even larger devices. These capabilities support high-throughput dataset generation for automated device tuning.",
-      "publishedDate": "2026-09-02",
-      "pdfUrl": "https://arxiv.org/pdf/2609.02736v1",
-      "summaryUrl": "https://arxiv.org/abs/2609.02736v1",
-      "category": "cond-mat.mes-hall"
-    },
-    {
-      "arxivId": "2609.02988v1",
-      "title": "Mesh-Native Physics-Informed Graph Surrogates for TCAD-in-the-Loop Design Space Exploration",
-      "authors": [
-        "Leonid Popryho",
-        "Ayoub Sadeghi",
-        "Inna Partin-Vaisband"
-      ],
-      "abstract": "High-fidelity TCAD simulation of drift-diffusion transport remains the workhorse of emerging FinFET device design, but it is computationally expensive, especially for 3D structures where runtime escalates steeply with mesh complexity. This sharply limits multi-objective design space exploration. Existing machine-learning surrogates map a fixed set of design parameters to a few scalar device metrics, discarding the underlying physics and losing transferability across device geometries and families. A physics-informed graph attention network (GAT) surrogate is proposed. It operates directly on the tetrahedral TCAD mesh and predicts, at every mesh node, the electrostatic potential together with the electron and hole quasi-Fermi levels, the fundamental unknowns of the drift-diffusion system. Training combines a data loss with finite-volume current-continuity residuals, embedding carrier-transport physics into the objective. Operating on the mesh as a graph, the surrogate inherits size generalization: a model trained on few-fin meshes applies unchanged to substantially larger arrays, bounded at inference only by GPU memory. Per-node uncertainty from a deep ensemble drives an active-learning loop that screens large candidate pools in seconds and forwards only the most informative designs for full simulation. Benchmarked against Sentaurus Device on multi-fin tri-gate FinFETs, the surrogate reproduces the three drift-diffusion fields with sub-volt per-field RMSE and reaches a per-design throughput orders of magnitude higher than the full simulator. The advantage grows with device size: on large multi-fin arrays that are prohibitively slow to simulate directly, inference still completes in under a second per device, enabling Pareto-front exploration across device scales infeasible for direct TCAD sweeps.",
-      "publishedDate": "2026-09-02",
-      "pdfUrl": "https://arxiv.org/pdf/2609.02988v1",
-      "summaryUrl": "https://arxiv.org/abs/2609.02988v1",
-      "category": "cs.LG"
-    },
-    {
-      "arxivId": "2609.02661v1",
-      "title": "Intuitionistic Unitary Linear Logic: A Proof-Theoretical Approach to Purely Quantum Higher-Order",
-      "authors": [
-        "Julien Lamiroy",
-        "Beno\u00eet Valiron",
-        "Renaud Vilmart"
-      ],
-      "abstract": "Although the circuit model for quantum computation is well established, it is incapable of representing non-causal higher-order quantum processes such as the quantum switch. If several models of non-causal quantum computation have been considered in the literature, the approaches have so far only been focusing on the physicality of such processes, using matrices and other techniques from linear algebra. If these approaches are expressive, they however only provide a static and monolithic understanding of these processes.   In this article, we propose a new formalism for non-causal, higher-order quantum processes. Based on a Curry-Howard interpetation, our proposal offers a computational interpretation that is both compositional and modular. In particular, we present Intuitionistic Unitary Linear Logic (IULL), a logic based on linear logic focusing on conservation of unitarity for higher order terms. We prove the coherence of IULLL, its completeness with regard to unitaries, and the admissibility of its cut rules. We finally discuss the validity of our approach by revisiting known non-causal quantum processes with IULL.",
-      "publishedDate": "2026-09-02",
-      "pdfUrl": "https://arxiv.org/pdf/2609.02661v1",
-      "summaryUrl": "https://arxiv.org/abs/2609.02661v1",
-      "category": "cs.LO"
-    },
-    {
-      "arxivId": "2609.02641v1",
-      "title": "Transversal Gates and Magic State Distillation in an Optimally Synthesized Spin-Qubit Shuttling Bus",
-      "authors": [
-        "Pau Escofet",
-        "Andrii Semenov",
-        "Niall Murphy",
-        "Elena Blokhina",
-        "Carmen G. Almud\u00e9ver",
-        "Sergi Abadal",
-        "Eduard Alarc\u00f3n"
-      ],
-      "abstract": "Fault-tolerant quantum computing requires not only reliable logical qubit storage, but also the ability to perform high-fidelity logical operations between error-corrected qubits at scale. While much of the existing literature focuses on optimizing syndrome extraction for a single logical qubit, the co-design of physical architectures that support both robust error correction and efficient logical computation remains an open challenge. In this work, we propose a multi-qubit spin-qubit shuttling bus architecture that addresses both requirements simultaneously. The architecture optimizes the physical qubit layout for syndrome extraction and supports transversal two-qubit logical gates between an arbitrary number of logical qubits, achieving all-to-all logical connectivity through coherent spin shuttling. We further propose an ancilla-sharing scheme that encodes multiple logical qubits within a single logical element, compressing the physical footprint of the processor and improving long-range gate fidelity. Extending the architecture from a one-dimensional bus to a two-dimensional grid of shuttling tracks reduces the inter-qubit distance, yielding consistent improvements in logical error. Finally, we apply the Quantum Reverse Mapping methodology at the logical level to optimize the layout of a \\textit{15-to-1} magic state distillation circuit, demonstrating how the transversal capabilities of the proposed architecture can be leveraged for universal fault-tolerant computation. Taken together, these results establish a principled co-design framework that bridges the physical, error-correction, and logical computation layers of the quantum stack, and demonstrate that spin-qubit shuttling architectures are a viable and flexible substrate for scalable fault-tolerant quantum computation.",
-      "publishedDate": "2026-09-02",
-      "pdfUrl": "https://arxiv.org/pdf/2609.02641v1",
-      "summaryUrl": "https://arxiv.org/abs/2609.02641v1",
-      "category": "quant-ph"
     }
   ]
 }
