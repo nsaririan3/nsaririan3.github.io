@@ -1,6 +1,119 @@
 {
   "papers": [
     {
+      "arxivId": "2609.31605v1",
+      "title": "Measurement-Based Uncomputation from an Error Correction Perspective",
+      "authors": [
+        "Minjun Jeon",
+        "Po-Wei Huang",
+        "Zhenyu Cai"
+      ],
+      "abstract": "Coherent uncomputation can be as costly as the computation itself, creating substantial spacetime overheads that can be prohibitive on early fault-tolerant quantum computers. We develop an algebraic framework for measurement-based uncomputation (MBU) through a quantum error-correction picture: measurements of the garbage register induce relative phases analogous to errors causing non-trivial syndromes. Accepting only zero-syndrome outcomes achieves post-selected MBU, removing the need for an uncomputation oracle at the cost of a probabilistic success rate determined by the affine rank of the populated garbage support. This rank can be much smaller than the number of garbage qubits, as illustrated through an example of the HHL algorithm. We then derive a structural condition under which the original uncomputation oracle can be reused to correct the phase for all measurement outcomes. No correction is required for the zero syndrome, while corrections for non-zero syndromes can be further adapted to individual measurement outcomes for simpler circuits, as illustrated by existing modular-arithmetic, QROM, and QRAM MBU constructions. Phase-correction circuits can be further simplified by co-optimising their implementation with the representation of the measurement-induced phases. Selecting which syndrome classes to correct interpolates between post-selected, partially corrected, and deterministic MBU, enabling trade-offs among correction cost, workspace, and repetitions.",
+      "publishedDate": "2026-09-25",
+      "pdfUrl": "https://arxiv.org/pdf/2609.31605v1",
+      "summaryUrl": "https://arxiv.org/abs/2609.31605v1",
+      "category": "quant-ph"
+    },
+    {
+      "arxivId": "2609.31533v1",
+      "title": "Structural prediction of B$_{18}$Y$_{2}$ cluster: A Machine-Learning-Assisted Basin-Hopping Study",
+      "authors": [
+        "Peter Ludwig Rodr\u00edguez-Kessler"
+      ],
+      "abstract": "The structural and optical properties of the doubly yttrium-doped boron cluster B$_{18}$Y$_2$ have been systematically investigated using density functional theory calculations. The lowest-energy structure was identified through extensive basin-hopping searches accelerated by a pre-trained MACE machine-learning potential and subsequently refined and validated at the DFT level. The resulting global-minimum structure adopts a double-ring geometry, consisting of two fused B$_9$ rings stabilized by yttrium atoms positioned above and below the boron framework. Vibrational frequency calculations confirm the dynamical stability of the optimized structure, while the calculated infrared and UV--Vis spectra provide characteristic signatures of the Y--B interactions and the electronic structure of the boron framework. These results demonstrate how yttrium doping can stabilize unusual double-ring boron architectures and highlight the effectiveness of machine-learning-assisted basin-hopping searches for exploring the complex potential-energy landscapes of doped boron clusters.",
+      "publishedDate": "2026-09-25",
+      "pdfUrl": "https://arxiv.org/pdf/2609.31533v1",
+      "summaryUrl": "https://arxiv.org/abs/2609.31533v1",
+      "category": "cond-mat.mtrl-sci"
+    },
+    {
+      "arxivId": "2609.31528v1",
+      "title": "Quantum-HPC Workflows Across Multiple Quantum Computing Platforms: Two Case Studies",
+      "authors": [
+        "Philipp Seitz",
+        "Miwako Tsuji",
+        "John Children",
+        "Yuta Kikuchi",
+        "Riku Masui",
+        "Juan Pedersen",
+        "Kentaro Yamamoto",
+        "Ross Duncan"
+      ],
+      "abstract": "We describe the Quantum-HPC hybrid system comprising the supercomputer Fugaku, the QPUs Quantinuum Reimei and ibm_kobe, and the Tierkreis hybrid workflow software. We present two demonstrations of the system at work. In the first, we compute the excited states of a biomolecular system using Fugaku and Reimei (simulator) to handle classical and quantum parts of the workflow respectively. In the second, Fugaku coordinates Reimei and ibm_kobe working together in a combined VQE + QPE workflow to compute the ground state energy of a simple system.",
+      "publishedDate": "2026-09-25",
+      "pdfUrl": "https://arxiv.org/pdf/2609.31528v1",
+      "summaryUrl": "https://arxiv.org/abs/2609.31528v1",
+      "category": "quant-ph"
+    },
+    {
+      "arxivId": "2609.31470v1",
+      "title": "Beyond Empirical Support: Structured Outlier Generation via Sinkhorn Optimal Transport",
+      "authors": [
+        "Haixiang Sun",
+        "Andrew L. Liu"
+      ],
+      "abstract": "Outliers are essential for evaluating and improving the robustness of machine learning systems, especially when future distributions may differ significantly from historical training data. In high-stakes applications, robustness often depends on rare cases that finite datasets fail to capture, making simple resampling or perturbation insufficient for stress scenario generation. Existing outlier synthesis methods typically rely on sparse neighborhoods, low support latent regions, or classifier boundary crossings, which can be heuristic, unstable, and tied to specific modalities or architectures. We therefore propose Sinkhorn Boundary Outlier Generation (SBOG), a structured framework for latent-space outlier generation that couples Sinkhorn optimal transport geometry with distributionally robust boundary modeling. The resulting Sinkhorn-induced support cost guides the sampler toward weakly supported boundary regions, while semantic constraints prevent uncontrolled drift from the intended context, yielding controlled deviations from the in-distribution reference measure rather than arbitrary sparse-region samples. Experiments on time series anomaly generation and image outlier synthesis show that our framework produces informative, semantically controlled outliers and improves downstream robustness evaluation across modalities, providing a foundation for stress scenario generation beyond empirical support.",
+      "publishedDate": "2026-09-25",
+      "pdfUrl": "https://arxiv.org/pdf/2609.31470v1",
+      "summaryUrl": "https://arxiv.org/abs/2609.31470v1",
+      "category": "stat.ML"
+    },
+    {
+      "arxivId": "2609.31469v1",
+      "title": "LandscapeSHAP: Which Persistent Homology Class Gets the Credit?",
+      "authors": [
+        "Nikola Mili\u0107evi\u0107"
+      ],
+      "abstract": "Shapley values, a solution concept from cooperative game theory, have recently become a standard tool for feature credit allocation in machine learning. They provide an axiomatically justified method to fairly distribute a model's prediction among the data features. Shapley values have not yet been applied to explain machine learning models trained on features from topological data analysis. We develop what we believe is the first such approach, focusing on the persistence landscape featurization of persistence diagrams. Because each landscape coordinate is a rank statistic, crediting a model's prediction back to individual persistent homology classes (persistence diagram points) is nontrivial. We introduce LandscapeSHAP, a method for fair credit allocation to persistence diagram points based on a model's prediction. For linear models on persistence landscapes, LandscapeSHAP has a closed form expression that gives the exact Shapley value of every persistence diagram point. In particular, there is no coalition sampling required. We further prove that the four Shapley \"fairness\" axioms uniquely characterize this credit allocation for any model, not only linear ones. For a general nonlinear model, this unique value can only be calculated exactly from its defining coalition averaging formula, which requires considering all $2^N$ many coalitions, where $N$ is the number of points in the persistence diagram. This is computationally intractable for persistence diagrams of realistic size. We complement the exact linear model result with an efficient Monte Carlo sampling of persistence diagram coalitions. We give convergence rates in terms of number of samples needed to approximate to a desired degree of accuracy. We also prove stability results for the LandscapeSHAP credit allocation, for any model.",
+      "publishedDate": "2026-09-25",
+      "pdfUrl": "https://arxiv.org/pdf/2609.31469v1",
+      "summaryUrl": "https://arxiv.org/abs/2609.31469v1",
+      "category": "math.AT"
+    },
+    {
+      "arxivId": "2609.31405v1",
+      "title": "Solution for Interference in Hotspot Scenarios Applying Q-Learning on FFR-Based ICIC Techniques",
+      "authors": [
+        "Iago Di\u00f3genes do Rego",
+        "Vicente A. de Sousa"
+      ],
+      "abstract": "This work explores interference coordination techniques (inter-cell interference coordination, ICIC) based on fractional frequency reuse (FFR) as a solution for a multi-cellular scenario with user concentration varying over time. Initially, we present the problem of high user concentration along with their consequences. Next, the use of multiple-input multiple-output (MIMO) and small cells are discussed as classic solutions to the problem, leading to the introduction of fractional frequency reuse and existing ICIC techniques that use FFR. An exploratory analysis is presented in order to demonstrate the effectiveness of ICIC techniques in reducing co-channel interference, as well as to compare different techniques. A statistical study was conducted using one of the techniques from the first analysis in order to identify which of its parameters are relevant to the system performance. Additionally, another study is presented to highlight the impact of high user concentration in the proposed scenario. Because of the dynamic aspect of the system, this work proposes a solution based on machine learning. It consists of changing the ICIC parameters automatically to maintain the best possible signal-to-interference-plus-noise ratio (SINR) in a scenario with hotspots appearing over time. All investigations are based on ns-3 simulator prototyping. The results show that the proposed Q-Learning algorithm increases the average SINR from all users and hotspot users when compared with a scenario without Q-Learning. The SINR from hotspot users is increased by 11.2% in the worst case scenario and by 180% in the best case",
+      "publishedDate": "2026-09-25",
+      "pdfUrl": "https://arxiv.org/pdf/2609.31405v1",
+      "summaryUrl": "https://arxiv.org/abs/2609.31405v1",
+      "category": "cs.NI"
+    },
+    {
+      "arxivId": "2609.31402v1",
+      "title": "AFA-Net: A Differential Attention Approach for Auditory Attention Detection",
+      "authors": [
+        "Philip H. Lee",
+        "Shreeram Suresh Chandra",
+        "Karan Thakkar",
+        "John H. L. Hansen"
+      ],
+      "abstract": "Auditory Attention Detection (AAD) utilizes electroencephalographic (EEG) signals to identify a target speaker in a multi-speaker environment. Despite considerable progress, existing deep learning architectures often lack explicit mechanisms for handling noisy EEG data. To address this limitation, we propose Auditory Focus Attention Networks (AFA-Net), a machine learning framework that replaces vanilla attention with a simple yet flexible differential attention mechanism to help focus on task-relevant neural activity. AFA-Net achieves an upward accuracy of 96.8% at the 2s decision window, while using substantially fewer parameters than most existing methods. To the best of our knowledge, AFA-Net is among the first frameworks to explicitly try to combat EEG noise to improve AAD.",
+      "publishedDate": "2026-09-25",
+      "pdfUrl": "https://arxiv.org/pdf/2609.31402v1",
+      "summaryUrl": "https://arxiv.org/abs/2609.31402v1",
+      "category": "cs.SD"
+    },
+    {
+      "arxivId": "2609.31384v1",
+      "title": "Multivariate conformal uncertainty propagation in multitask atomistic simulation: Successes and pitfalls",
+      "authors": [
+        "Katharine Fisher",
+        "Michael Herbst",
+        "James Kermode",
+        "Youssef Marzouk"
+      ],
+      "abstract": "Machine learning has become the standard tool for the design of interatomic potentials which balance efficiency and accuracy, but uncertainty quantification remains an open problem. Multiscale simulations introduce an additional challenge: robust uncertainty quantification across scales. Even within one scale, computations are often multistage, producing a sequence of target quantities, each dependent on the previous, and each with some uncertainty. Conformal methods have emerged as a model agnostic framework for recalibrating surrogate predictions to produce sets which contain the truth at a user-specified rate. For multistage workflows, we require uncertainty calibration for multiple chemical properties and atomistic configurations, and we want to propagate uncertainty sets to downstream quantities of interest. Such propagation should capture the error cancellations which occur in many downstream targets in materials science; for instance, an approximate energy difference is often more accurate than individual energy predictions. We present the first exploration of multivariate conformal methods for chemical properties, including Bonferroni-corrected hyperrectangles, hyperellipsoidal sets based on the Mahalanobis distance, and custom loss functions within conformal risk control. Calibration is applied directly to predicted energies, atomic forces, and virial stresses, then propagated to elastic constants and vacancy formation energies employing a variety of commonly considered approximate protocols in materials modeling. We highlight the benefits of building correlation predictions into the conformal procedure, making it possible to build sets which capture near symmetries and error cancellation. We conclude with a discussion of the interplay of the employed approximate computational protocol and conformal guarantees.",
+      "publishedDate": "2026-09-25",
+      "pdfUrl": "https://arxiv.org/pdf/2609.31384v1",
+      "summaryUrl": "https://arxiv.org/abs/2609.31384v1",
+      "category": "physics.chem-ph"
+    },
+    {
       "arxivId": "2609.31361v1",
       "title": "Resolving the Dual-Timescale Forecasting Dilemma in High-Frequency Cyber-Physical Telemetry via Physics-Grounded Dynamic Asymptotic Decomposition",
       "authors": [
@@ -1445,137 +1558,7 @@
       "pdfUrl": "https://arxiv.org/pdf/2609.28149v1",
       "summaryUrl": "https://arxiv.org/abs/2609.28149v1",
       "category": "eess.SY"
-    },
-    {
-      "arxivId": "2609.28112v1",
-      "title": "Quantum Topological Data Analysis Beyond Betti Numbers: Complexity Hardness $\\&$ An Algorithm for Torsion Witness",
-      "authors": [
-        "Nhat A. Nghiem",
-        "Dominic W. Berry",
-        "Trung V. Phan"
-      ],
-      "abstract": "Recent advances have revealed an interplay between quantum computing and topological data analysis (TDA). Most quantum TDA has focused on Betti numbers, which characterize the connectivity and ``holes'' of a dataset. Homology, however, contains additional information in the form of torsion: a nontrivial cycle can become trivial after being repeated finitely, revealing global constraints on how cycles combine and wrap around one another. Beyond applications in biomolecular studies, torsion appears in physical settings including homological quantum rotor codes, discrete charges, and gauge sectors. We study torsion from both classical and quantum perspectives. Given a graph $G$ and its clique complex $K = \\mathrm{Cl}(G)$, we first prove that, for fixed $r$ and prime $p$, deciding whether $H_r(K,\\mathbb{Z})$ contains $p$-torsion is NP-hard. As a corollary, when a homological rotor code is specified by $G$, deciding whether the code has a finite-dimensional logical sector of a given order is NP-hard. We discuss related problems, including the Bockstein homomorphism, Smith normal form, lattice saturation, and cohomology. Second, for a finite set of primes $P$, we develop a quantum algorithm that serves as a one-sided torsion witness. For fixed $r$, it outputs WITNESS or INCONCLUSIVE, i.e. WITNESS certifies that either $H_r(K,\\mathbb{Z})$ or $H_{r-1}(K,\\mathbb{Z})$ contains $p$-torsion for some $p\\in P$ while INCONCLUSIVE makes no claim about its presence or absence. We identify a regime in which the algorithm achieves a near-quadratic quantum speedup over the corresponding classical algorithm under the same input model. Our NP-hardness result complements recent hardness results for estimating Betti numbers, adding a complexity-theoretic perspective to quantum TDA. Together, these results demonstrate that integral homology, beyond its Betti numbers, can be computationally challenging.",
-      "publishedDate": "2026-09-23",
-      "pdfUrl": "https://arxiv.org/pdf/2609.28112v1",
-      "summaryUrl": "https://arxiv.org/abs/2609.28112v1",
-      "category": "quant-ph"
-    },
-    {
-      "arxivId": "2609.28058v1",
-      "title": "Quantum Advantage in Topological Data Analysis via Mayer Homology",
-      "authors": [
-        "Nhat A. Nghiem",
-        "Ryan Babbush",
-        "Adam Zalcman",
-        "Dominic W. Berry",
-        "Trung V. Phan",
-        "Guo-Wei Wei",
-        "Ryu Hayakawa"
-      ],
-      "abstract": "Prior work has explored quantum algorithms for topological data analysis (TDA), revealing the possibility of exponential quantum speedups in estimating the ratios of Betti numbers to the dimension of the combinatorial Laplacian. However, this quantity is only non-vanishing and efficient-to-quantumly-estimate when Betti numbers are exponentially large, a case for which concrete examples are rarely known. Furthermore, certain randomized classical algorithms are sometimes efficient in this regime. Thus, the prospect of achieving quantum advantage in conventional TDA appears fairly narrow. Here, we address these challenges to the quantum advantage in TDA by developing quantum algorithms for Mayer homology, which generalize simplicial homology to $N$-nilpotent boundary operators ($\\partial^N =0$) and have recently been successfully applied to real-world TDA contexts. We introduce an efficient quantum algorithm for estimating Mayer Betti numbers and their persistent counterparts. We then prove that for high-order simplices, Mayer Betti numbers are often exponentially large in the dense regime, which ameliorates the normalization bottleneck of conventional quantum TDA. In the same regime, we argue that existing dequantization algorithms developed for conventional TDA, when applied to Mayer homology, generally lose theoretical guaranties, facing certain structural barriers that prevent their practical utilities. We also provide logical resource estimates revealing that a quantum computer with roughly a few hundred qubits and sixty million Toffoli gates could solve Mayer homology problems beyond the capabilities of known classical approaches. Finally, we discuss real-world applications of Mayer homology in genomics, supersymmetry, drug discovery, and neuroscience, revealing the potential of our quantum algorithm to deliver real-world impacts via Mayer homology.",
-      "publishedDate": "2026-09-23",
-      "pdfUrl": "https://arxiv.org/pdf/2609.28058v1",
-      "summaryUrl": "https://arxiv.org/abs/2609.28058v1",
-      "category": "quant-ph"
-    },
-    {
-      "arxivId": "2609.28043v1",
-      "title": "Enhanced track reconstruction at the HL-LHC",
-      "authors": [
-        "Brunella D'Anzi"
-      ],
-      "abstract": "The High-Luminosity Large Hadron Collider (HL-LHC) will substantially increase the charged-particle multiplicity and detector occupancy in the ATLAS and CMS experiments, posing new challenges for the reconstruction of charged-particle tracks. Both experiments are upgrading their tracking detectors, with fully silicon-based systems providing a finer granularity, extended acceptance and updated geometry with respect to the current ones, with the goal to reduce the combinatorial complexity of pattern recognition tasks. At the same time, the more demanding reconstruction environment at the HL-LHC requires algorithms capable of retaining high tracking efficiency while reducing the associated computational cost. To this purpose, both the ATLAS and CMS Collaborations are developing tracking algorithms for offline and online reconstruction, exploiting parallelized, vectorized and heterogeneous architectures. The ATLAS experiment is moving toward an ACTS reconstruction chain, based on the Combinatorial Kalman Filter algorithm. In the CMS experiment, the new High-Level Trigger tracking baseline combines the Patatrack and the Line Segment Tracking algorithms for seed reconstruction, using the mkFit algorithm for track building. These developments yield tracking efficiencies above 85% across the full phase space at high pileup, extending the acceptance to forward and displaced tracks with transverse displacements of up to tens of centimetres, while significantly reducing the reconstruction time. Machine-learning techniques are also being explored at several stages of the reconstruction, including track building. The state-of-the-art performances of the tracking strategies developed by the ATLAS and CMS Collaborations for the HL-LHC are presented, together with prospects of further improvements.",
-      "publishedDate": "2026-09-23",
-      "pdfUrl": "https://arxiv.org/pdf/2609.28043v1",
-      "summaryUrl": "https://arxiv.org/abs/2609.28043v1",
-      "category": "hep-ex"
-    },
-    {
-      "arxivId": "2609.28013v1",
-      "title": "SoLiD26: A First Principles Solid-Liquid Interface Dataset for Machine-learned Interatomic Potentials",
-      "authors": [
-        "Jonas Busk",
-        "Emil J. P. Frost",
-        "Yogeshwaran Krishnan",
-        "Henrik H. Kristoffersen",
-        "August E. G. Mikkelsen",
-        "Xueping Qin",
-        "Xin Yang",
-        "Heine A. Hansen",
-        "Arghya Bhowmik",
-        "Tejs Vegge"
-      ],
-      "abstract": "Machine-learned interatomic potentials (MLIPs) for solid-liquid interfaces in advanced materials applications, e.g., electrochemistry, catalysis and corrosion, require training data that samples both liquid environments, the solid and the interface itself. We present SoLiD26, a curated solid-liquid interface dataset, containing 15.4 million first-principles atomic structures with up to 576 atoms and 15 chemical elements for training and evaluating MLIPs. The structures were compiled from density functional theory (DFT) calculations performed in studies of solid-liquid interfaces, with most configurations originating from ab initio molecular dynamics (AIMD) simulations. Each record contains atomic species, positions, simulation cell, periodic boundary conditions, potential energy and atomic forces. SoLiD26 includes aqueous coinage metal interfaces, electrode-electrolyte systems, and selected bulk reference structures, calculated with VASP using the PBE functional and D3 dispersion corrections. We describe the data ingestion and preparation pipeline used to construct the dataset. The application of SoLiD26 for training and evaluating MLIPs is demonstrated with a suite of MACE models on a simple training, validation and test split. The dataset enables development and benchmarking of MLIPs for structurally and chemically heterogeneous solid-liquid interfaces.",
-      "publishedDate": "2026-09-23",
-      "pdfUrl": "https://arxiv.org/pdf/2609.28013v1",
-      "summaryUrl": "https://arxiv.org/abs/2609.28013v1",
-      "category": "cond-mat.mtrl-sci"
-    },
-    {
-      "arxivId": "2609.27749v1",
-      "title": "Evaluation of pre-trained models for pedagogical assessment of novel AI-assisted educational questions",
-      "authors": [
-        "Michael Lawrence Castanares",
-        "Princess Ventures",
-        "Allan Tan"
-      ],
-      "abstract": "The surge in AI-assisted generation of educational materials has outpaced our capacity to validate their pedagogical quality. Automated evaluation using Bloom Classifier models is a promising approach to assess educational materials at scale. These models show high accuracy within-distribution dataset (IID Dataset). However, applying the same models to new out-of-distribution (OOD) datasets such as AI-assisted generated questions could show performance degradation. To identify robust classifiers under dataset shift, we evaluated traditional Machine Learning (ML), transformer, and Large Language models on the Bloom level classification task. We also explored feature-engineering strategies incorporating NLP metrics, appending the learning objectives as part of the input, and text splicing to stabilize OOD performance. Our baseline tests show that TFPOS-IDF ML models perform poorly on OOD (Macro F1-score 0.48) compared to BERT (0.55) and LLMs (0.79). Text splicing improved macro F1-score performance of ML and BERT models (0.59 and 0.62, respectively). Appending the learning objectives with the input increased model performance on specific dataset. Model retraining provided the largest improvement across models and datasets. Overall, these findings highlight the trade-off on the use of pre-trained models with novel AI-assisted educational questions and how strategic feature enhancements help address loss in performance.",
-      "publishedDate": "2026-09-23",
-      "pdfUrl": "https://arxiv.org/pdf/2609.27749v1",
-      "summaryUrl": "https://arxiv.org/abs/2609.27749v1",
-      "category": "cs.AI"
-    },
-    {
-      "arxivId": "2609.27724v1",
-      "title": "Quantum Simulation of Si/SiGe Devices with Experimentally Calibrated Micromagnet Effects",
-      "authors": [
-        "Andrii Sokolov",
-        "Conor Power",
-        "Mathieu Moras",
-        "Claude Rohrbacher",
-        "Brian Malone",
-        "Sergey Amitonov",
-        "Agostino Apra",
-        "Amir Sammak",
-        "Nodar Samkharadze",
-        "Elena Blokhina"
-      ],
-      "abstract": "Silicon-based spin qubits in Si/SiGe heterostructures are a leading platform for scalable quantum computing, yet bridging the gap between theoretical computer-aided design(CAD) models and experimental reality remains a significant challenge. Standard simulations often fail to capture critical physical phenomena, such as interface dipoles, parasitic charge accumulation, and the magnetic hysteresis of on-chip micromagnets. In this work, we present a comprehensive, experimentally calibrated 3D simulation pipeline for a 6-dot Si/SiGe device. We refine the semiconductor band alignment and introduce a semi-empirical classical charge screening model to accurately capture the formation of parasitic wells and their suppression of gate lever-arms. Furthermore, we apply the Jiles-Atherton model to account for the hysteresis and pre-magnetization of integrated cobalt micromagnets, successfully reproducing the experimental resonant frequencies across all six qubits. By coupling these calibrated electrostatic and magnetic profiles into a time-dependent rotating wave approximation (RWA) Hamiltonian, we reproduce experimental observables, including microwave power chevrons. This framework provides a robust foundation for predicting device behavior, evaluating microwave line losses, and optimizing future scalable spin qubit architectures prior to fabrication.",
-      "publishedDate": "2026-09-23",
-      "pdfUrl": "https://arxiv.org/pdf/2609.27724v1",
-      "summaryUrl": "https://arxiv.org/abs/2609.27724v1",
-      "category": "quant-ph"
-    },
-    {
-      "arxivId": "2609.28568v1",
-      "title": "Pretraining and adapting a language model on a dependency-free stack: GPT-2 124M from random weights, reproduced against llm.c, and a clinical adapter for Qwen3-0.6B",
-      "authors": [
-        "Thang Tran",
-        "Lan Dang"
-      ],
-      "abstract": "Almost every language model in service was trained by one family of software. That concentration makes a question hard to settle: how much of what is known about training a language model describes language models, and how much describes that software? Settling it needs a second implementation able to carry a model through a whole lifecycle rather than reproduce one operator.   We report such a lifecycle. Using numbat, a machine-learning stack written in Zig with no third-party runtime dependencies, we pretrain a 124.4 M-parameter GPT-2 from random initialisation over 9.91 B tokens of web text, then adapt a separate small model to clinical question answering. A reference implementation runs on identical hardware at both stages, and a sidecar with authority to halt a run supervises each.   Agreement is close. Held-out cross-entropy finishes at 3.2588 against a published 3.29, and HellaSwag at 0.3053 against 0.299; across 8 paired evaluations it sits below a same-machine reference at every point, by 0.0608 on average. Re-running that reference on different hardware moves it 0.0035, which bounds how much of any gap is method rather than framework. Throughput does not pay for agreement: measured in one session at a production configuration, numbat reaches 43,374 tokens per second against PyTorch's 41,202, scaling 2.769x over three cards. Clinical adaptation ends at 2.1899 held-out loss against 2.1941.   Neither model is a medical device, and neither is validated for clinical use.",
-      "publishedDate": "2026-09-23",
-      "pdfUrl": "https://arxiv.org/pdf/2609.28568v1",
-      "summaryUrl": "https://arxiv.org/abs/2609.28568v1",
-      "category": "cs.SE"
-    },
-    {
-      "arxivId": "2609.28567v1",
-      "title": "Leakage-Safe Machine Learning for Hydrogen Embrittlement Detection in 316L Stainless Steel: A Region-Held-Out Evaluation of Texture and Deep Features in SEM Micrographs",
-      "authors": [
-        "Muhammad Awais",
-        "Muhammad Yaseen",
-        "Abdul Shakoor",
-        "Niaz Ahmed Niaz",
-        "Huria Zia",
-        "Muhammad Zain Shakoor"
-      ],
-      "abstract": "Scanning electron microscopy (SEM) is routinely used to characterize the microstructural changes caused by hydrogen embrittlement (HE) in structural steels. Machine learning can automate this characterization, but models are often evaluated using image-level splits. When several images come from the same specimen region, such splits leak information between the training and test sets. Here, we propose a region-held-out protocol for classifying as-received (AR) and hydrogen-charged (H2) SEM micrographs of 316L stainless steel, based on Leave-One-Region-Out (LORO) cross-validation over 14 spatial regions (8 AR, 6 H2; 31 images). We compared six feature-classifier combinations built on local binary patterns (LBP), grey-level co-occurrence matrices (GLCM), self-supervised convolutional embeddings pretrained on 143 unlabeled SEM images, and a convolutional neural network (CNN). The simplest texture approach, LBP with a support vector machine (LBP+SVM), performed best, achieving a balanced accuracy of 0.79, H2 recall of 0.69, and H2 precision of 0.82, outperforming every deep-learning and combined-feature model. A group-level permutation test (500 permutations sampled from the 3,003 possible region-to-label assignments) yielded p = 0.008, indicating that the result cannot be explained by a chance alignment of the region structure. Grad-CAM maps from a CNN trained on the full dataset tended to concentrate on localized surface and grain-boundary features, where hydrogen-induced morphological changes are known to occur. Under a leakage-safe, statistically validated protocol, texture descriptors recover a hydrogen-charging signature from SEM micrographs even with few samples, and the same protocol can be extended to larger HE detection studies in other alloy systems.",
-      "publishedDate": "2026-09-23",
-      "pdfUrl": "https://arxiv.org/pdf/2609.28567v1",
-      "summaryUrl": "https://arxiv.org/abs/2609.28567v1",
-      "category": "cs.LG"
     }
   ],
-  "fetchedAt": "2026-09-28T01:18:29.314967Z"
+  "fetchedAt": "2026-09-28T07:58:00.602661Z"
 }
