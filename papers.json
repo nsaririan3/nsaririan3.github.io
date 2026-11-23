@@ -1,7 +1,7 @@
 {
   "metadata": {
     "totalCount": 100,
-    "lastUpdated": "2026-11-23T03:29:21.827608Z",
+    "lastUpdated": "2026-11-23T13:51:42.992455Z",
     "keywords": [
       "machine learning",
       "natural language processing",
@@ -9,6 +9,147 @@
     ]
   },
   "papers": [
+    {
+      "arxivId": "2611.27972v1",
+      "title": "Localization of weakly integral objects in braided fusion categories",
+      "authors": [
+        "C\u00e9sar Galindo"
+      ],
+      "abstract": "An object $X$ of a braided fusion category is called weakly integral if $\\mathrm{FPdim}(X)^2$ is an integer. We prove that every nonzero weakly integral object admits a localization, that is, a Yang-Baxter operator $R$ on a finite-dimensional vector space $W$ such that, for every $n$, the algebra homomorphisms from the group algebra of the braid group $B_n$ to $\\mathrm{End}(W^{\\otimes n})$ and to $\\mathrm{End}(X^{\\otimes n})$, defined by $R$ and by the braiding, have the same kernel. The operator $R$ can be chosen unitary when the braided fusion category is unitary. This proves the 'if' direction of a conjecture of Rowell and Wang, motivated by topological quantum computation, which states that a simple object admits a localization if and only if it is weakly integral. For a simple weakly integral object of a unitary braided fusion category, the operator $R$ that we construct has an enhancement in the sense of Turaev, and the resulting knot invariant is the Reshetikhin-Turaev invariant of knots colored by $X$.",
+      "publishedDate": "2026-11-20",
+      "pdfUrl": "https://arxiv.org/pdf/2611.27972v1",
+      "summaryUrl": "https://arxiv.org/abs/2611.27972v1",
+      "category": "math.QA"
+    },
+    {
+      "arxivId": "2611.27962v1",
+      "title": "Model Carving: Training Transformers That Optimize Their Own Topology",
+      "authors": [
+        "Kaden Zheng",
+        "Pratyusha Sharma"
+      ],
+      "abstract": "Machine learning has largely kept separate the choice of architecture and the process of training. A classic Transformer, for instance, trains a fixed set of attention and MLP sublayers at every layer, in the same order, and optimizes the weights within. This uniformity is a convention rather than a principled design choice, and it is likely suboptimal: the best architecture for a given task may be smaller, more efficient, and far from uniform. We believe that, ideally, training itself should shape the model's topology. To this end, we introduce Model Carving, which learns both a Transformer's weights and its architecture in a single run. By applying learnable, scalar gates to each sublayer, we allow the training loss to remove the model's own components during training -- freeing a smaller heterogeneous network inside. We evaluate Model Carving by pre-training standard Transformers from 140M to 2.7B parameters and looped Transformers from 140M to 1.3B. At equal training compute, carved models reach a lower validation loss than dense models trained with up to 1.7 times more compute. Furthermore, carved models also outperform size-matched models produced by pruning or distillation, suggesting that the best way to obtain small models for edge devices is to carve them during training, not to compress a large one afterwards. This advantage both grows with scale and carries over to downstream tasks such as few-shot evaluation and generation. Because the removed sublayers no longer run, carved models also cost up to 34% fewer FLOPs per token and decode up to 1.6 times faster without cost in quality. Our results show that architecture, like weights, should be learned and not fixed in advance, and that inside every large transformer is a smaller, faster, stronger one waiting to be carved out.",
+      "publishedDate": "2026-11-20",
+      "pdfUrl": "https://arxiv.org/pdf/2611.27962v1",
+      "summaryUrl": "https://arxiv.org/abs/2611.27962v1",
+      "category": "cs.LG"
+    },
+    {
+      "arxivId": "2611.27955v1",
+      "title": "Molecular structure breaks universality in screening behavior of electrolyte solutions",
+      "authors": [
+        "Anna T. Bui",
+        "Connie J. Fairchild",
+        "Dominic P. W. Thomas",
+        "Stephen J. Cox"
+      ],
+      "abstract": "Electrostatic screening is one of the most fundamental phenomena in electrolyte solutions. While dilute electrolytes are described by the universal Debye--H\u00fcckel theory, recent experiments have reported an apparently universal scaling law for screening lengths in concentrated electrolytes, fueling ongoing debate over anomalous underscreening. Yet, liquid state theory has been unable to determine whether molecular details of the solvent, the ions, or both should preserve or break such universality. Using machine-learned classical density functional theory, we compute numerically exact decay lengths across a hierarchy of electrolyte models of increasing molecular complexity. We find that molecular details qualitatively reshape screening: solvent attraction generates a new monotonic decay mode, solvent polarity produces re-entrant behavior, and ionic structure alone can drastically alter screening-length exponents. Consequently, no single scaling law describes screening universally across these molecularly distinct electrolytes. Our results challenge equilibrium interpretations of experimentally observed universality in concentrated electrolytes.",
+      "publishedDate": "2026-11-20",
+      "pdfUrl": "https://arxiv.org/pdf/2611.27955v1",
+      "summaryUrl": "https://arxiv.org/abs/2611.27955v1",
+      "category": "cond-mat.stat-mech"
+    },
+    {
+      "arxivId": "2611.27954v1",
+      "title": "Recovering buoyancy-glitch parameters in low-luminosity red giants from global stellar properties with machine learning",
+      "authors": [
+        "Jiang Chen"
+      ],
+      "abstract": "Buoyancy glitches in red giants provide localized information on the interior structure near the base of the convective envelope, but their properties are typically inferred from dedicated seismic modelling rather than global properties, limiting large-sample applications. We investigate whether the buoyancy-glitch amplitude ($A_g$), location ($W_{\\rm g}^{\\star}$), and width ($D_g$) can be recovered from global stellar properties using gradient-boosted tree regressors (XGBoost and LightGBM). The models were trained on a grid of 12580 synthetic stellar models of low-luminosity red giants, with target parameters derived from fits to the local buoyancy frequency profile. We find that $W_{\\rm g}^{\\star}$ and $D_g$ exhibit excellent recoverability, achieving test-set $\\mathcal{R}^2$ values of 0.98 and 0.97, respectively. In contrast, $A_g$ shows moderate recoverability overall ($\\mathcal{R}^2=0.68$). This reduced recoverability of $A_g$ is concentrated in the large frequency separation range $\u0394\u03bd= 4.6$--$18.9\\,\u03bc$Hz, where the glitch resides in the evanescent-zone transition between the convective envelope and the gravity-mode cavity, increasing intrinsic scatter. SHAP analysis shows that $\u03bd_{\\rm max}$ and $T_{\\rm eff}$ dominate the predictions across all targets, indicating that the regressors rely primarily on evolutionary state. While $W_{\\rm g}^{\\star}$ and $D_g$ are tightly constrained by global evolutionary trends, the lower recoverability of $A_g$ reflects localized structural complexity associated with red-giant evolution. Overall, for the synthetic grid adopted here, these results indicate that global properties provide a direct estimate of the buoyancy-glitch parameters and a way to prioritise dedicated mixed-mode inversions for large asteroseismic samples such as Kepler and PLATO.",
+      "publishedDate": "2026-11-20",
+      "pdfUrl": "https://arxiv.org/pdf/2611.27954v1",
+      "summaryUrl": "https://arxiv.org/abs/2611.27954v1",
+      "category": "astro-ph.SR"
+    },
+    {
+      "arxivId": "2611.27909v1",
+      "title": "Metadata-Private Voice Communication over Tor using Post-Quantum Key Encapsulation",
+      "authors": [
+        "Noah Zeinali Yazdi",
+        "Samuel Zeinali Yazdi"
+      ],
+      "abstract": "Encrypted voice communication systems commonly protect call content but expose significant metadata, including the network identities of both parties, call timing, and traffic patterns. Simultaneously, advances in quantum computing threaten the asymmetric primitives underlying conventional key exchange, creating a harvest-now, decrypt-later risk for long-lived sensitive communications. Existing systems address at most one of these concerns: secure VoIP applications such as Signal and Wire rely on centralized infrastructure and classical cryptography, while anonymous communication tools built on the Tor network support only text messaging and lack post-quantum key encapsulation. This paper presents SAPEC (Secure Anonymous Peer Exchange Communicator), a peer-to-peer voice communication system that simultaneously addresses anonymity, decentralization, and quantum resistance. SAPEC routes all traffic exclusively through Tor hidden services, concealing the IP addresses of both parties, and augments the standard TLS handshake with a custom protocol layer that performs ML-KEM-1024 key establishment, a settle on AES-256 symmetrical keys and mutual Dilithium identity verification before any audio is transmitted. All audio is subsequently encrypted under AES-256. A removable Crypto Ignition Key prevents identity key material from being stored on the device. Empirical evaluation across 45 independently circuit-rebuilt test runs yielded a median one-way audio delay of 355 milliseconds and a median connection setup time of 7.61 seconds on same-region Tor circuits, demonstrating that interactive voice communication over onion routing is practically achievable.",
+      "publishedDate": "2026-11-20",
+      "pdfUrl": "https://arxiv.org/pdf/2611.27909v1",
+      "summaryUrl": "https://arxiv.org/abs/2611.27909v1",
+      "category": "cs.CR"
+    },
+    {
+      "arxivId": "2611.27896v1",
+      "title": "Optimised 8th-Order Trotter-Suzuki Schemes for Quantum Simulation",
+      "authors": [
+        "Marko Male\u017ei\u010d",
+        "Johann Ostmeyer"
+      ],
+      "abstract": "Simulating quantum dynamics in many-body systems is one of the most promising applications of quantum computers. Product formulas are a natural choice for this task, since they map directly onto quantum gates, and increasing their order $n$ could lead to reduced gate depths, provided the parameters are chosen efficiently. So far, schemes beyond $6^{\\textrm{th}}$ order have only been built as compositions of second-order schemes, while more general product formulas are known only up to $6^{\\textrm{th}}$ order. In this work, we extend our optimisation framework to order $n = 8$, and find both more efficient compositions and the first $8^{\\textrm{th}}$ order general schemes. Our formulas improve on the theoretical efficiency of the state-of-the-art schemes by Morales et al and we recommend two schemes explicitly. In simulations of the Heisenberg XZ chain one of our recommended schemes always outperforms those by Morales et al, though it is not always the same scheme that performs best. More generally, we observe that for Hamiltonians split into many non-commuting operators the uniformity of a Trotter decomposition becomes the main indicator of a scheme's performance. To assess the schemes' use on quantum hardware, we simulate noisy circuits with our new Qiskit plugin qiskit-omelyan. At current noise levels, the Leapfrog scheme remains the best choice, but as noise rates decrease toward fault tolerance, our recommended schemes become competitive.",
+      "publishedDate": "2026-11-20",
+      "pdfUrl": "https://arxiv.org/pdf/2611.27896v1",
+      "summaryUrl": "https://arxiv.org/abs/2611.27896v1",
+      "category": "quant-ph"
+    },
+    {
+      "arxivId": "2611.27871v1",
+      "title": "World Models for Learning Quantum Many-Body Dynamics",
+      "authors": [
+        "Yuan Wang",
+        "Oleksandr Kyriienko"
+      ],
+      "abstract": "We propose using world models for learning Hamiltonians from measured dynamics of a quantum computer or simulator. Implicitly, the parameters of a Hamiltonian are encoded in how the measured few-body observables evolve. By using a joint-embedding predictive architecture (JEPA) to perform prediction in latent space, we show that the device Hamiltonian can be efficiently inferred from noisy measurements. We train a spatiotemporal encoder and predictor with approximately $2.7$ million trainable weights using a single objective, to predict the representation of the next window of measurements from the previous one. The network is thereby driven to retain the reproducible dynamics and discard shot noise. We recover the field and coupling maps of a two-dimensional Ising lattice in real and imaginary time, and the disorder map of a one-dimensional Heisenberg chain of $100$ sites. In every settings the encoder achieves lower error than a masked autoencoder and than the same encoder left untrained. It also outperforms the same regression head applied directly to time-averaged observables, by factors of $4.4$ to $30$. We establish latent prediction as a practical self-supervised objective for learning from measurements of quantum dynamics.",
+      "publishedDate": "2026-11-20",
+      "pdfUrl": "https://arxiv.org/pdf/2611.27871v1",
+      "summaryUrl": "https://arxiv.org/abs/2611.27871v1",
+      "category": "quant-ph"
+    },
+    {
+      "arxivId": "2611.27815v1",
+      "title": "Autonomous quantum machine learning via Riemannian gradient-based optimization",
+      "authors": [
+        "Kasidit Srimahajariyapong",
+        "Thiparat Chotibut",
+        "Suwannachad Suwannajitt",
+        "Tithivich Paka",
+        "Ricard Puig",
+        "Yudai Suzuki",
+        "Marek Gluza",
+        "Zo\u00eb Holmes",
+        "Supanut Thanasilp"
+      ],
+      "abstract": "Quantum machine learning models typically rely on repeated quantum measurements and classical optimization during training, making the quantum-to-classical information-extraction process a fundamental bottleneck for scalability. We propose a framework for autonomous self-training quantum machine learning, based on Riemannian gradient optimization, in which the optimization proceeds entirely within the quantum domain without requiring quantum measurements or classical feedback. We derive the Riemannian gradient update rules for a broad class of learning tasks and identify sufficient conditions under which the resulting training dynamics can be realized fully autonomously. Within this regime, we establish an exponential convergence guarantee, in the training iterations, for sufficiently small step sizes, and further analyze the training cost in terms of the growth of the circuit depth. Importantly, we further show that the trained model can automatically discover symmetries hidden in the training data without $\\textit{a priori}$ specification. For the canonical examples of quantum phase classification and unitary learning with a hidden symmetry, our numerical study indicates that learning can be achieved at low circuit depths with only a few distinct training examples. Our results thus establish autonomous quantum machine learning as a promising paradigm that removes the classical optimization loop while retaining strong theoretical guarantees and practical performances.",
+      "publishedDate": "2026-11-20",
+      "pdfUrl": "https://arxiv.org/pdf/2611.27815v1",
+      "summaryUrl": "https://arxiv.org/abs/2611.27815v1",
+      "category": "quant-ph"
+    },
+    {
+      "arxivId": "2611.27778v1",
+      "title": "QuASAR: Toward an LLM-Assisted Framework for Screening, Prototyping, and Assessing Quantum-Advantage Opportunities in Scientific Computing",
+      "authors": [
+        "Mark L. Carroll",
+        "Jordan A. Caraballo-Vega",
+        "Brian P. Powell",
+        "John L. Schnase"
+      ],
+      "abstract": "Identifying scientific computations that could benefit from quantum algorithms requires both domain knowledge and fluency in quantum algorithm design, expertise that rarely resides in one person. We report results from QuASAR, an experimental, two-agent, LLM-driven pipeline intended to bridge this gap. One agent screens scientific literature for computational kernels with a plausible quantum-algorithmic analogue and proposes candidates, each backed by citations. A second agent independently verifies those citations. For candidates that survive verification, it reconstructs the source's computational structure, formulates a quantum mapping, builds and executes a prototype, and benchmarks it against classical baselines. We applied this pipeline to ten candidate computations drawn from the astrophysics literature. Nine candidates were carried through to a small-scale, benchmarked prototype. We report three in detail, chosen as the clearest examples with the least redundancy across the set. They span combinatorial optimization, stochastic simulation, and Bayesian inference. The pipeline attempted to supply quantum-design expertise a domain scientist might lack, reconstructing source algorithms where one existed and building original, disclosed mappings where none did. None of the three case studies achieved quantum advantage at the tested scales, and their astrophysical framing has not yet undergone expert validation. What the experiment does show is that the pipeline can turn a published idea into a runnable prototype, which a scientist can then inspect, test against classical methods, and decide whether to pursue. QuASAR is an exploratory framework, offered to the community for evaluation, critique, and further development, with an approach that could broaden the use of quantum computing in scientific research and extend to computational improvements more generally.",
+      "publishedDate": "2026-11-20",
+      "pdfUrl": "https://arxiv.org/pdf/2611.27778v1",
+      "summaryUrl": "https://arxiv.org/abs/2611.27778v1",
+      "category": "cs.AI"
+    },
+    {
+      "arxivId": "2611.27771v1",
+      "title": "Stochastic Extragradient Methods Beyond Lipschitz Continuity",
+      "authors": [
+        "Konstantinos Oikonomidis",
+        "Jan Quan",
+        "Mathijs Schuurmans",
+        "Panagiotis Patrinos"
+      ],
+      "abstract": "Stochastic variational inequality problems have received significant attention due to their ability to model large-scale machine learning tasks. Typically, the operators involved are assumed to be globally Lipschitz, with only a handful of works extending beyond the standard setting to the so-called $(L_0,L_1)$-Lipschitz setting. In this work, we propose a novel stochastic past extragradient algorithm for variational inequality problems under a broad regularity assumption that is even less restrictive than $(L_0,L_1)$-Lipschitz continuity and provide convergence guarantees under bounded variance of the stochastic oracle. More precisely, we show a.s. convergence with suitable stepsize schedules and obtain convergence rates in expectation and in probability for fixed horizons. Finally, in numerical simulations we compare our proposed algorithm against standard methods.",
+      "publishedDate": "2026-11-20",
+      "pdfUrl": "https://arxiv.org/pdf/2611.27771v1",
+      "summaryUrl": "https://arxiv.org/abs/2611.27771v1",
+      "category": "math.OC"
+    },
     {
       "arxivId": "2611.27751v1",
       "title": "Budgeted Subset Selection with a Transferable Learned Value Model",
@@ -1159,7 +1300,7 @@
       "category": "cond-mat.str-el"
     },
     {
-      "arxivId": "2611.25302v1",
+      "arxivId": "2611.25302v2",
       "title": "Whose Safety? Addressing Anti-Blackness in the Age of AI Safety",
       "authors": [
         "M\u00edrian Silva",
@@ -1167,8 +1308,8 @@
       ],
       "abstract": "\"AI safety\" has grown from a niche contingent of actors into the dominant framing for artificial intelligence (AI) assessment and evaluation, overshadowing AI ethics. Through political and monetary influence, AI safety has shifted political focus within the US and abroad. The focus has shifted away from harms that currently affect the public toward threats framed as \"existential risks\". We argue that safety cannot be achieved while anti-Blackness is left unaddressed. We ground this argument in Sylvia Wynter's critique of the \"overrepresentation\" of Man: the modern, Western conception of the Human that is predicated on the subjugation and othering of Blackness. To analyze the state of addressing anti-Blackness in the age of AI safety, we conduct a two-stage, language model-assisted content analysis of 69,290 accepted main-track papers from ten leading machine learning (ML), natural language processing (NLP), and AI ethics conferences (2020--2025). Safety research grew from 0.5% of accepted papers in 2020 to 6.4% in 2025, overtaking ethics. Yet 94% of safety papers rely on automated metrics, and only 11% of safety papers mention harms that affect society directly, compared with 78% of ethics papers. Of the 2,182 safety papers, 8 mention race; none make it central, and none name Black or African-diaspora communities. Across all 254 identified as race-focused papers, only 3 describe racial harm in safety terms, and 55% appear at three ethics venues that publish 2.5% of the corpus. We offer this interdisciplinary examination of AI safety to argue that a just technological future depends on confronting anti-Blackness directly.",
       "publishedDate": "2026-11-18",
-      "pdfUrl": "https://arxiv.org/pdf/2611.25302v1",
-      "summaryUrl": "https://arxiv.org/abs/2611.25302v1",
+      "pdfUrl": "https://arxiv.org/pdf/2611.25302v2",
+      "summaryUrl": "https://arxiv.org/abs/2611.25302v2",
       "category": "cs.CY"
     },
     {
@@ -1379,147 +1520,6 @@
       "pdfUrl": "https://arxiv.org/pdf/2611.24885v1",
       "summaryUrl": "https://arxiv.org/abs/2611.24885v1",
       "category": "quant-ph"
-    },
-    {
-      "arxivId": "2611.25004v1",
-      "title": "On the Impact of Feature Reduction Techniques on Adversarial Attacks",
-      "authors": [
-        "Mohammad Meymani",
-        "Roozbeh Razavi-Far"
-      ],
-      "abstract": "Adversarial attacks have posed significant threats to machine learning models by exploiting their inherent vulnerabilities. Researchers have established an interdisciplinary field called adversarial machine learning to explore these vulnerabilities and develop corresponding defense strategies. Feature reduction strategies are used to decrease the dimensionality of the data in order to reduce training time, avoid the curse of dimensionality, prevent overfitting, and mitigate redundant features. However, their effect on adversarial robustness across different classifiers and attack scenarios remains insufficiently explored. This study aims to analyze the effect of feature reduction techniques on the adversarial robustness of a diverse set of machine learning models under poisoning, backdoor, and universal adversarial perturbation attacks on the APT dataset. These models include support vector machine, decision tree, random forest, multi-layer perceptron, and k-nearest neighbors. The attained results are compared with scenarios where different feature reduction techniques are applied, including principal component analysis, permutation importance ranking, recursive feature elimination, and univariate mutual information. Metrics such as accuracy, F1-score, and mitigation score are employed to evaluate the effect of these techniques on adversarial robustness. The results demonstrate that permutation importance ranking and univariate mutual information generally provide the most consistent robustness improvements, while other methods exhibit more variable effects depending on the classifier and attack scenario.",
-      "publishedDate": "2026-11-18",
-      "pdfUrl": "https://arxiv.org/pdf/2611.25004v1",
-      "summaryUrl": "https://arxiv.org/abs/2611.25004v1",
-      "category": "cs.LG"
-    },
-    {
-      "arxivId": "2611.24831v1",
-      "title": "Overlooked and Underutilized: Prototypes are the Missing Piece in Tabular XAI",
-      "authors": [
-        "Jacek Karolczak",
-        "Jerzy Stefanowski"
-      ],
-      "abstract": "Explainable AI (XAI) is frequently applied to high-stakes tabular data, yet the field relies heavily on feature attribution methods. While these approaches offer technical transparency, evaluating dozens of isolated features demands excessive cognitive effort from non-expert users. In this paper, we argue that prototypes remain overlooked and underutilized, and should be integrated as a complementary, intuitive gateway to auditing complex machine learning models. Although entire exemplars function as an intuitive baseline for prototype-based explanations, we highlight prototypical parts as particularly valuable for tabular data. By grouping related features into bounded subspaces, prototypical parts technically embody human-understandable concepts, replacing isolated features with cohesive semantic units. We support this integration through two primary lenses. Cognitively, these parts align with Rosch's categorization theory and Kahneman's System 1 thinking to naturally reduce cognitive load for humans. Then, we introduce a Geometric Validity Triad to conceptualize why prototypes validate the data manifold - a critical dimension often neglected by existing methods. We contend that making tabular XAI genuinely comprehensible requires shifting toward composite explanation pipelines that pair intuitive similarity-based reasoning with rigorous feature-level auditing. The paper concludes by outlining open challenges of prototype-based methods and discussing potential solutions to guide future research.",
-      "publishedDate": "2026-11-18",
-      "pdfUrl": "https://arxiv.org/pdf/2611.24831v1",
-      "summaryUrl": "https://arxiv.org/abs/2611.24831v1",
-      "category": "cs.LG"
-    },
-    {
-      "arxivId": "2611.24812v1",
-      "title": "A Homogeneous Benchmark of Exoplanet Mass-Radius Relations",
-      "authors": [
-        "Ailar Alizadehsabegh",
-        "Soroush Sarabi",
-        "Atila Poro"
-      ],
-      "abstract": "The mass-radius ($M$-$R$) relation is fundamental to inferring the bulk composition and internal structure of exoplanets. However, published relations remain difficult to compare directly because studies adopt different planetary samples, fitting procedures, and evaluation metrics. We construct a homogeneous, quality-controlled benchmark of 963 exoplanets with dynamically measured masses and transit radii from the NASA Exoplanet Archive. We compare empirical power laws, probabilistic models, and machine-learning (ML) regressors using point accuracy, interval coverage, and probabilistic calibration. On the full test set, a multi-feature random forest has the lowest root-mean-square error, 0.329~dex in $\\log_{10} M$ versus 0.368~dex for a fitted two-parameter power law ($p = 0.007$ unadjusted; $p = 0.059$ after Holm correction across 13 comparisons). Radius-only ML models perform comparably to the single power law. In three ranges of the measured radius, several methods improve on the power law below 1.6 $R_\\oplus$, but none does between 1.6 and 4 $R_\\oplus$. Including stellar and orbital covariates significantly improves predictions only for low-mass planets ($M < 4.4\\,M_\\oplus$), although this result is sensitive to missing covariate data and weakens when the training and test sets are separated by host star. Within their calibrated radius domains, the published empirical and probabilistic relations remain highly competitive. Finally, a first-order variance decomposition shows that formal measurement uncertainties account for only $\\sim$3\\% of the residual variance (0.067 of 0.401~dex), and the remaining $\\sim$0.396~dex arises from compositional diversity, selection effects, and model approximation error.",
-      "publishedDate": "2026-11-18",
-      "pdfUrl": "https://arxiv.org/pdf/2611.24812v1",
-      "summaryUrl": "https://arxiv.org/abs/2611.24812v1",
-      "category": "astro-ph.EP"
-    },
-    {
-      "arxivId": "2611.24803v1",
-      "title": "Cross-Dataset Inference of Central-Satellite Classification and Host Halo Masses from Galaxy neighbours with Machine Learning",
-      "authors": [
-        "Alice Chen",
-        "Camille Avestruz",
-        "Niayesh Afshordi",
-        "Yen-Ting Lin"
-      ],
-      "abstract": "The classification of galaxies as centrals or satellites gives insight into the galaxy-halo connection. This, together with halo mass estimates, can be used to connect observed galaxy populations to underlying dark matter structure. To (1) classify galaxies as centrals or satellites and (2) estimate the host halo mass for centrals, we train XGBoost models on IllustrisTNG (TNG100) galaxies, using the distances (3D or projected (2+1)D redshift space) and $M_*$ of their ten nearest neighbours. We then test the model on EAGLE to measure its robustness after applying a simple domain-alignment step that corrects for a relative shift in the $M_*$ distribution between TNG100 and EAGLE. We further augment the training data by combining feature sets from neighbour samples with varying lower $M_*$ thresholds. On the TNG100 test set, the central/satellite classifier reaches purity and completeness $=0.97$ (0.95) in 3D (projected redshift) space at the threshold where purity=completeness, and the halo-mass regressor achieves $r^2$=0.98 (0.93) when evaluated on true centrals and $r^2=0.93$ (0.93) when evaluated on inferred centrals. Applied to EAGLE after alignment, the classifier achieves purity/completeness $=0.95$ (0.95), while halo-mass inference yields $r^2=0.91$ ($0.87$) for true centrals and $r^2=0.83$ (0.77) for inferred centrals; training-data augmentation most improves the halo-mass estimation task. Satellites misclassified as centrals underpredict the true masses of host halos, especially if they are closer to a lower mass halo's central than its own host's central and/or has a significantly lower $M_*$ than its own central. These results show that survey-accessible information such as projected separations and stellar masses - combined with simulation-trained models and domain alignment - can enable reliable central identification and host halo mass estimation to an $r^2\\geq 0.85$.",
-      "publishedDate": "2026-11-18",
-      "pdfUrl": "https://arxiv.org/pdf/2611.24803v1",
-      "summaryUrl": "https://arxiv.org/abs/2611.24803v1",
-      "category": "astro-ph.GA"
-    },
-    {
-      "arxivId": "2611.24798v1",
-      "title": "Soft Mixture of Quantum Experts for Hybrid Quantum-Classical Learning",
-      "authors": [
-        "Valeria Repetto",
-        "Romina D'Aurizio",
-        "Piero Farinelli"
-      ],
-      "abstract": "Quantum Machine Learning (QML) has attracted increasing interest as a possible route to construct feature representations that are difficult to reproduce with classical models. However, near-term QML architectures based on trainable parametrized quantum circuits remain affected by limited hardware resources, noise, and severe optimization difficulties such as barren plateaus. In this work we propose Soft-MoQE, a Soft Mixture of Quantum Experts architecture that replaces variational quantum training with the input-dependent selection and combination of fixed quantum feature maps. The model is composed of a heterogeneous pool of non-trainable quantum circuits, each defining a distinct embedding, and a classical gating network that learns how to weight these embeddings for each data point. We benchmark Soft-MoQE on three PCA-reduced tasks: MNIST parity, MNIST 10-class, and FashionMNIST. Soft-MoQE outperforms the single best expert, the uniform average of all experts and a linear baseline, achieving task-dependent performance comparable to that of a trainable quantum neural network, without optimizing any quantum parameter and with a quantum training cost that is lower by orders of magnitude. The analysis of the class- conditioned expert usage shows that the learned routing combines a few experts for each input, with a selection that depends on the class. These results support the learned routing among fixed quantum circuits as a trainability-aware design principle for hybrid QML.",
-      "publishedDate": "2026-11-18",
-      "pdfUrl": "https://arxiv.org/pdf/2611.24798v1",
-      "summaryUrl": "https://arxiv.org/abs/2611.24798v1",
-      "category": "quant-ph"
-    },
-    {
-      "arxivId": "2611.24794v1",
-      "title": "Exploring Speaker-Aware Engagement Modeling for Children with Autism Spectrum Disorder",
-      "authors": [
-        "Kaleen Shrestha",
-        "Austin Joel Dympep",
-        "Young Suh Hong",
-        "Maja Matari\u0107"
-      ],
-      "abstract": "Prior work on engagement modeling in children with autism spectrum disorder (ASD) has demonstrated substantial individual variability in behavioral features, particularly in visual modalities. In this work, we extend the literature to acoustic features in naturalistic interactions, where multiple speakers and atypical interaction patterns complicate speaker-specific analysis. We investigated whether speaker diarization improved acoustic engagement modeling during month-long, in-home socially assistive robot (SAR) interventions with seven children with ASD. We trained classical machine learning models using acoustic features extracted from diarized child and parent/caregiver audio and compared their performance with models trained on undiarized audio. Diarized audio consistently yielded higher area under the receiver operating characteristic curve (AUROC) values, although these differences were not statistically significant. More importantly, the relative contributions of child and caregiver acoustic features varied across participants, indicating that the acoustic information associated with engagement was not consistent across children. These findings extend evidence of participant-level variability in ASD engagement modeling to the acoustic domain and demonstrate the feasibility of isolating speaker-specific vocalizations for studying engagement in complex, naturalistic interactions.",
-      "publishedDate": "2026-11-18",
-      "pdfUrl": "https://arxiv.org/pdf/2611.24794v1",
-      "summaryUrl": "https://arxiv.org/abs/2611.24794v1",
-      "category": "cs.SD"
-    },
-    {
-      "arxivId": "2611.24759v1",
-      "title": "Characterizing adsorption thermodynamics in carbon capture materials: an efficient first-principles approach",
-      "authors": [
-        "Anna T. Bui",
-        "Grant M. Rotskoff",
-        "Thomas E. Markland"
-      ],
-      "abstract": "Porous materials offer a vast design space for CO$_2$ capture, whose exploration hinges on efficient and accurate first-principles predictions of the thermodynamics governing adsorption. However, simulating isotherms and heats of adsorption using grand canonical molecular simulations is extremely computationally expensive when combined with accurate ab initio treatments of the molecular interactions, limiting screening to low-pressure uptake encoded in the Henry constant. Identifying and designing the best CO$_2$ capture materials requires a strategy that can efficiently calculate their adsorption properties using ab initio potential energy surfaces such as those now available from foundational machine-learned interatomic potentials (MLIPs). Here we develop a neural classical density functional (cDFT) framework for carbon capture processes that allows direct calculation of adsorption isotherms from low to high loading limits of metal-organic frameworks (MOFs) without grand canonical simulations. We demonstrate the success of our approach by calculating the ab initio adsorption isotherms for over 5,000 experimentally reported MOFs. From our screening, we show how these materials can be characterized using four isotherm shapes, arising from their pore size and binding sites, which the Henry constant cannot distinguish. We show that these shapes, rather than the binding strength alone, decide which MOFs suit which process: small pores with strong binding sites for vacuum and temperature swings at low pressure, large pores with weakly binding walls for pressure swings. Finally, we identify the most promising candidates by weighing their working capacity against the energy needed for regeneration.",
-      "publishedDate": "2026-11-18",
-      "pdfUrl": "https://arxiv.org/pdf/2611.24759v1",
-      "summaryUrl": "https://arxiv.org/abs/2611.24759v1",
-      "category": "cond-mat.mtrl-sci"
-    },
-    {
-      "arxivId": "2611.24741v1",
-      "title": "Sex Differences in the Detection of Parkinson's Disease from Speech",
-      "authors": [
-        "Hiba Akhaddar",
-        "Peter Plantinga",
-        "Mirco Ravanelli",
-        "Tristan Glatard"
-      ],
-      "abstract": "Parkinson's disease (PD) is the second most common neurodegenerative disease in the world, and 70\\% to 75\\% of PD patients suffer from speech disorders at some stage. Since PD affects men more frequently than women, previous publications tend to rely on unbalanced datasets that potentially introduce sex biases into trained models. This study investigates sex differences in PD detection from speech using deep learning and traditional machine learning approaches. We evaluated speech-based PD detection using embeddings from three pre-trained speech models, combined with handcrafted acoustic features and different classifiers. Sex-specific experiments were conducted on balanced subsets of four sustained phonation datasets, controlling for sex, disease status, and, where possible, age. All recordings were obtained during a sustained phonation task. Results show that female speakers were more accurately classified than male speakers in the larger dataset. Sex-specific results show that when the models are trained on one sex, they fail to generalize to the other one. Our results highlight the importance of including sex as a variable in the development of PD detection systems.",
-      "publishedDate": "2026-11-18",
-      "pdfUrl": "https://arxiv.org/pdf/2611.24741v1",
-      "summaryUrl": "https://arxiv.org/abs/2611.24741v1",
-      "category": "eess.AS"
-    },
-    {
-      "arxivId": "2611.24727v1",
-      "title": "Surrogate Modeling and Reduced-Order Methods in Gravitational-Wave Physics and Numerical Relativity: From Spectral Representations to Adaptive Compression",
-      "authors": [
-        "Manuel Tiglio"
-      ],
-      "abstract": "The rapid expansion of gravitational-wave astronomy and high-precision numerical relativity has created an acute computational bottleneck: direct numerical integration of the Einstein field equations and high-dimensional Bayesian parameter estimation require millions of waveform evaluations that cannot be sustained by traditional solvers alone. Reduced-order modeling (ROM) and surrogate techniques have emerged as foundational tools to bridge this gap, compressing high-fidelity solution manifolds into compact, rapidly evaluable representations without sacrificing physical accuracy. This perspective reviews the mathematical pillars of projection-based reduced-order modeling---including Proper Orthogonal Decomposition, greedy basis selection, and the Empirical Interpolation Method---and traces their operational impact in gravitational-wave data analysis through surrogate waveform families and Reduced-Order Quadratures. We then examine the fundamental approximation barriers posed by slow Kolmogorov n-width decay in non-stationary, transient, and strongly nonlinear regimes, showing how adaptive hp-greedy domain partitioning and multi-scale spectral compression overcome these limits. Finally, we discuss how combining certified reduced-order structures with modern scientific machine learning and sensitivity-aware quantization provides a rigorous blueprint for next-generation detectors such as LISA, Einstein Telescope, and Cosmic Explorer.",
-      "publishedDate": "2026-11-18",
-      "pdfUrl": "https://arxiv.org/pdf/2611.24727v1",
-      "summaryUrl": "https://arxiv.org/abs/2611.24727v1",
-      "category": "gr-qc"
-    },
-    {
-      "arxivId": "2611.24707v1",
-      "title": "The Long and Winding Pore: Tuning Porosity in Templated Nanoporous Carbons",
-      "authors": [
-        "Zacharie Waysenson",
-        "Baptiste Barthe-Gold",
-        "Arthur France-Lanord",
-        "Mathieu Salanne",
-        "A. Marco Saitta"
-      ],
-      "abstract": "Disordered materials pose a recurring challenge for molecular simulation: realistic structural models are often generated through thermal protocols in which several structural descriptors emerge simultaneously and cannot easily be varied independently. Nanoporous carbons constitute a particularly relevant example: pore size, wall order, curvature, and network tortuosity generally emerge as outcomes of the thermal preparation protocol, rather than being independently prescribed structural parameters. Moreover, for practical applications, models of porous materials should ideally exhibit a percolating pore network, capable of supporting end-to-end transport of adsorbed species through the material. To this end, here we introduce a hierarchy of templating strategies, built around a common melt-quench-anneal protocol driven by a machine-learned interatomic potential for carbon, that progressively separates these variables. A rigid cylindrical template interacting with the environment through a tunable Lennard-Jones potential provides independent control over pore size and local wall organization, while leaving the structural disorder of the surrounding carbon matrix essentially unchanged. Generalizing the template to a spring-connected, tortuous backbone further allows pore geometry and curvature to be prescribed without qualitatively altering the local templating mechanism established for the straight pore. Finally, making the template mobile lets the growing carbon network reshape it in turn, which sharpens pore boundaries and allows sub-nanometer pore sizes to be targeted precisely, as needed for applications such as supercapacitor electrodes. Ultimately, this approach enables systematic studies of structure-property relationships in porous materials for applications such as energy storage, desalination and gas capture.",
-      "publishedDate": "2026-11-18",
-      "pdfUrl": "https://arxiv.org/pdf/2611.24707v1",
-      "summaryUrl": "https://arxiv.org/abs/2611.24707v1",
-      "category": "cond-mat.mtrl-sci"
     }
   ]
 }
